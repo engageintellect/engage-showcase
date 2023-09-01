@@ -186,6 +186,118 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"building-sites-with-astro.md": {
+	id: "building-sites-with-astro.md";
+  slug: "building-sites-with-astro";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"crypto-dashbord.md": {
+	id: "crypto-dashbord.md";
+  slug: "crypto-dashbord";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"deploying-pocketbase-on-ubuntu.md": {
+	id: "deploying-pocketbase-on-ubuntu.md";
+  slug: "deploying-pocketbase-on-ubuntu";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"fast-api-for-python-development.md": {
+	id: "fast-api-for-python-development.md";
+  slug: "fast-api-for-python-development";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"getting-started-with-tailwindcss-in-nextjs.md": {
+	id: "getting-started-with-tailwindcss-in-nextjs.md";
+  slug: "getting-started-with-tailwindcss-in-nextjs";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"getting-started-with-the-chatgpt-api.md": {
+	id: "getting-started-with-the-chatgpt-api.md";
+  slug: "getting-started-with-the-chatgpt-api";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"how-to-use-react-tailwind-and-svelte-inside-astro.md": {
+	id: "how-to-use-react-tailwind-and-svelte-inside-astro.md";
+  slug: "how-to-use-react-tailwind-and-svelte-inside-astro";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"linktree-clone.md": {
+	id: "linktree-clone.md";
+  slug: "linktree-clone";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"medium-article.md": {
+	id: "medium-article.md";
+  slug: "medium-article";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"nextjs-notion-guide.md": {
+	id: "nextjs-notion-guide.md";
+  slug: "nextjs-notion-guide";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"project-nexum-wiki.md": {
+	id: "project-nexum-wiki.md";
+  slug: "project-nexum-wiki";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"run-machine-learning-models-locally-with-hugging-face.md": {
+	id: "run-machine-learning-models-locally-with-hugging-face.md";
+  slug: "run-machine-learning-models-locally-with-hugging-face";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"solid-global-state.md": {
+	id: "solid-global-state.md";
+  slug: "solid-global-state";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"sveltekit-landing-daisy.md": {
+	id: "sveltekit-landing-daisy.md";
+  slug: "sveltekit-landing-daisy";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"using-pocketbase-with-sveltekit.md": {
+	id: "using-pocketbase-with-sveltekit.md";
+  slug: "using-pocketbase-with-sveltekit";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"using-trpc-in-nextjs.md": {
+	id: "using-trpc-in-nextjs.md";
+  slug: "using-trpc-in-nextjs";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 };
 
 	};
