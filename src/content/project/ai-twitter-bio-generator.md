@@ -1,5 +1,5 @@
 ---
-pubDate: 2023-02-01T00:00:00Z
+publishDate: 2023-02-01T00:00:00Z
 title: AI Twitter Bio Generator
 description: A Twitter bio generator built with Next.js 13, OpenAI's ChatGPT API, and TailwindCSS.
 excerpt: Instantly generate great twitter bios using OpenAI's ChatGPT API.
