@@ -4,7 +4,7 @@ title: Getting started with the ChatGPT API.
 description: A guide to getting started with the ChatGPT API.
 excerpt: As an AI language model, ChatGPT can generate natural language text in response to prompts given to it.
 image: "https://images.unsplash.com/photo-1676299081847-824916de030a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYXRncHR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
-category: Articles
+category: Article
 tags:
   - ChatGPT
   - AI
@@ -15,9 +15,9 @@ tags:
 
 ## Introduction
 
-As an AI language model, ChatGPT can generate natural language text in response to prompts given to it. The ChatGPT API allows developers to integrate this powerful technology into their own personal projects, whether it be a chatbot, an automated customer support system, or a text-generation tool.
+As an AI language model, ChatGPT can generate natural language text in response to prompts given to it. The ChatGPT API allows developers to integrate this powerful technology into their own personal Project, whether it be a chatbot, an automated customer support system, or a text-generation tool.
 
-In this blog post, we will walk through the steps for using the ChatGPT API in personal projects.
+In this blog post, we will walk through the steps for using the ChatGPT API in personal Project.
 
 ## Step 1: Get an API Key
 
@@ -83,4 +83,4 @@ Here are a few tips to help you get started:
 
 ## Conclusion
 
-The ChatGPT API is a powerful tool that can be used in a variety of personal projects. By following the steps outlined in this blog post, you can start using the API in your own projects and take advantage of its natural language generation capabilities.
+The ChatGPT API is a powerful tool that can be used in a variety of personal Project. By following the steps outlined in this blog post, you can start using the API in your own Project and take advantage of its natural language generation capabilities.

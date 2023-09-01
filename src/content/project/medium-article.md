@@ -4,7 +4,7 @@ title: How product leaders create and manage user perception in today's socially
 description: A story of product management and social engineering.
 excerpt: Dealing with the Perils of User-Generated Content, An Internal Product Branding Case Study
 image: "https://miro.medium.com/v2/resize:fit:1400/0*dmFlpjra37Gitqcx"
-category: Articles
+category: Article
 tags:
   - Medium
   - Product Management

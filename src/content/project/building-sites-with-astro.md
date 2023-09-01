@@ -3,7 +3,7 @@ pubDate: 2023-01-02T00:00:00Z
 title: Building Sites with Astro
 description: Using Astro to build fast, lean, and modern websites.
 excerpt: Astro is a static site generator that aims to simplify the process of building modern websites. It is built with a focus on developer experience, performance, and flexibility.
-category: Articles
+category: Article
 image: "https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/07/social.jpg?fit=2024%2C1012&ssl=1"
 tags:
   - Astro
@@ -12,7 +12,7 @@ tags:
 
 ## Introduction
 
-Astro is a static site generator that aims to simplify the process of building modern websites. It is built with a focus on developer experience, performance, and flexibility. One of the core features of Astro is its component-based architecture that allows developers to build reusable UI components that can be easily shared across pages and projects.
+Astro is a static site generator that aims to simplify the process of building modern websites. It is built with a focus on developer experience, performance, and flexibility. One of the core features of Astro is its component-based architecture that allows developers to build reusable UI components that can be easily shared across pages and Project.
 
 One of the main benefits of using Astro is its ability to provide fast and performant websites. Astro generates static HTML, CSS, and JavaScript, which means that the website can be served directly from a CDN or any static hosting provider. This makes the website fast to load, which is critical for improving user experience and search engine optimization.
 

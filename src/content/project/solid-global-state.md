@@ -3,8 +3,8 @@ pubDate: 2023-04-13T00:00:00Z
 title: Managing Global State with Solid.js and TypeScript
 description: Easily determine the best time to buy or sell your crypto.
 excerpt: A simple crypto dashbord built with Sveltekit, CoinGecko API, Blockchain.com API, Fear & Greed index, TailwindCSS, and DaisyUI.
-category: Articles
-image: /assets/images/solid.png
+category: Article
+image: /images/solid.png
 tags:
   - SolidJS
   - TypeSript
@@ -143,4 +143,4 @@ In this example, we have two components, `Counter` and `Display`, both connected
 
 In this tutorial, we've covered how to implement global state management using Solid.js and TypeScript. We've learned how to create a global state store, define actions to update the state, use the global state in components, and connect multiple components to the global state. With Solid.js and TypeScript, you can efficiently manage and share data across your application, making your code more maintainable and scalable.
 
-We hope this tutorial has provided you with a solid foundation for implementing global state management in your Solid.js and TypeScript projects. Happy coding!
+We hope this tutorial has provided you with a solid foundation for implementing global state management in your Solid.js and TypeScript Project. Happy coding!

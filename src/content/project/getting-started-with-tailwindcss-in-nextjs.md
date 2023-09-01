@@ -4,7 +4,7 @@ title: Getting started with TailwindCSS in Next.js.
 description: A guide to getting started with TailwindCSS in Next.js.
 excerpt: Tailwind CSS is a popular utility-first CSS framework that allows you to rapidly build modern, responsive, and customizable user interfaces.
 image: "https://www.drupal.org/files/project-images/screenshot_361.png"
-category: Articles
+category: Article
 tags:
   - TailwindCSS
   - Next.js

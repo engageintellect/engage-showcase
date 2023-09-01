@@ -4,7 +4,7 @@ title: Why You Should Be Using FastAPI for Python Web Development
 description: A guide to getting started with the Fast API.
 excerpt: As an AI language model, ChatGPT can generate natural language text in response to prompts given to it.
 image: "https://miro.medium.com/max/1200/1*AEONFaJvxuXhZRxRsb1PbQ.png"
-category: Articles
+category: Article
 tags:
   - Python
   - FastAPI

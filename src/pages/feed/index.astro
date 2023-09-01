@@ -1,0 +1,54 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+const posts = (await getCollection("project")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+
+const sortedPosts = [...posts].sort((a, b) => {
+  const dateA: Date = new Date(a.data.pubDate);
+  const dateB: Date = new Date(b.data.pubDate);
+  return dateB.getTime() - dateA.getTime(); // Sort in reverse chronological order
+});
+---
+
+<head>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+<body>
+  <div>
+    <Header />
+
+    <div class="max-w-4xl mx-auto p-2">
+      {
+        sortedPosts.map((post) => (
+          <a href={`/project/${post.slug}/`}>
+            <div class="mb-5">
+              <div class="text-sm font-thin">
+                <div class="bg-red-500">{post.data.category}</div>
+              </div>
+              <div class="text-xl font-bold">{post.data.title}</div>
+              <div class="text-gray-500">
+                <FormattedDate date={post.data.pubDate} />
+              </div>
+
+              {post.data.tags && (
+                <div class="mt-2 flex gap-1">
+                  {post.data.tags.map((tag) => (
+                    <div class="bg-gray-200 text-xs rounded-full px-2 py-1 text-gray-700">
+                      {tag}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</body>

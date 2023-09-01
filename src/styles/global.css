@@ -1,13 +1,6 @@
-/*
-  The CSS in this style tag is based off of Bear project's default CSS.
-  https://github.com/HermanMartinus/bearproject/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/project/default.css
-  License MIT: https://github.com/HermanMartinus/bearproject/blob/master/LICENSE.md
- */
-
 :root {
   --accent: 96, 115, 159;
   --accent-dark: #000d8a;
-  --black: 15, 18, 25;
   --gray: 96, 115, 159;
   --gray-light: 229, 233, 240;
   --gray-dark: 34, 41, 57;
@@ -34,12 +27,12 @@ body {
   margin: 0;
   padding: 0;
   text-align: left;
-  background: linear-gradient(var(--gray-gradient)) no-repeat;
+  /* background: linear-gradient(var(--gray-gradient)) no-repeat; */
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: rgb(var(--gray-dark));
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.7;
 }
 /* main {
@@ -55,7 +48,6 @@ h4,
 h5,
 h6 {
   margin: 0 0 0.5rem 0;
-  color: rgb(var(--black));
   line-height: 1.2;
 }
 h1 {
