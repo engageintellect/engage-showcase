@@ -15,6 +15,9 @@ const project = defineCollection({
       .optional()
       .transform((str) => (str ? new Date(str) : undefined)),
     heroImage: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    category: z.string().optional(),
+    excerpt: z.string().optional(),
   }),
 });
 
