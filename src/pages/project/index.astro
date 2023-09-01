@@ -9,106 +9,46 @@ import FormattedDate from "../../components/FormattedDate.astro";
 const posts = (await getCollection("project")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
+
+const sortedPosts = [...posts].sort((a, b) => {
+  const dateA: Date = new Date(a.data.pubDate);
+  const dateB: Date = new Date(b.data.pubDate);
+  return dateB.getTime() - dateA.getTime(); // Sort in reverse chronological order
+});
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style>
-      main {
-        width: 960px;
-      }
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-      ul li {
-        width: calc(50% - 1rem);
-      }
-      ul li * {
-        text-decoration: none;
-        transition: 0.2s ease;
-      }
-      ul li:first-child {
-        width: 100%;
-        margin-bottom: 1rem;
-        text-align: center;
-      }
-      ul li:first-child img {
-        width: 100%;
-      }
-      ul li:first-child .title {
-        font-size: 2.369rem;
-      }
-      ul li img {
-        margin-bottom: 0.5rem;
-        border-radius: 12px;
-      }
-      ul li a {
-        display: block;
-      }
-      .title {
-        margin: 0;
-        color: rgb(var(--black));
-        line-height: 1;
-      }
-      .date {
-        margin: 0;
-        color: rgb(var(--gray));
-      }
-      ul li a:hover h4,
-      ul li a:hover .date {
-        color: rgb(var(--accent));
-      }
-      ul a:hover img {
-        box-shadow: var(--box-shadow);
-      }
-      @media (max-width: 720px) {
-        ul {
-          gap: 0.5em;
-        }
-        ul li {
-          width: 100%;
-          text-align: center;
-        }
-        ul li:first-child {
-          margin-bottom: 0;
-        }
-        ul li:first-child .title {
-          font-size: 1.563em;
-        }
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <Header />
-    <main>
+    <main class="px-2 max-w-4xl mx-auto py-2">
       <section>
-        <ul>
+        <div class="grid sm:grid-cols-2 gap-5">
           {
-            posts.map((post) => (
-              <li>
+            sortedPosts.map((post) => (
+              <div class="group shadow rounded-xl sm:hover:shadow-lg transition-all duration-200">
                 <a href={`/project/${post.slug}/`}>
                   <img
-                    width={720}
-                    height={360}
+                    class="h-64 rounded-t-xl object-cover w-full transition-all duration-200"
                     src={post.data.heroImage}
                     alt=""
                   />
-                  <h4 class="title">{post.data.title}</h4>
-                  <p class="date">
-                    <FormattedDate date={post.data.pubDate} />
-                  </p>
+
+                  <div class="p-2">
+                    <div class="text-xl">{post.data.title}</div>
+                    <div class="text-neutral-500 font-extrathin">
+                      <FormattedDate date={post.data.pubDate} />
+                    </div>
+                  </div>
                 </a>
-              </li>
+              </div>
             ))
           }
-        </ul>
+        </div>
       </section>
     </main>
     <Footer />
