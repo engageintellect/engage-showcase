@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/ProjectPost.astro";
+import { Icon } from "astro-icon";
+import TechCard from "../components/TechCard.astro";
 ---
 
 <Layout
@@ -8,65 +10,194 @@ import Layout from "../layouts/ProjectPost.astro";
   pubDate={new Date("August 08 2021")}
   image="/images/laptop-ai-code.png"
 >
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo
-    integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis
-    egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In
-    hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat.
-    Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu
-    non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim.
-    Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed
-    vulputate mi. Dictumst quisque sagittis purus sit amet.
-  </p>
+  <div class="my-10">
+    <div class="text-2xl font-bold">I'm Josh.</div>
 
-  <p>
-    Morbi tristique senectus et netus. Id semper risus in hendrerit gravida
-    rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus
-    sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris
-    rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus
-    dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-    massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius
-    morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras
-    ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est
-    ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa
-    ultricies mi.
-  </p>
+    <div>A full stack web developer from Orange County, California.🍊🌊</div>
 
-  <p>
-    Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque.
-    Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac
-    felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit
-    amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed
-    elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-    dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra.
-    Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum
-    consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus
-    ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-    facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed
-    risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor
-    vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus
-    non. Amet dictum sit amet justo donec enim.
-  </p>
+    <div class="flex gap-2 my-5">
+      <a
+        href="https://github.com/engageintellect"
+        class="bg-teal-500 rounded py-2 px-4 text-white"
+      >
+        <div class="flex gap-2 items-center">
+          <div>
+            <Icon name="simple-icons:github" width="20" />
+          </div>
+          <div>Github</div>
+        </div>
+      </a>
 
-  <p>
-    Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac
-    ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem
-    viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu
-    ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac
-    tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-    pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim
-    sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam.
-    Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
-  </p>
+      <a
+        href="mailto:jc9361@gmail.com"
+        class="bg-purple-500 rounded py-2 px-4 text-white"
+      >
+        <div class="flex gap-2 items-center">
+          <div>
+            <Icon name="ion:mail" width="20" />
+          </div>
+          <div>Contact</div>
+        </div>
+      </a>
+    </div>
+  </div>
 
-  <p>
-    Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus
-    imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu
-    cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum.
-    Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit
-    libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed
-    pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique
-    magna.
-  </p>
+  <div class="my-10">
+    <div class="text-3xl font-bold">Technologies</div>
+    <div class="lg font-thin">The stuff I use the most.</div>
+
+    <!-- <div class="flex gap-2 overflow-scroll"> -->
+    <div class="sm:grid flex overflow-auto sm:grid-cols-3 gap-2 my-5">
+      <div class="w-full">
+        <TechCard
+          title="Next.js"
+          description="A versatile React framework for building performant server-side rendered and statically generated web applications with seamless integration with popular web technologies."
+          iconName="cib:next-js"
+          cardUrl="https://nextjs.org"
+        />
+      </div>
+      <div class="w-full">
+        <TechCard
+          title="Sveltekit"
+          description="A lightweight and fast web framework for building server-rendered and static sites with Svelte, offering intuitive development and easy deployment."
+          iconName="vscode-icons:file-type-svelte"
+          cardUrl="https://kit.svelte.dev"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="React"
+          description="A popular JavaScript library for building user interfaces with reusable components and a virtual DOM, backed by a vast ecosystem of tools and resources."
+          iconName="logos:react"
+          cardUrl="https://reactjs.org"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="Astro"
+          description="A modern static site generator that combines performance, flexibility, and simplicity, enabling developers to build dynamic sites with modern web technologies."
+          iconName="vscode-icons:file-type-astro"
+          cardUrl="https://astro.build"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="Tailwind"
+          description="A utility-first CSS framework for rapidly building custom user interfaces with a modern design system, offering a wide range of pre-built components and utilities."
+          iconName="vscode-icons:file-type-tailwind"
+          cardUrl="https://tailwindcss.com"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="Typescript"
+          description="A superset of JavaScript that provides static type checking, enhanced IDE support, and other features for safer and more maintainable code, ideal for large-scale projects."
+          iconName="vscode-icons:file-type-typescript-official"
+          cardUrl="https://www.typescriptlang.org"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="Python"
+          description="A versatile and popular high-level programming language that emphasizes readability, simplicity, and productivity, with extensive libraries and frameworks for web development."
+          iconName="vscode-icons:file-type-python"
+          cardUrl="https://www.python.org"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="PlanetScale"
+          description="A cloud-native database platform that enables developers to build applications with the scalability and reliability of a distributed database, without the operational overhead."
+          iconName="vscode-icons:file-type-mysql"
+          cardUrl="https://planetscale.com"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="Supabase"
+          description="An open-source alternative to Firebase that provides a suite of tools for building applications with serverless functions, authentication, and a PostgreSQL database."
+          iconName="simple-icons:supabase"
+          cardUrl="https://supabase.io"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="GraphQL"
+          description="A query language for APIs that provides a flexible and efficient approach to data fetching, enabling clients to specify exactly what data they need and nothing more."
+          iconName="vscode-icons:file-type-graphql"
+          cardUrl="https://graphql.org"
+        />
+      </div>
+      <div class="w-full">
+        <TechCard
+          title="Vercel"
+          description="A cloud platform for static sites and serverless functions that provides a global edge network, serverless functions, and other tools for rapid deployment and scaling."
+          iconName="ion:logo-vercel"
+          cardUrl="https://vercel.com"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="AWS"
+          description="A cloud platform that provides a wide range of services for building and deploying applications, including serverless functions, databases, storage, and more."
+          iconName="mdi:aws"
+          cardUrl="https://aws.amazon.com"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="Linux"
+          description="An open-source operating system that provides a free and highly customizable alternative to Windows and macOS, with a wide range of distributions and desktop environments."
+          iconName="logos:linux-tux"
+          cardUrl="https://www.linux.org"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="OpenAI"
+          description="A research laboratory that develops artificial intelligence technology, including the GPT-3 language model, which can generate human-like text in response to prompts."
+          iconName="simple-icons:openai"
+          cardUrl="https://openai.com"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="Hugging Face"
+          description="An open-source natural language processing library that provides a wide range of pretrained models and tools for building conversational AI applications."
+          iconName="noto-v1:hugging-face"
+          cardUrl="https://huggingface.co"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="PyTorch"
+          description="A popular machine learning library that provides a Python interface for tensor computation and deep neural networks, with extensive support for GPU acceleration."
+          iconName="logos:pytorch"
+          cardUrl="https://pytorch.org"
+        />
+      </div>
+
+      <div class="w-full">
+        <TechCard
+          title="FastAPI"
+          description="A modern Python framework for building APIs with a focus on developer productivity and code quality, offering automatic documentation and data validation."
+          iconName="simple-icons:fastapi"
+          cardUrl="https://fastapi.tiangolo.com"
+        />
+      </div>
+    </div>
+  </div>
 </Layout>
