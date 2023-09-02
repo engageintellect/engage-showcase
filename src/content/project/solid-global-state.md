@@ -112,7 +112,8 @@ const Counter = () => {
 
 In this example, we've used the `store` function from Solid.js to subscribe to changes in the global state. The `store` function returns a tuple containing the current state and a `setState` function to update the state. We can then use the `setState` function to update the `counter` property in the global state.
 
-Step 5: Connect Multiple Components to the Global State
+## Step 5: Connect Multiple Components to the Global State
+
 You can connect multiple components to the global state by using the `store` function in each component that needs access to the global state. Since the `store` function automatically handles reactivity, any changes in the global state will trigger re-renders in all connected components.
 
 Here's an example of how to connect multiple components to the global state:
