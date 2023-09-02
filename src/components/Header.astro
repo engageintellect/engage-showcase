@@ -8,20 +8,17 @@ import { SITE_TITLE } from "../consts";
     {SITE_TITLE}
   </a>
 </div>
-<header class="sticky top-0 bg-white z-50">
-  <div class="mx-auto shadow transform -translate-y-px">
-    <nav class="max-w-4xl px-2 mx-auto flex flex-col items-start justify-start">
-      <div class="flex justify-between w-full">
-        <div class="flex items-center gap-5 w-full">
-          <HeaderLink href="/about">About</HeaderLink>
-          <HeaderLink href="/feed">Feed</HeaderLink>
-          <HeaderLink href="/project">Projects</HeaderLink>
-        </div>
+<header class="sticky top-0 px-2 bg-white z-50 bottom-shadow">
+  <nav class="max-w-4xl px-2 mx-auto flex flex-col items-start justify-start">
+    <div class="flex justify-betwe w-full">
+      <div class="flex items-center gap-5 w-full">
+        <HeaderLink href="/about">About</HeaderLink>
+        <HeaderLink href="/feed">Feed</HeaderLink>
+        <HeaderLink href="/project">Projects</HeaderLink>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
-
 <style>
   /* Set initial styles for nav links */
   nav a {
@@ -34,5 +31,9 @@ import { SITE_TITLE } from "../consts";
   nav a.active {
     text-decoration: none;
     border-bottom-color: var(--accent);
+  }
+
+  .bottom-shadow {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); /* Adjust shadow properties as needed */
   }
 </style>
