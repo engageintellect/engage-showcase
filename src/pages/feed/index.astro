@@ -4,8 +4,9 @@ import Header from "../../components/Header.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
+import SearchFilter from "../../components/SearchFilter.svelte"; // Import the Svelte component
 
-let searchInput = ""; // Initialize the search input value
+let search = ""; // Initialize the search input value
 
 const posts = (await getCollection("project")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -20,11 +21,11 @@ const sortedPosts = [...posts].sort((a, b) => {
 let filteredPosts = [...sortedPosts]; // Initialize with all posts
 
 function handleSearch(event) {
-  searchInput = event.target.value.toLowerCase();
+  search = event.target.value.toLowerCase();
 
   // Filter posts based on the search term
   filteredPosts = sortedPosts.filter((post) =>
-    post.data.title.toLowerCase().includes(searchInput)
+    post.data.title.toLowerCase().includes(search)
   );
 }
 ---
@@ -36,58 +37,12 @@ function handleSearch(event) {
   <div>
     <Header />
 
-    <!-- Add a search box to filter results -->
-    <div class="max-w-4xl mx-auto p-2">
-      <div class="flex">
-        <input
-          type="text"
-          id="search"
-          class="border border-gray-300 rounded p-2 flex-grow"
-          placeholder="Search"
-          oninput={(event) => handleSearch(event)}
-        />
-
-        <button
-          type="button"
-          class="bg-gray-200 border border-gray-300 rounded p-2 ml-2"
-        >
-          Search
-        </button>
-      </div>
-
-      <div class="max-w-4xl mx-auto p-2">
-        {
-          filteredPosts.map((post) => (
-            <>
-              <hr />
-              <a href={`/project/${post.slug}/`}>
-                <div class="my-5">
-                  <div class="text-xs font-thin mb-2">
-                    <span class="border p-1 rounded">{post.data.category}</span>
-                  </div>
-                  <div class="flex">
-                    <div class="text-xl font-bold">{post.data.title}</div>
-                  </div>
-                  <div class="text-gray-500">
-                    <FormattedDate date={post.data.pubDate} />
-                  </div>
-
-                  {post.data.tags && (
-                    <div class="mt-2 flex flex-wrap gap-1">
-                      {post.data.tags.map((tag) => (
-                        <div class="bg-gray-200 text-xs rounded px-2 py-1 text-gray-700">
-                          #{tag}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </a>
-              <hr />
-            </>
-          ))
-        }
-      </div>
-    </div>
+    <!-- Use the SearchFilter Svelte component and pass searchInput and handleSearch as props -->
+    <SearchFilter
+      client:load
+      handleSearch={handleSearch}
+      searchInput={search}
+      allItems={filteredPosts}
+    />
   </div>
 </body>
