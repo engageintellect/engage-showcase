@@ -54,22 +54,27 @@ h6 {
 h1 {
   font-size: 1.75em;
   margin-top: 1rem;
+  font-weight: 600;
 }
 h2 {
   font-size: 1.5em;
   margin-top: 1rem;
+  font-weight: 600;
 }
 h3 {
   font-size: 1.25em;
   margin-top: 1rem;
+  font-weight: 600;
 }
 h4 {
   font-size: 1.1em;
   margin-top: 1rem;
+  font-weight: 600;
 }
 h5 {
   font-size: 1.05em;
   margin-top: 1rem;
+  font-weight: 600;
 }
 strong,
 b {
