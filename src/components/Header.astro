@@ -8,16 +8,18 @@ import { SITE_TITLE } from "../consts";
     {SITE_TITLE}
   </a>
 </div>
-<header class="sticky top-0 px-2 bg-white z-50 shadow transform translate-y-px">
-  <nav class="max-w-4xl px-2 mx-auto flex flex-col items-start justify-start">
-    <div class="flex justify-between w-full">
-      <div class="flex items-center gap-5 w-full">
-        <HeaderLink href="/about">About</HeaderLink>
-        <HeaderLink href="/feed">Feed</HeaderLink>
-        <HeaderLink href="/project">Projects</HeaderLink>
+<header class="sticky top-0 bg-white z-50">
+  <div class="mx-auto shadow transform -translate-y-px">
+    <nav class="max-w-4xl px-2 mx-auto flex flex-col items-start justify-start">
+      <div class="flex justify-between w-full">
+        <div class="flex items-center gap-5 w-full">
+          <HeaderLink href="/about">About</HeaderLink>
+          <HeaderLink href="/feed">Feed</HeaderLink>
+          <HeaderLink href="/project">Projects</HeaderLink>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>
 
 <style>
