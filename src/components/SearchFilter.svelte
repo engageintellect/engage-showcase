@@ -19,11 +19,11 @@
   });
 </script>
 
-<div class="flex flex-col max-w-4xl px-2 mx-auto p-2">
+<div class="flex flex-col max-w-4xl mx-auto p-2">
   <input
     type="text"
     id="search"
-    class="border border-gray-300 rounded p-2 flex-grow sticky top-12 focus:outline-none"
+    class="border border-gray-300 rounded p-2 flex-grow sm:sticky sm:top-12 focus:outline-none"
     placeholder="Search"
     on:input={handleSearch}
     bind:value={searchInput}
