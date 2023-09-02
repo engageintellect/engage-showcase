@@ -23,7 +23,7 @@
   <input
     type="text"
     id="search"
-    class="border border-gray-300 rounded p-2 flex-grow sticky sm:top-14 focus:outline-none ring-none focus:border-neutral-900"
+    class="border border-gray-300 rounded p-2 flex-grow sticky sm:top-14 focus:outline-none focus:ring-red-500 ring-none focus:border-neutral-900"
     placeholder="Search"
     on:input={handleSearch}
     bind:value={searchInput}
@@ -35,7 +35,10 @@
     {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
       <div class="my-2">
         <hr />
-        <a href={`/project/${item.slug}/`}>
+        <a
+          href={`/project/${item.slug}/`}
+          class="outline-none focus:outline-neutral-900"
+        >
           <div class="my-5">
             <div class="text-xs font-thin mb-2">
               <span class="border p-1 rounded">{item.data.category}</span>
