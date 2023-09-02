@@ -11,7 +11,7 @@ tags:
   - Server
 ---
 
-## Introduction
+# Introduction
 
 PocketBase is a lightweight, open-source NoSQL database that is designed to run on devices with limited resources, such as a Raspberry Pi. In this tutorial, we will show you how to set up a PocketBase server on a Raspberry Pi using Ubuntu and Nginx, and then we will create a systemd service called "pocketbase" to run PocketBase persistently.
 Prerequisites
@@ -22,7 +22,7 @@ Before you begin, you will need the following:
 - A terminal or SSH connection to the Raspberry Pi
 - A basic understanding of the Linux command line
 
-### Step 1: Install Nginx
+## Step 1: Install Nginx
 
 The first step in setting up PocketBase on your Raspberry Pi is to install Nginx, a popular web server that can be used to serve web pages and applications.
 
@@ -35,7 +35,7 @@ sudo apt install nginx
 
 Once Nginx is installed, you can verify that it is running by opening a web browser and navigating to http://<your_raspberry_pi_ip_address>. You should see the default Nginx welcome page.
 
-### Step 2: Install PocketBase
+## Step 2: Install PocketBase
 
 The next step is to install PocketBase on your Raspberry Pi. To do this, you can follow the instructions in the PocketBase documentation:
 
@@ -105,7 +105,7 @@ sudo nginx -t
 sudo systemctl restart nginx
 ```
 
-### Step 4: Create a systemd service for PocketBase
+## Step 4: Create a systemd service for PocketBase
 
 To run PocketBase persistently, we will create a systemd service called pocketbase. This service will start PocketBase automatically when the Raspberry Pi boots up and restart it if it crashes.
 
@@ -167,6 +167,6 @@ CGroup: /system.slice/pocketbase.service
 Mar 03 23:30:23 raspberrypi systemd[1]: Started PocketBase server.
 ```
 
-## Conclusion
+# Conclusion
 
 Congratulations! You have successfully set up a PocketBase server on a Raspberry Pi using Ubuntu and Nginx, and created a systemd service to run PocketBase persistently. Now you can use PocketBase to store and retrieve data from your Raspberry Pi applications.
