@@ -37,10 +37,7 @@
     {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
       <div class="">
         <hr />
-        <a
-          href={`/project/${item.slug}/`}
-          class="outline-none focus:outline-neutral-900"
-        >
+        <a href={`/project/${item.slug}/`} class="">
           <div class="my-5">
             <div class="text-xs font-thin mb-2">
               <span class="border p-1 rounded">{item.data.category}</span>
