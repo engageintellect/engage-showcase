@@ -45,7 +45,7 @@ const { title, description, pubDate, updatedDate, image, tags, category } =
         </div>
         <div class="prose px-2 sm:px-0">
           <div
-            class="flex flex-col justify-start items-start sm:items-center py-5 sm:border-b sm:border-r sm:border-l border-neutral-900/20 rounded-b-xl sm:mb-10 sm:px-2"
+            class="flex flex-col justify-start items-start sm:items-center py-5 rounded-b-none border-b sm:border-r sm:border-l border-neutral-900/20 sm:rounded-b-xl sm:mb-5 sm:px-2"
           >
             <div class="font-extrathin text-neutral-500">
               <FormattedDate date={pubDate} />
@@ -71,7 +71,7 @@ const { title, description, pubDate, updatedDate, image, tags, category } =
               )
             }
           </div>
-          <hr />
+
           <slot />
         </div>
       </article>
