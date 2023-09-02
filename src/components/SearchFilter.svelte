@@ -20,20 +20,22 @@
 </script>
 
 <div class="flex flex-col max-w-4xl mx-auto p-2">
-  <input
-    type="text"
-    id="search"
-    class="border border-gray-300 rounded p-2 flex-grow sticky sm:top-14 focus:outline-none focus:ring-red-500 ring-none focus:border-neutral-900"
-    placeholder="Search"
-    on:input={handleSearch}
-    bind:value={searchInput}
-    bind:this={inputElement}
-    autofocus
-  />
+  <div class="mb-2 sticky top-14">
+    <input
+      type="text"
+      id="search"
+      class="border border-gray-300 rounded p-2 flex-grow w-full focus:outline-none focus:ring-red-500 ring-none focus:border-neutral-900"
+      placeholder="Search"
+      on:input={handleSearch}
+      bind:value={searchInput}
+      bind:this={inputElement}
+      autofocus
+    />
+  </div>
 
   {#each allItems as item}
     {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
-      <div class="my-2">
+      <div class="">
         <hr />
         <a
           href={`/project/${item.slug}/`}
