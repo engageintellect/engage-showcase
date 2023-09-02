@@ -12,7 +12,7 @@ tags:
 # canonical: https://astrowind.vercel.app/get-started-website-with-astro-tailwind-css
 ---
 
-## Introduction
+# Introduction
 
 Pocketbase is a cloud database service that provides a fast and scalable way to store and manage your application data. SvelteKit is a web application framework that makes it easy to build fast and efficient web applications. In this blog post, we will explore how to use Pocketbase with SvelteKit.
 
@@ -79,6 +79,6 @@ For example, to fetch data from a Pocketbase collection and display it in a Svel
 
 In this example, we import the Pocketbase client from the pocketbase.js file and use the onMount lifecycle function to fetch data from a items collection in the Pocketbase database. We then display the data in a list in the Svelte component.
 
-## Conclusion
+# Conclusion
 
 In this blog post, we have explored how to use Pocketbase with SvelteKit. By following these steps, you can easily set up a connection to your Pocketbase database and use it in your SvelteKit app. Pocketbase provides a fast and scalable way to store and manage your application data, while SvelteKit makes it easy to build fast and efficient web applications.

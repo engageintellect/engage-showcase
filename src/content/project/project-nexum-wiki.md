@@ -14,6 +14,8 @@ tags:
   - Zod
 ---
 
+# Introduction
+
 Project Nexum is an open wiki platform built with Sveltekit, Pocketbase, Zod, TinyMCE, TailwindCSS, and DaisyUI.
 
 [Try the App](https://project-nexum.vercel.app)
@@ -22,13 +24,16 @@ Project Nexum is an open wiki platform built with Sveltekit, Pocketbase, Zod, Ti
 <br/>
 [How it works](https://project-nexum.vercel.app/about)
 
-## Getting Started
+# Getting Started
 
+## Clone Repository
+
+````bash
 ```bash
 git clone https://github.com/engageintellect/project-nexum.git
-```
+````
 
-### Run code
+## Run Code
 
 ```bash
 cd crypto-dashboard && pnpm i && pnpm run dev

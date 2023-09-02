@@ -13,6 +13,8 @@ tags:
   - TailwindCSS
 ---
 
+# Introduction
+
 Twitter-Bio is a tool to generate great twitter bios using OpenAI's ChatGPT API.
 
 [Try the App](https://twitter-bio-tau.vercel.app)
@@ -27,6 +29,7 @@ Twitter-Bio is a tool to generate great twitter bios using OpenAI's ChatGPT API.
 git clone https://github.com/engageintellect/twitter-bio.git
 ```
 
+<br/>
 ```bash
 cd linktreez && pnpm i && pnpm run dev
 ```

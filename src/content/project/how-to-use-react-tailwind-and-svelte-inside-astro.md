@@ -12,11 +12,11 @@ tags:
   - TailwindCSS
 ---
 
-## Introduction
+# Introduction
 
 I’ll have to admit, Astro has been growing on me lately, big time. I don’t know whether it’s the sheer speed, the familiar template layout, or the ever-growing feature set. However, what I do know, is that Astro is capable of doing most of the things I want to do, well.
 
-## Overview
+# Overview
 
 In this article, we will be going over how to do the following:
 
@@ -26,7 +26,7 @@ In this article, we will be going over how to do the following:
 - Render React components on our homepage.
 - Deploy our project to Vercel.
 
-## Getting Started
+# Getting Started
 
 To get started, we will first create a directory for our project to live in. I’m going to call mine ‘astro-demo’.
 
@@ -60,7 +60,7 @@ Lastly, we will have the installer initialize a new Git repository for our proje
 
 ![Untitled](https://miro.medium.com/v2/resize:fit:1400/0*fdtGtRLqDa5BwhYI)
 
-## Starting our Project
+# Starting our Project
 
 Now that our new project is set up, and everything is initialized, we’re ready to get going. I’m going to open this project up in VS Code, and start the dev server:
 
@@ -72,7 +72,7 @@ We’ll navigate to `http://localhost:3000` in our browser to make sure that our
 
 ![Untitled](https://miro.medium.com/v2/resize:fit:1400/0*Q0p0plNS_P0odjct)
 
-### Adding TailwindCSS, React, and Svelte to our Project
+## Adding TailwindCSS, React, and Svelte to our Project
 
 To add Tailwind, React, and Svelte to our project, all we have to do is open a terminal and run the following command:
 
@@ -170,7 +170,7 @@ pnpm astro add vercel
 
 From there, you can simply run the `vercel` command in your cli, or go to the Vercel website to deploy your project through the GUI.
 
-## Conclusion
+# Conclusion
 
 In this article we went over:
 

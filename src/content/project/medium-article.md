@@ -12,15 +12,15 @@ tags:
 canonical: https://astrowind.vercel.app/get-started-website-with-astro-tailwind-css
 ---
 
-## Introduction.
+# Introduction.
 
 In today's age, product leaders need to navigate the delicate task of creating and managing user perception. In the summer of 2021, my team and I set out to build a modern, open, permissionless, and free knowledge platform for internal use at a large, multi-national real estate organization. We essentially deployed a company-wide version of Wikipedia built on open-source technologies that freed us from legacy tools (like SharePoint) and supported user contributions and innovative solutions to meet a wide range of business needs.
 
-## The Wiki Standard.
+# The Wiki Standard.
 
 As you probably already know, Wikipedia is a free, open-source online encyclopedia that anyone can edit, making it a collaborative platform for knowledge sharing. It is constantly updated and improved by its community of volunteers, making it a reliable source of information that gets better over time. We wanted to bring this same approach to our organization, recognizing that knowledge sharing is a social endeavor rather than a technical one.
 
-## What's in a name?
+# What's in a name?
 
 When creating a product, it's essential to have a unique and memorable name. We aimed for a name that was short, sparked curiosity, and had a playful tone. We gathered a group of users and brainstormed different options, eventually settling on a name that was a play on words related to our company mascot, as well as hinting toward the type of culture we were trying to support. An initial search on the internet showed that the name was unlike any existing brand, so we moved forward with our campaign.
 
@@ -33,13 +33,13 @@ It all sounds simple enough. - Just change the name, create a new logo, and 
 The phrase that was our product's name existed in far more places than just the masthead of our app. It was noted hundreds of times directly in the content of the wiki pages in the app itself, in databases (both shared and external), in product portfolio tools, DNS records, source code, etc.
 Simply put, changing the name would call for a re-factor of the entire codebase AND all the associated marketing and communications that went along with the project. We planned out all the work that would be needed to make these changes and estimated them as roughly a 45+ day endeavor, a huge strain on time and resources.
 
-## Community-defined words.
+# Community-defined words.
 
 In case you're not already familiar, Urban Dictionary is a crowdsourced online dictionary of slang words and phrases. It defines various slang terms and colloquial language not found in traditional dictionaries. While Urban Dictionary is not considered a credible source by most academic communities, it may be referenced loosely in popular culture.
 
 Our team considered the Urban Dictionary definition as an existential risk to the successful adoption of our product brand in a company with a deep-rooted, conservative culture. We needed to get ahead of employee rumor mills and negative attention. We evaluated several options from expediting the rebranding efforts to discrediting Urban Dictionary as a reputable source, to ignoring the threat and doing nothing. We realized that the best strategy was to accept that modern search engines and sites like Urban Dictionary are mainstays and therefore we needed to have a strategy to influence external, crowdsourced sites to promote the type of image we wanted for our internal product brand.
 
-## Dealing with adversity.
+# Dealing with adversity.
 
 After planning and prioritizing the 45+ days of backlog items needed to start a potential rebranding, I started to think that there had to be a better way. Not only did I view this rebranding as a monumental waste of time, but I was also proud of what we had built and didn't like the idea of having to make such drastic changes just because some random person on the internet decided to create a NSFW definition for some laughs.
 
@@ -49,7 +49,7 @@ Frustrated, I decided to do a little research into how Urban Dictionary works. I
 
 Immediately, I reached out to my team and sent them a link to the definition, along with an ask to spam the newly realized dislike button. Soon, the dislikes outweighed the likes by a factor of 10x, but nothing changed. When going to any popular search engine and searching for our product's name, the top result would be for the derogatory definition. My paranoia started to tell me that our efforts to snub out this definition were likely making it more popular to search engines, being that we were interacting with the page and searching for it often.
 
-## Changing the narrative.
+# Changing the narrative.
 
 Admittedly, after going through the steps previously mentioned, we had more-or-less given up and accepted that a product re-brand was in our team's immediate future. It had been more than a week since we shifted the like/dislike ratio of the definition and nothing on the site had changed. The definition we despised still ranked on top of everything else.
 
@@ -61,7 +61,7 @@ So, we tried it. First, I created 2 or 3 definitions, then I asked each member o
 
 It ended up taking about a week for all the definitions to be approved and displayed on the client, but it finally worked. Our updated definitions were added to Urban Dictionary and successfully pushed the offending definition down toward the bottom of the results. We finally won. We saved over a month of re-work, and we were able to keep the original name and story that started the product.
 
-## Closing Thoughts.
+# Closing Thoughts.
 
 A strong, unique name and positive brand image can go a long way in building trust and credibility with users. As product leaders, it's our responsibility to ensure that the names and branding of our products align with our company's values and mission and do not offend or alienate any potential users.
 

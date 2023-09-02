@@ -12,11 +12,11 @@ tags:
   - Blog
 ---
 
-## Introduction
+# Introduction
 
 In recent years, Notion has become a popular productivity tool for individuals and teams. Its versatility and flexibility make it an ideal choice for organizing notes, tasks, databases, and more. But did you know that Notion can also serve as a backend for your web applications? In this article, we'll explore the benefits of using Notion as a backend for a Next.js application and demonstrate how to do it using the Notion API and TypeScript.
 
-### Benefits of using Notion as a backend
+## Benefits of using Notion as a backend
 
 1. No database setup required
    One of the main advantages of using Notion as a backend is that you don't have to worry about setting up and maintaining a database. Notion provides a powerful database system that allows you to organize your data in tables, and you can easily add, edit, and delete records. Plus, you can customize the properties of each column to suit your needs, such as adding select options, date pickers, and more.
@@ -30,7 +30,7 @@ Notion provides an API that allows you to access and manipulate your data progra
 Building a Next.js application with Notion as a backend
 Now that we've covered the benefits of using Notion as a backend, let's see how we can use it with Next.js. We'll build a simple blog application that retrieves posts from a Notion database and displays them on the frontend. We'll use TypeScript to ensure type safety and the Notion API to fetch data from Notion.
 
-## Prerequisites
+# Prerequisites
 
 Before we get started, make sure you have the following:
 
@@ -46,7 +46,7 @@ To install the notion-client package, run the following command:
 npm install notion-client
 ```
 
-### Step 1: Create a Notion database
+## Step 1: Create a Notion database
 
 First, let's create a Notion database to store our blog posts. To do this, go to your Notion dashboard and create a new page. In the page properties, click the "Add a database" button, and select "Blog Posts" as the database template.
 
@@ -59,7 +59,7 @@ This will create a database with the following properties:
 
 Feel free to customize the properties to suit your needs.
 
-### Step 2: Fetch data from Notion
+## Step 2: Fetch data from Notion
 
 Next, let's fetch the data from Notion using the Notion API. Create a new file called notion.ts in your Next.js project, and add the following code:
 
@@ -88,7 +88,7 @@ In this code, we're creating a new Client object from the notion-client package,
 We're using the database_id environment variable to specify the ID of the Notion database we created earlier. Then, we're using the databases.query method to retrieve the data from the database.
 The databases.query method returns an array of pages, where each page represents a blog post. We're mapping over the results and extracting the relevant properties (title, date, tags, and content) from each page.
 
-### Step 3: Create a Next.js API route
+## Step 3: Create a Next.js API route
 
 Next, let's create a Next.js API route to serve our blog posts. Create a new file called blog.ts in the pages/api directory, and add the following code:
 
@@ -108,7 +108,7 @@ export default async function handler(
 
 This code defines a new API route that retrieves the blog posts using the getBlogPosts function we defined earlier. We're using the NextApiRequest and NextApiResponse types from Next.js to ensure type safety.
 
-### Step 4: Display the blog posts on the frontend
+## Step 4: Display the blog posts on the frontend
 
 Finally, let's display the blog posts on the frontend. Create a new file called index.tsx in the pages directory, and add the following code:
 
@@ -161,7 +161,7 @@ export default function Home({ posts }: Props) {
 In this code, we're using the GetStaticProps function from Next.js to fetch the blog posts at build time. We're defining a new interface called Post to represent a single blog post, and another interface called Props to represent the props of our Home component.
 In the Home component, we're using the map method to render each blog post as a div element. We're displaying the title, date, tags, and content of each post.
 
-### Step 5: Run the application
+## Step 5: Run the application
 
 That's it! You can now run your application using the following command:
 

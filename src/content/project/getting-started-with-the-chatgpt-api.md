@@ -13,7 +13,7 @@ tags:
 # canonical: https://astrowind.vercel.app/get-started-website-with-astro-tailwind-css
 ---
 
-## Introduction
+# Introduction
 
 As an AI language model, ChatGPT can generate natural language text in response to prompts given to it. The ChatGPT API allows developers to integrate this powerful technology into their own personal Project, whether it be a chatbot, an automated customer support system, or a text-generation tool.
 

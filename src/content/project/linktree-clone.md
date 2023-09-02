@@ -10,20 +10,23 @@ tags:
   - TailwindCSS
 ---
 
+# Introduction
+
 LinkTreez is a linktree clone made using Next.js 13, Tailwind, and Daisy UI.
 
 <a href="https://github.com/engageintellect/linktreez" target="_blank">Go to Repository</a>
 
-## Getting Started
+# Getting Started
 
 **Note:** LinkTreez is using Next 13's expiremental app directory.
 
-### Run code
+## Run code
 
 ```bash
 git clone https://github.com/engageintellect/linktreez.git
 ```
 
+<br>
 ```bash
 cd linktreez && npm i && npm run dev
 ```

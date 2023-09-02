@@ -13,11 +13,11 @@ tags:
 # canonical: https://astrowind.vercel.app/get-started-website-with-astro-tailwind-css
 ---
 
-## Introduction
+# Introduction
 
 Tailwind CSS is a popular utility-first CSS framework that allows you to rapidly build modern, responsive, and customizable user interfaces. Next.js is a popular server-side rendering framework for React applications that provides many features, including server-side rendering, static site generation, and more. Combining Next.js with Tailwind CSS can help you build fast, scalable, and responsive web applications. In this article, we'll walk you through the process of getting started with Tailwind CSS in a Next.js project.
 
-## Step 1: Create a new Next.js project
+# Step 1: Create a new Next.js project
 
 To get started, you need to have Node.js and npm installed on your computer. Once you have them installed, open your terminal and create a new Next.js project by running the following command:
 
@@ -31,7 +31,7 @@ This will create a new Next.js project in a directory named my-tailwind-project.
 cd my-tailwind-project
 ```
 
-## Step 2: Install Tailwind CSS and its dependencies
+# Step 2: Install Tailwind CSS and its dependencies
 
 Next, you need to install Tailwind CSS and its dependencies. To do this, run the following command in your project directory:
 
@@ -41,7 +41,7 @@ npm install tailwindcss postcss autoprefixer
 
 These packages are required to use Tailwind CSS in a Next.js project. tailwindcss is the core package, postcss is a tool for transforming CSS with JavaScript, and autoprefixer is a plugin for postcss that automatically adds vendor prefixes to your CSS.
 
-## Step 3: Configure Tailwind CSS
+# Step 3: Configure Tailwind CSS
 
 Next, you need to configure Tailwind CSS by creating a tailwind.config.js file in your project directory. This file will contain your custom configuration for Tailwind CSS. You can generate a default configuration file by running the following command:
 
@@ -61,7 +61,7 @@ module.exports = {
 
 This file tells postcss to use Tailwind CSS and autoprefixer.
 
-## Step 4: Import Tailwind CSS
+# Step 4: Import Tailwind CSS
 
 To import Tailwind CSS into your Next.js project, create a new file named styles/globals.css with the following code:
 
@@ -87,7 +87,7 @@ export default MyApp;
 
 This imports the global styles into your Next.js project.
 
-## Step 5: Test Tailwind CSS
+# Step 5: Test Tailwind CSS
 
 Now that you have configured Tailwind CSS in your Next.js project, it's time to test it out. Open your terminal and start your Next.js development server by running the following command:
 
@@ -117,6 +117,6 @@ This code will display a blue background with white text on the homepage.
 
 Save the changes and refresh your browser. You should see the new homepage with the blue background and white text. Congratulations, you have successfully integrated Tailwind CSS into your Next.js project.
 
-## Conclusion
+# Conclusion
 
 In this article, we walked you through the process of getting started with Tailwind CSS in a Next.js project. We covered the steps of creating a new Next.js project, installing Tailwind CSS and its dependencies, configuring Tailwind CSS, importing Tailwind CSS, and testing it out. Tailwind CSS is a powerful tool that can help you build modern and responsive user interfaces quickly and easily. When combined with Next.js, you can create fast and scalable web applications that look great on all devices.
