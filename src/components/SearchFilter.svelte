@@ -36,7 +36,7 @@
   {#each allItems as item}
     {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
       <div class="">
-        <hr />
+        <!-- <hr /> -->
         <a href={`/project/${item.slug}/`} class="">
           <div class="my-5">
             <div class="text-xs font-thin mb-2">
