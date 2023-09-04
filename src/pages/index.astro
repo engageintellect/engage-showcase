@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon";
 ---
 
 <html lang="en" class="">
@@ -29,21 +30,29 @@ import { Image } from "astro:assets";
 
         <div class="flex flex-col">
           <div class="text-3xl font-semibold">@engageintellect</div>
-          <div class="text-xl">
+          <div class="text-xl my-2">
             <a href="/project">Web Developer</a>
           </div>
-          <div class="flex gap-2">
+          <div class="flex gap-2 my-2">
             <a
               href="/project"
-              class="bg-neutral-900 py-2 px-4 text-white uppercase rounded"
-              >Projects</a
+              class="bg-neutral-900 py-2 px-4 text-white rounded"
             >
+              <div class="flex items-center gap-1">
+                <Icon name="ph:code-fill" width="20" />
+                <div>Projects</div>
+              </div>
+            </a>
 
             <a
               href="mailto:jc9361@gmail.com"
-              class="bg-teal-500 py-2 px-4 text-white uppercase rounded"
-              >Contact</a
+              class="bg-teal-500 py-2 px-4 text-white rounded"
             >
+              <div class="flex items-center gap-1">
+                <Icon name="ion:mail" width="20" />
+                <div>Contact</div>
+              </div>
+            </a>
           </div>
         </div>
       </div>

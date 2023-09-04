@@ -35,17 +35,17 @@ const filteredPosts = sortedPosts.filter(
             filteredPosts.map((post) => (
               <div class="group shadow border border-neutral-900/20 rounded-xl sm:hover:shadow-lg transition-all duration-200 overflow-hidden">
                 <a href={`/project/${post.slug}/`}>
-                  <div class="h-64 relative overflow-hidden">
+                  <div class="h-52 relative overflow-hidden">
                     <img
-                      class="h-64 group-hover:saturate-150 rounded-t-xl object-cover w-full transition-all duration-300 group-hover:scale-105"
+                      class="h-52 group-hover:saturate-150 rounded-t-xl object-cover w-full transition-all duration-300 group-hover:scale-105"
                       src={post.data.image}
                       alt=""
                     />
 
                     {post.data.tags && (
-                      <div class="sm:opacity-0 sm:group-hover:opacity-100 absolute bottom-0 bg-black/70 transition-all duration-700 p-2 w-full">
-                        <div class="text-sm text-white pb-2">
-                          Technologies Used
+                      <div class="sm:opacity-0 sm:group-hover:opacity-100 absolute bottom-0 bg-neutral-900/30 transition-all duration-700 p-2 w-full">
+                        <div class="text-xs text-white font-semibold pb-2 drop-shadow-md">
+                          Technologies Used:
                         </div>
                         <div class="flex flex-wrap gap-1">
                           {post.data.tags.map((tag) => (
