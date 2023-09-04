@@ -20,7 +20,7 @@ const sortedPosts = [...posts].sort((a, b) => {
 
 let filteredPosts = [...sortedPosts]; // Initialize with all posts
 
-function handleSearch(event) {
+function handleSearch(event: any) {
   search = event.target.value.toLowerCase();
 
   // Filter posts based on the search term
