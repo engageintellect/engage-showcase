@@ -12,12 +12,14 @@ import { Icon } from "astro-icon";
   <nav class="max-w-4xl px-2 mx-auto flex flex-col items-start justify-start">
     <div class="flex justify-betwe w-full">
       <div class="flex items-center gap-5 w-full">
-        <div class="flex gap-1 items-center my-3 bg-red-500">
-          <div>
-            <Icon name="icon-park:left" width="16" class="" />
-          </div>
-          <div>
-            <a href="javascript:history.back()">{`‹ Back`}</a>
+        <div class="py-3">
+          <div class="flex gap-1 items-center">
+            <div>
+              <Icon name="icon-park:left" width="16" />
+            </div>
+            <div>
+              <a href="javascript:history.back()">{`Back`}</a>
+            </div>
           </div>
         </div>
       </div>
