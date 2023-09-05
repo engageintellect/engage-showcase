@@ -8,7 +8,6 @@
     interval: 300,
     scrambleDuration: 1000,
     scrambleSlowdown: true,
-    delay: 30000,
   }}
 >
   {inputString}
