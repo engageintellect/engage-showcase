@@ -40,7 +40,7 @@ Features:
 - ✅ RSS Feed support
 - ✅ Markdown & MDX support
 
-## 🚀 Project Structure
+## Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 

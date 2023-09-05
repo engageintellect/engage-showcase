@@ -28,7 +28,7 @@ const { title, description, pubDate, updatedDate, image, tags, category } =
           {
             image && (
               <Image
-                class="h-64 object-cover sm:border sm:rounded-t-xl shadow sm:shadow-none sm:border-neutral-900/20"
+                class="h-64 object-cover sm:border sm:rounded-t shadow sm:shadow-none sm:border-neutral-900/20"
                 width={1020}
                 height={510}
                 src={image}
@@ -47,7 +47,7 @@ const { title, description, pubDate, updatedDate, image, tags, category } =
         </div>
         <div class="prose px-2 sm:px-0">
           <div
-            class="flex flex-col justify-start items-start sm:items-center py-5 rounded-b-none border-b sm:border-r sm:border-l border-neutral-900/20 sm:rounded-b-xl sm:mb-5 sm:px-2"
+            class="flex flex-col justify-start items-start sm:items-center py-5 rounded-b-none border-b sm:border-r sm:border-l border-neutral-900/20 sm:rounded-b sm:mb-5 sm:px-2"
           >
             <div class="font-extrathin text-neutral-500">
               <FormattedDate date={pubDate} />

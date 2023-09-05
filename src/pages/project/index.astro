@@ -33,19 +33,26 @@ const filteredPosts = sortedPosts.filter(
         <div class="grid sm:grid-cols-2 gap-2 sm:gap-5">
           {
             filteredPosts.map((post) => (
-              <div class="group shadow border border-neutral-900/20 rounded-xl sm:hover:shadow-lg transition-all duration-200 overflow-hidden">
+              <div class="group shadow border border-neutral-900/20 rounded sm:hover:shadow-lg transition-all duration-200 overflow-hidden">
                 <a href={`/project/${post.slug}/`}>
+                  <div class="p-2 border-b border-neutral-900/20">
+                    <div class="text-lg font-semibold">{post.data.title}</div>
+                    <div class="text-neutral-500 text-sm font-thin">
+                      <FormattedDate date={post.data.pubDate} />
+                    </div>
+                  </div>
+
                   <div class="h-52 relative overflow-hidden">
                     <img
-                      class="h-52 group-hover:saturate-150 rounded-t-xl object-cover w-full transition-all duration-300 group-hover:scale-105"
+                      class="h-52 group-hover:saturate-150 rounded-b object-cover w-full transition-all duration-300 group-hover:scale-105"
                       src={post.data.image}
                       alt=""
                     />
 
                     {post.data.tags && (
-                      <div class="sm:opacity-0 sm:group-hover:opacity-100 absolute bottom-0 bg-neutral-900/30 transition-all duration-700 p-2 w-full">
-                        <div class="text-xs text-white font-semibold pb-2 drop-shadow-md">
-                          Technologies Used:
+                      <div class="sm:opacity-0 sm:group-hover:opacity-100 absolute bottom-0 bg-neutral-900/70 transition-all duration-700 p-2 w-full">
+                        <div class="text-[0.8rem] text-white font-semibold mb-2 drop-shadow-lg">
+                          Technologies:
                         </div>
                         <div class="flex flex-wrap gap-1">
                           {post.data.tags.map((tag) => (
@@ -56,13 +63,6 @@ const filteredPosts = sortedPosts.filter(
                         </div>
                       </div>
                     )}
-                  </div>
-
-                  <div class="p-2">
-                    <div class="text-xl">{post.data.title}</div>
-                    <div class="text-neutral-500 font-extrathin">
-                      <FormattedDate date={post.data.pubDate} />
-                    </div>
                   </div>
                 </a>
               </div>
