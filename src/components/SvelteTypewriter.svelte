@@ -4,6 +4,7 @@
 </script>
 
 <p
+  class="text-xl"
   use:scramble={{
     interval: 300,
     scrambleDuration: 1000,
