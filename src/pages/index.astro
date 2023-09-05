@@ -32,9 +32,7 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
         <div class="flex flex-col justify-center md:items-start items-center">
           <div class="text-3xl font-semibold">@engageintellect</div>
           <div class="text-xl my-2">
-            <a href="/project">
-              <SvelteTypewriter client:load strings={["Web Developer"]} />
-            </a>
+            <SvelteTypewriter client:load strings={["Web Developer"]} />
           </div>
           <div class="flex gap-2 my-2">
             <a
