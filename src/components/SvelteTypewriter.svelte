@@ -5,8 +5,7 @@
 </script>
 
 <div
-  class="text-xl text-neutral-900/70 flex items-center bg-red-500 h-[1rem] w-full"
-  data-static
+  class="text-xl text-neutral-900/70 flex items-center bg-red-500 h-[0rem] w-full"
   use:scramble={{
     interval: 300,
     scrambleDuration: 1000,
