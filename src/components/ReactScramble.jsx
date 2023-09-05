@@ -1,6 +1,7 @@
 import Scramble from "react-scramble";
+import React from "react";
 
-export default function ReactScramble() {
+function ReactScramble() {
   return (
     <div class="bg-red-300">
       <Scramble
@@ -21,3 +22,5 @@ export default function ReactScramble() {
     </div>
   );
 }
+
+export default ReactScramble;
