@@ -1,7 +1,7 @@
 <script>
   import { scramble } from "svelte-typewriter";
   import { concurrent } from "svelte-typewriter";
-  export let strings = [];
+  export let inputString = "";
 </script>
 
 <div
@@ -13,5 +13,5 @@
     delay: 30000,
   }}
 >
-  {strings}
+  {inputString}
 </div>
