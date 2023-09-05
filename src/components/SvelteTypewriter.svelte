@@ -5,4 +5,4 @@
   export let strings = [];
 </script>
 
-<p use:scramble={{ interval: 300, scrambleDuration: 1000 }}>{strings}</p>
+<div use:scramble={{ interval: 300, scrambleDuration: 1000 }}>{strings}</div>
