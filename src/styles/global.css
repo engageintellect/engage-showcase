@@ -23,7 +23,7 @@
   font-display: swap;
 } */
 body {
-  /* font-family: "Atkinson", sans-serif; */
+  font-family: "Atkinson", sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -87,7 +87,7 @@ a:hover {
 	color: var(--accent);
 } */
 p {
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
 }
 .prose p {
   margin-bottom: 2em;
