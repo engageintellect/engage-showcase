@@ -4,7 +4,7 @@
 </script>
 
 <div
-  class="my-0"
+  class="my-2"
   use:scramble={{
     interval: 300,
     scrambleDuration: 1000,
