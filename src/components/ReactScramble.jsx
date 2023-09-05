@@ -1,4 +1,3 @@
-import React from "react";
 import Scramble from "react-scramble";
 
 export default function ReactScramble() {
