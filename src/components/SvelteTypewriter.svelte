@@ -1,11 +1,11 @@
 <script>
-  import { scramble } from "svelte-typewriter";
   import { concurrent } from "svelte-typewriter";
+  import { loop } from "svelte-typewriter";
+  import { scramble } from "svelte-typewriter";
   export let inputString = "";
 </script>
 
 <div
-  class="text-xl text-neutral-900/70 flex items-center bg-red-500 w-full my-2 flex-nowrap"
   use:scramble={{
     interval: 300,
     scrambleDuration: 1000,
