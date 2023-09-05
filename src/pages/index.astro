@@ -7,7 +7,6 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
 import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
 import Typewriter from "svelte-typewriter";
-import ReactScramble from "../components/ReactScramble";
 ---
 
 <html lang="en" class="">
@@ -35,8 +34,6 @@ import ReactScramble from "../components/ReactScramble";
           class="flex flex-col justify-center md:items-start items-center gap-2"
         >
           <div class="text-3xl font-semibold">@engageintellect</div>
-
-          <ReactScramble client:load />
 
           <SvelteTypewriter client:load inputString={"Web Developer"} />
 
