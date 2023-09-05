@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class="text-xl text-neutral-900/70"
+  class="text-xl text-neutral-900/70 flex itesm-center"
   use:concurrent={{
     interval: 300,
     scrambleDuration: 1000,
