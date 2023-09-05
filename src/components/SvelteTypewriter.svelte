@@ -1,11 +1,12 @@
 <script>
   import { scramble } from "svelte-typewriter";
+  import { concurrent } from "svelte-typewriter";
   export let strings = [];
 </script>
 
 <div
-  class="my-2 text-xl text-neutral-900/70"
-  use:scramble={{
+  class="text-xl text-neutral-900/70"
+  use:concurrent={{
     interval: 300,
     scrambleDuration: 1000,
     scrambleSlowdown: true,
