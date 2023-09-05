@@ -3,13 +3,14 @@
   export let inputString = "";
 </script>
 
-<p
-  class="text-xl"
+<div
+  class="text-xl text-neutral-900/50"
   use:scramble={{
     interval: 300,
     scrambleDuration: 1000,
     scrambleSlowdown: true,
+    delay: 1000,
   }}
 >
   {inputString}
-</p>
+</div>
