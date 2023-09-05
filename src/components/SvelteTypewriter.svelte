@@ -1,11 +1,9 @@
 <script>
-  import { concurrent } from "svelte-typewriter";
-  import { loop } from "svelte-typewriter";
   import { scramble } from "svelte-typewriter";
   export let inputString = "";
 </script>
 
-<div
+<p
   use:scramble={{
     interval: 300,
     scrambleDuration: 1000,
@@ -14,4 +12,4 @@
   }}
 >
   {inputString}
-</div>
+</p>
