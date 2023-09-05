@@ -4,7 +4,7 @@
 </script>
 
 <div
-  class="my-2"
+  class="my-2 text-xl text-neutral-900/70"
   use:scramble={{
     interval: 300,
     scrambleDuration: 1000,
