@@ -6,6 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
 import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
+import Hello from "../components/Hello.svelte";
 ---
 
 <html lang="en" class="">
@@ -35,6 +36,7 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
           <div class="text-3xl font-semibold">@engageintellect</div>
 
           <SvelteTypewriter client:only inputString="Web Developer " />
+          <Hello />
 
           <div class="flex gap-2">
             <a
