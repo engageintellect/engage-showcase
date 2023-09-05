@@ -1,6 +1,6 @@
 ---
 pubDate: 2023-02-01T00:00:00Z
-title: SvelteKit Landing Page with Daisy UI
+title: SvelteKit Landing Page with Daisy UI and some other
 description: Using SvelteKit to build a landing page with Daisy UI.
 excerpt: Using SvelteKit to build a landing page with user-selected themes with Daisy UI.
 category: Project

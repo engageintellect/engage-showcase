@@ -5,20 +5,40 @@ import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
+import SearchFilter from "../../components/SearchFilter.svelte"; // Import the Svelte component
+import SearchCards from "../../components/SearchCards.svelte"; // Import the Svelte component
 
+// Initialize the search term
+let search = "";
+
+// Get all posts and sort them by date
 const posts = (await getCollection("project")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 
+// Sort posts by date
 const sortedPosts = [...posts].sort((a, b) => {
   const dateA: Date = new Date(a.data.pubDate);
   const dateB: Date = new Date(b.data.pubDate);
-  return dateB.getTime() - dateA.getTime(); // Sort in reverse chronological order
+  return dateB.getTime() - dateA.getTime();
 });
 
-const filteredPosts = sortedPosts.filter(
+// Initialize the filtered posts
+let filteredPosts = [...sortedPosts];
+
+// Filter posts based on the category
+filteredPosts = filteredPosts.filter(
   (post) => post.data.category === "Project"
 );
+
+// Handle the search term
+function handleSearch(event: any) {
+  search = event.target.value.toLowerCase();
+  // Filter posts based on the search term
+  filteredPosts = sortedPosts.filter((post) =>
+    post.data.title.toLowerCase().includes(search)
+  );
+}
 ---
 
 <!doctype html>
@@ -28,49 +48,24 @@ const filteredPosts = sortedPosts.filter(
   </head>
   <body>
     <Header />
+    <!-- <SearchFilter
+      client:load
+      handleSearch={handleSearch}
+      searchInput={search}
+      allItems={filteredPosts}
+    /> -->
+
     <main class="px-2 max-w-4xl mx-auto py-2">
       <section>
-        <div class="grid sm:grid-cols-2 gap-2 sm:gap-5">
-          {
-            filteredPosts.map((post) => (
-              <div class="group shadow border border-neutral-900/20 rounded sm:hover:shadow-lg transition-all duration-200 overflow-hidden">
-                <a href={`/project/${post.slug}/`}>
-                  <div class="p-2 border-b border-neutral-900/20">
-                    <div class="text-lg font-semibold">{post.data.title}</div>
-                    <div class="text-neutral-500 text-sm font-thin">
-                      <FormattedDate date={post.data.pubDate} />
-                    </div>
-                  </div>
-
-                  <div class="h-52 relative overflow-hidden">
-                    <img
-                      class="h-52 group-hover:saturate-150 rounded-b object-cover w-full transition-all duration-300 group-hover:scale-105"
-                      src={post.data.image}
-                      alt=""
-                    />
-
-                    {post.data.tags && (
-                      <div class="sm:opacity-0 sm:group-hover:opacity-100 absolute bottom-0 bg-neutral-900/70 transition-all duration-700 p-2 w-full">
-                        <div class="text-[0.8rem] text-white font-semibold mb-2 drop-shadow-lg">
-                          Technologies:
-                        </div>
-                        <div class="flex flex-wrap gap-1">
-                          {post.data.tags.map((tag) => (
-                            <div class="bg-neutral-900 text-white font-semibold text-[0.8rem] px-2 py-1 rounded">
-                              {tag}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </a>
-              </div>
-            ))
-          }
-        </div>
+        <SearchCards
+          client:load
+          handleSearch={handleSearch}
+          searchInput={search}
+          allItems={filteredPosts}
+        />
       </section>
     </main>
+
     <Footer />
   </body>
 </html>
