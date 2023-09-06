@@ -186,6 +186,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"building-a-nextjs-application-with-notion-as-a-backend.md": {
+	id: "building-a-nextjs-application-with-notion-as-a-backend.md";
+  slug: "building-a-nextjs-application-with-notion-as-a-backend";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "building-sites-with-astro.md": {
 	id: "building-sites-with-astro.md";
   slug: "building-sites-with-astro";
@@ -207,9 +214,9 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
-"fast-api-for-python-development.md": {
-	id: "fast-api-for-python-development.md";
-  slug: "fast-api-for-python-development";
+"fastapi-for-python-development.md": {
+	id: "fastapi-for-python-development.md";
+  slug: "fastapi-for-python-development";
   body: string;
   collection: "project";
   data: InferEntrySchema<"project">
@@ -235,9 +242,16 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
-"linktree-clone.md": {
-	id: "linktree-clone.md";
-  slug: "linktree-clone";
+"linktreez.md": {
+	id: "linktreez.md";
+  slug: "linktreez";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"managing-global-state-with-solidjs-and-typescript.md": {
+	id: "managing-global-state-with-solidjs-and-typescript.md";
+  slug: "managing-global-state-with-solidjs-and-typescript";
   body: string;
   collection: "project";
   data: InferEntrySchema<"project">
@@ -245,13 +259,6 @@ declare module 'astro:content' {
 "medium-article.md": {
 	id: "medium-article.md";
   slug: "medium-article";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"nextjs-notion-guide.md": {
-	id: "nextjs-notion-guide.md";
-  slug: "nextjs-notion-guide";
   body: string;
   collection: "project";
   data: InferEntrySchema<"project">
@@ -270,16 +277,9 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
-"solid-global-state.md": {
-	id: "solid-global-state.md";
-  slug: "solid-global-state";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"sveltekit-landing-daisy.md": {
-	id: "sveltekit-landing-daisy.md";
-  slug: "sveltekit-landing-daisy";
+"sveltekit-landing-page-with-daisyui.md": {
+	id: "sveltekit-landing-page-with-daisyui.md";
+  slug: "sveltekit-landing-page-with-daisyui";
   body: string;
   collection: "project";
   data: InferEntrySchema<"project">
