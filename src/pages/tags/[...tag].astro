@@ -1,0 +1,85 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import ProjectPost from "../../layouts/ProjectPost.astro";
+import Header from "../../components/Header.astro";
+
+type Props = CollectionEntry<"project">;
+const tagParam = Astro.params.tag;
+const allPosts = await getCollection("project");
+let pageObjects: { title: string; slug: string; tags: string[] }[] = [];
+
+import { type CollectionEntry, getCollection } from "astro:content";
+
+type TagRoute = {
+  params: {
+    tag: string;
+  };
+};
+
+export async function getStaticPaths(): Promise<TagRoute[]> {
+  const posts = await getCollection<CollectionEntry<"project">>("project");
+
+  const tagSet = new Set<string>();
+
+  // Extract and process tags
+  posts.forEach((post) => {
+    if (Array.isArray(post.data.tags)) {
+      post.data.tags.forEach((tag) => {
+        const lowercaseTag = tag.toLowerCase();
+        const urlTag = lowercaseTag.replace(/\s+/g, "-");
+        tagSet.add(urlTag);
+      });
+    }
+  });
+
+  // Convert tagSet to an array of tag objects
+  const tagRoutes: TagRoute[] = Array.from(tagSet).map((tag) => ({
+    params: { tag },
+  }));
+
+  return tagRoutes;
+}
+
+const pageTitle = `Posts with Tag: ${tagParam}`;
+
+console.log("Tagged Pages:");
+
+interface Post {
+  title: string;
+  slug: string;
+  tags: string[];
+}
+
+for (let i = 0; i < allPosts.length; i++) {
+  const tags = allPosts[i].data.tags;
+
+  // Check if tags is an array and process each tag
+  if (Array.isArray(tags)) {
+    const processedTags = tags.map((tag) =>
+      tag.toLowerCase().replace(/\s+/g, "-")
+    );
+
+    // Check if any of the processed tags match tagParam
+    if (processedTags.includes(tagParam.toLowerCase().replace(/\s+/g, "-"))) {
+      let postTitle = String(allPosts[i].data.title);
+      let postSlug = String(postTitle).toLocaleLowerCase().replace(/\s+/g, "-");
+
+      const newPost: Post = {
+        title: postTitle,
+        slug: postSlug,
+        tags: processedTags,
+      };
+
+      pageObjects.push(newPost);
+    }
+  }
+}
+
+// console.log("my post", pageObjects);
+---
+
+<div>
+  <Header />
+  <h1>{pageTitle}</h1>
+  <div>{JSON.stringify(pageObjects)}</div>
+</div>
