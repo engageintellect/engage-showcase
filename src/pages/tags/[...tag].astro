@@ -1,15 +1,20 @@
 ---
-// TODO: This whole file could be WAY cleaner. WIP.
 import { type CollectionEntry, getCollection } from "astro:content";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import Header from "../../components/Header.astro";
-import TaggedFilter from "../../components/TaggedFilter.svelte";
 import BaseHead from "../../components/BaseHead.astro";
+import { formatTag } from "../../utils";
+import SearchFilter from "../../components/SearchFilter.svelte";
 
-type Props = CollectionEntry<"project">;
-const tagParam = Astro.params.tag;
-const allPosts = await getCollection("project");
-let pageObjects: { title: string; slug: string; tags: string[] }[] = [];
+interface Post {
+  slug: string;
+  data: {
+    title: string;
+    category: string;
+    pubDate: string;
+    tags: string[];
+  };
+}
 
 type TagRoute = {
   params: {
@@ -17,12 +22,8 @@ type TagRoute = {
   };
 };
 
-function formatSlug(slug: string) {
-  return slug.replace(/\s+/g, "-").replace(/[^\w-]/g, "");
-}
-
 export async function getStaticPaths(): Promise<TagRoute[]> {
-  const posts = await getCollection<CollectionEntry<"project">>("project");
+  const posts = await getCollection("project");
 
   const tagSet = new Set<string>();
 
@@ -31,7 +32,7 @@ export async function getStaticPaths(): Promise<TagRoute[]> {
     if (Array.isArray(post.data.tags)) {
       post.data.tags.forEach((tag) => {
         const lowercaseTag = tag.toLowerCase();
-        const urlTag = lowercaseTag.replace(/\s+/g, "-").replace(/[^\w-]/g, "");
+        const urlTag = formatTag(lowercaseTag);
         tagSet.add(urlTag);
       });
     }
@@ -45,40 +46,34 @@ export async function getStaticPaths(): Promise<TagRoute[]> {
   return tagRoutes;
 }
 
-interface Post {
-  title: string;
-  slug: string;
-  category: string;
-  pubDate: string;
-  tags: string[];
-}
+const tagParam: string = Astro.params.tag || ""; // Assuming tagParam is a string
+const allPosts: CollectionEntry<"project">[] = await getCollection("project");
 
-for (let i = 0; i < allPosts.length; i++) {
-  const tags = allPosts[i].data.tags;
+const pageObjects: Post[] = [];
+
+for (const post of allPosts) {
+  const tags = post.data.tags;
 
   // Check if tags is an array and process each tag
   if (Array.isArray(tags)) {
-    const processedTags = tags.map((tag) =>
-      tag
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .replace(/[^\w-]/g, "")
-    );
+    const processedTags = tags.map((tag) => formatTag(tag));
 
     // Check if any of the processed tags match tagParam
-    if (processedTags.includes(tagParam.toLowerCase().replace(/\s+/g, "-"))) {
-      let postTitle = String(allPosts[i].data.title);
-      let postSlug = postTitle
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .replace(/[^\w-]/g, "");
+    if (processedTags.includes(formatTag(tagParam))) {
+      const postTitle = String(post.data.title);
+      const postSlug = formatTag(postTitle);
+      const postCategory = String(post.data.category);
+      const postPubDate = String(post.data.pubDate);
 
+      // Create a newPost object conforming to the Post type
       const newPost: Post = {
-        title: postTitle,
         slug: postSlug,
-        category: allPosts[i].data.category,
-        pubDate: allPosts[i].data.pubDate,
-        tags: tags,
+        data: {
+          title: postTitle,
+          category: postCategory,
+          pubDate: postPubDate,
+          tags: tags,
+        },
       };
 
       pageObjects.push(newPost);
@@ -86,17 +81,19 @@ for (let i = 0; i < allPosts.length; i++) {
   }
 }
 
-let search = "";
-let filteredPosts = pageObjects;
+let search: string = "";
+let filteredPosts: Post[] = pageObjects;
 
-function handleSearch(event: any) {
-  search = event.target.value.toLowerCase();
+function handleSearch(event: Event) {
+  const inputElement = event.target as HTMLInputElement;
+  search = inputElement.value.toLowerCase();
 
   // Filter posts based on the search term
   filteredPosts = pageObjects.filter((post) =>
-    post.title.toLowerCase().includes(search)
+    post.data.title.toLowerCase().includes(search)
   );
 }
+
 // console.log("my post", pageObjects);
 ---
 
@@ -115,7 +112,7 @@ function handleSearch(event: any) {
     </div>
 
     <div transition:animate="slide">
-      <TaggedFilter
+      <SearchFilter
         client:load
         handleSearch={handleSearch}
         searchInput={search}
