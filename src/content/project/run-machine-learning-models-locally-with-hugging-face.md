@@ -4,7 +4,7 @@ title: Run Machine Learning Models Locally with Hugging Face
 description: A Twitter bio generator built with Next.js 13, OpenAI's ChatGPT API, and TailwindCSS.
 excerpt: Artificial Intelligence and Machine Learning are transforming industries, and one of the key technologies driving this revolution is the transformer architecture.
 category: Article
-image: "https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.png"
+image: "https://huggingface.co/front/assets/homepage/hugs-mobile.svg"
 tags:
   - Python
   - AI

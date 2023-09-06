@@ -4,7 +4,7 @@ title: Crypto Dashbord
 description: Easily determine the best time to buy or sell your crypto.
 excerpt: A simple crypto dashbord built with Sveltekit, CoinGecko API, Blockchain.com API, Fear & Greed index, TailwindCSS, and DaisyUI.
 category: Project
-image: /images/chart.png
+image: "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202309/pandasecurity-crypto-gaming-sixteen_nine.jpg?size=948:533"
 tags:
   - Sveltekit
   - Crypto

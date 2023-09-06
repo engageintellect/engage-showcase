@@ -23,7 +23,7 @@
     <input
       type="text"
       id="search"
-      class="border border-gray-300 rounded p-2 flex-grow w-full focus:outline-none focus:ring-red-500 ring-none focus:border-neutral-900"
+      class="border border-neutral-900 rounded p-2 flex-grow w-full focus:outline-none ring-none focus:border-neutral-900"
       placeholder="Search"
       on:input={handleSearch}
       bind:value={searchInput}
