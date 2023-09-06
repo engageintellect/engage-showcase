@@ -5,7 +5,7 @@
   let allItems: any = [];
   let inputElement: HTMLInputElement;
   import FormatDate from "./FormatDate.svelte";
-
+  import { formatTag } from "../utils";
   export { searchInput, handleSearch, allItems };
 
   handleSearch = (e: any) => {
@@ -17,13 +17,6 @@
   onMount(() => {
     inputElement.focus();
   });
-
-  function formatTag(tag: string) {
-    return tag
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]/g, "");
-  }
 </script>
 
 <div class="flex flex-col max-w-4xl mx-auto p-2">
@@ -62,7 +55,7 @@
               {#each item.data.tags as tag}
                 <a
                   href={`/tags/${formatTag(tag)}/`}
-                  class="bg-gray-200 text-xs rounded px-2 py-1 text-gray-700"
+                  class="bg-gray-200 md:hover:bg-gray-300 text-xs rounded px-2 py-1 text-gray-700"
                 >
                   #{tag}
                 </a>

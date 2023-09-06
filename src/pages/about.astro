@@ -2,206 +2,230 @@
 import Layout from "../layouts/ProjectPost.astro";
 import { Icon } from "astro-icon";
 import TechCard from "../components/TechCard.astro";
+import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
+import { scramble, concurrent } from "svelte-typewriter";
+import HeaderBack from "../components/HeaderBack.astro";
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { Image } from "astro:assets";
 ---
 
-<Layout
-  title="About Me"
-  description="Lorem ipsum dolor sit amet"
-  pubDate={new Date("August 08 2021")}
-  image="/images/laptop-ai-code.png"
->
-  <div class="my-10">
-    <div class="">
-      <div class="text-3xl font-bold">I'm Josh.</div>
+<head>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
 
-      <div>Fullstack Web Developer from Orange County, California.🍊🌊</div>
-
-      <div class="flex gap-2 my-5">
-        <a
-          href="https://github.com/engageintellect"
-          class="bg-neutral-900 rounded py-2 px-4 text-white"
-        >
-          <div class="flex gap-2 items-center">
-            <div>
-              <Icon name="simple-icons:github" width="20" />
-            </div>
-            <div>Github</div>
+<div transition:animate="none">
+  <HeaderBack />
+  <div class="max-w-4xl mx-auto px-2">
+    <div class="my-10">
+      <div class="" transition:animate="fade">
+        <div class="flex flex-col md:flex-row md:items-center gap-5">
+          <div>
+            <Image
+              src="https://github.com/engageintellect.png"
+              alt="Josh"
+              class="rounded-full w-32 md:w-48"
+              width="400"
+              height="400"
+            />
           </div>
-        </a>
 
-        <a
-          href="mailto:jc9361@gmail.com"
-          class="bg-teal-500 rounded py-2 px-4 text-white"
-        >
-          <div class="flex gap-2 items-center">
+          <div class="max-w-xs">
+            <div class="text-3xl font-bold">I'm Josh.</div>
+
             <div>
-              <Icon name="ion:mail" width="20" />
+              Fullstack Web Developer from Orange County, California.🍊🌊
             </div>
-            <div>Contact</div>
+
+            <div class="flex gap-2 my-5">
+              <a
+                href="https://github.com/engageintellect"
+                class="bg-neutral-900 rounded py-2 px-4 text-white"
+              >
+                <div class="flex gap-2 items-center">
+                  <div>
+                    <Icon name="simple-icons:github" width="20" />
+                  </div>
+                  <div>Github</div>
+                </div>
+              </a>
+
+              <a
+                href="mailto:jc9361@gmail.com"
+                class="bg-teal-500 rounded py-2 px-4 text-white"
+              >
+                <div class="flex gap-2 items-center">
+                  <div>
+                    <Icon name="ion:mail" width="20" />
+                  </div>
+                  <div>Contact</div>
+                </div>
+              </a>
+            </div>
           </div>
-        </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-10" transition:animate="fade">
+      <div class="">
+        <div class="text-3xl font-bold">Technologies</div>
+        <div class="lg font-thin">The stuff I use the most.</div>
+      </div>
+
+      <!-- <div class="flex gap-2 overflow-scroll"> -->
+      <div class="sm:grid flex overflow-auto sm:grid-cols-3 gap-2 my-5">
+        <div class="w-full">
+          <TechCard
+            title="Next.js"
+            description="A versatile React framework for building performant server-side rendered and statically generated web applications with seamless integration with popular web technologies."
+            iconName="cib:next-js"
+            cardUrl="https://nextjs.org"
+          />
+        </div>
+        <div class="w-full">
+          <TechCard
+            title="Sveltekit"
+            description="A lightweight and fast web framework for building server-rendered and static sites with Svelte, offering intuitive development and easy deployment."
+            iconName="vscode-icons:file-type-svelte"
+            cardUrl="https://kit.svelte.dev"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="React"
+            description="A popular JavaScript library for building user interfaces with reusable components and a virtual DOM, backed by a vast ecosystem of tools and resources."
+            iconName="logos:react"
+            cardUrl="https://reactjs.org"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="Astro"
+            description="A modern static site generator that combines performance, flexibility, and simplicity, enabling developers to build dynamic sites with modern web technologies."
+            iconName="vscode-icons:file-type-astro"
+            cardUrl="https://astro.build"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="Typescript"
+            description="A superset of JavaScript that provides static type checking, enhanced IDE support, and other features for safer and more maintainable code, ideal for large-scale projects."
+            iconName="vscode-icons:file-type-typescript-official"
+            cardUrl="https://www.typescriptlang.org"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="Python"
+            description="A versatile and popular high-level programming language that emphasizes readability, simplicity, and productivity, with extensive libraries and frameworks for web development."
+            iconName="vscode-icons:file-type-python"
+            cardUrl="https://www.python.org"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="Tailwind"
+            description="A utility-first CSS framework for rapidly building custom user interfaces with a modern design system, offering a wide range of pre-built components and utilities."
+            iconName="vscode-icons:file-type-tailwind"
+            cardUrl="https://tailwindcss.com"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="PlanetScale"
+            description="A cloud-native database platform that enables developers to build applications with the scalability and reliability of a distributed database, without the operational overhead."
+            iconName="vscode-icons:file-type-mysql"
+            cardUrl="https://planetscale.com"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="Supabase"
+            description="An open-source alternative to Firebase that provides a suite of tools for building applications with serverless functions, authentication, and a PostgreSQL database."
+            iconName="simple-icons:supabase"
+            cardUrl="https://supabase.io"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="GraphQL"
+            description="A query language for APIs that provides a flexible and efficient approach to data fetching, enabling clients to specify exactly what data they need and nothing more."
+            iconName="vscode-icons:file-type-graphql"
+            cardUrl="https://graphql.org"
+          />
+        </div>
+        <div class="w-full">
+          <TechCard
+            title="Vercel"
+            description="A cloud platform for static sites and serverless functions that provides a global edge network, serverless functions, and other tools for rapid deployment and scaling."
+            iconName="ion:logo-vercel"
+            cardUrl="https://vercel.com"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="AWS"
+            description="A cloud platform that provides a wide range of services for building and deploying applications, including serverless functions, databases, storage, and more."
+            iconName="mdi:aws"
+            cardUrl="https://aws.amazon.com"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="Linux"
+            description="An open-source operating system that provides a free and highly customizable alternative to Windows and macOS, with a wide range of distributions and desktop environments."
+            iconName="logos:linux-tux"
+            cardUrl="https://www.linux.org"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="OpenAI"
+            description="A research laboratory that develops artificial intelligence technology, including the GPT-3 language model, which can generate human-like text in response to prompts."
+            iconName="simple-icons:openai"
+            cardUrl="https://openai.com"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="Hugging Face"
+            description="An open-source natural language processing library that provides a wide range of pretrained models and tools for building conversational AI applications."
+            iconName="noto-v1:hugging-face"
+            cardUrl="https://huggingface.co"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="PyTorch"
+            description="A popular machine learning library that provides a Python interface for tensor computation and deep neural networks, with extensive support for GPU acceleration."
+            iconName="logos:pytorch"
+            cardUrl="https://pytorch.org"
+          />
+        </div>
+
+        <div class="w-full">
+          <TechCard
+            title="FastAPI"
+            description="A modern Python framework for building APIs with a focus on developer productivity and code quality, offering automatic documentation and data validation."
+            iconName="simple-icons:fastapi"
+            cardUrl="https://fastapi.tiangolo.com"
+          />
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="my-10">
-    <div class="">
-      <div class="text-3xl font-bold">Technologies</div>
-      <div class="lg font-thin">The stuff I use the most.</div>
-    </div>
-
-    <!-- <div class="flex gap-2 overflow-scroll"> -->
-    <div class="sm:grid flex overflow-auto sm:grid-cols-3 gap-2 my-5">
-      <div class="w-full">
-        <TechCard
-          title="Next.js"
-          description="A versatile React framework for building performant server-side rendered and statically generated web applications with seamless integration with popular web technologies."
-          iconName="cib:next-js"
-          cardUrl="https://nextjs.org"
-        />
-      </div>
-      <div class="w-full">
-        <TechCard
-          title="Sveltekit"
-          description="A lightweight and fast web framework for building server-rendered and static sites with Svelte, offering intuitive development and easy deployment."
-          iconName="vscode-icons:file-type-svelte"
-          cardUrl="https://kit.svelte.dev"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="React"
-          description="A popular JavaScript library for building user interfaces with reusable components and a virtual DOM, backed by a vast ecosystem of tools and resources."
-          iconName="logos:react"
-          cardUrl="https://reactjs.org"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="Astro"
-          description="A modern static site generator that combines performance, flexibility, and simplicity, enabling developers to build dynamic sites with modern web technologies."
-          iconName="vscode-icons:file-type-astro"
-          cardUrl="https://astro.build"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="Typescript"
-          description="A superset of JavaScript that provides static type checking, enhanced IDE support, and other features for safer and more maintainable code, ideal for large-scale projects."
-          iconName="vscode-icons:file-type-typescript-official"
-          cardUrl="https://www.typescriptlang.org"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="Python"
-          description="A versatile and popular high-level programming language that emphasizes readability, simplicity, and productivity, with extensive libraries and frameworks for web development."
-          iconName="vscode-icons:file-type-python"
-          cardUrl="https://www.python.org"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="Tailwind"
-          description="A utility-first CSS framework for rapidly building custom user interfaces with a modern design system, offering a wide range of pre-built components and utilities."
-          iconName="vscode-icons:file-type-tailwind"
-          cardUrl="https://tailwindcss.com"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="PlanetScale"
-          description="A cloud-native database platform that enables developers to build applications with the scalability and reliability of a distributed database, without the operational overhead."
-          iconName="vscode-icons:file-type-mysql"
-          cardUrl="https://planetscale.com"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="Supabase"
-          description="An open-source alternative to Firebase that provides a suite of tools for building applications with serverless functions, authentication, and a PostgreSQL database."
-          iconName="simple-icons:supabase"
-          cardUrl="https://supabase.io"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="GraphQL"
-          description="A query language for APIs that provides a flexible and efficient approach to data fetching, enabling clients to specify exactly what data they need and nothing more."
-          iconName="vscode-icons:file-type-graphql"
-          cardUrl="https://graphql.org"
-        />
-      </div>
-      <div class="w-full">
-        <TechCard
-          title="Vercel"
-          description="A cloud platform for static sites and serverless functions that provides a global edge network, serverless functions, and other tools for rapid deployment and scaling."
-          iconName="ion:logo-vercel"
-          cardUrl="https://vercel.com"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="AWS"
-          description="A cloud platform that provides a wide range of services for building and deploying applications, including serverless functions, databases, storage, and more."
-          iconName="mdi:aws"
-          cardUrl="https://aws.amazon.com"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="Linux"
-          description="An open-source operating system that provides a free and highly customizable alternative to Windows and macOS, with a wide range of distributions and desktop environments."
-          iconName="logos:linux-tux"
-          cardUrl="https://www.linux.org"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="OpenAI"
-          description="A research laboratory that develops artificial intelligence technology, including the GPT-3 language model, which can generate human-like text in response to prompts."
-          iconName="simple-icons:openai"
-          cardUrl="https://openai.com"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="Hugging Face"
-          description="An open-source natural language processing library that provides a wide range of pretrained models and tools for building conversational AI applications."
-          iconName="noto-v1:hugging-face"
-          cardUrl="https://huggingface.co"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="PyTorch"
-          description="A popular machine learning library that provides a Python interface for tensor computation and deep neural networks, with extensive support for GPU acceleration."
-          iconName="logos:pytorch"
-          cardUrl="https://pytorch.org"
-        />
-      </div>
-
-      <div class="w-full">
-        <TechCard
-          title="FastAPI"
-          description="A modern Python framework for building APIs with a focus on developer productivity and code quality, offering automatic documentation and data validation."
-          iconName="simple-icons:fastapi"
-          cardUrl="https://fastapi.tiangolo.com"
-        />
-      </div>
-    </div>
-  </div>
-</Layout>
+</div>

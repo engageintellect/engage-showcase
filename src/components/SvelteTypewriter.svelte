@@ -6,7 +6,7 @@
 <div
   class="text-xl text-neutral-900/50"
   use:scramble={{
-    interval: 300,
+    typeDuration: 300,
     scrambleDuration: 1000,
     scrambleSlowdown: true,
     delay: 1000,

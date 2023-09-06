@@ -6,24 +6,12 @@ import HeaderBack from "../components/HeaderBack.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import { Image } from "astro:assets";
+import { formatTag } from "../utils";
 
 type Props = CollectionEntry<"project">["data"];
 
 const { title, description, pubDate, updatedDate, image, tags, category } =
   Astro.props;
-
-
-  function formatTag(tag: string) {
-    return tag
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^\w-]/g, "");
-  }
-
-
-
-
-
 ---
 
 <html lang="en" transition:name="root" transition:animate="none">
@@ -41,7 +29,7 @@ const { title, description, pubDate, updatedDate, image, tags, category } =
           {
             image && (
               <Image
-              loading="eager"
+                loading="eager"
                 class="h-52 sm:h-64 object-cover sm:border sm:rounded-t shadow sm:shadow-none sm:border-neutral-900/20"
                 width={1020}
                 height={510}
@@ -81,7 +69,7 @@ const { title, description, pubDate, updatedDate, image, tags, category } =
                   {tags.map((tag) => (
                     <a
                       href={`/tags/${formatTag(tag)}/`}
-                      class="bg-neutral-900 text-white text-xs font-semibold text-[0.8rem] px-2 py-1 rounded"
+                      class="bg-gray-200 md:hover:bg-gray-300  text-xs text-[0.8rem] px-2 py-1 rounded"
                     >
                       #{tag}
                     </a>
