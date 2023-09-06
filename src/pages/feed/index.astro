@@ -6,6 +6,8 @@ import { getCollection } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import SearchFilter from "../../components/SearchFilter.svelte"; // Import the Svelte component
 
+import { fade } from "astro:transitions";
+
 let search = ""; // Initialize the search input value
 
 const posts = (await getCollection("project")).sort(
@@ -31,6 +33,7 @@ function handleSearch(event: any) {
   );
 }
 ---
+<html lang="en" transition:name="root" transition:animate="slide">
 
 <head>
   <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -40,11 +43,17 @@ function handleSearch(event: any) {
     <Header />
 
     <!-- Use the SearchFilter Svelte component and pass searchInput and handleSearch as props -->
-    <SearchFilter
-      client:load
-      handleSearch={handleSearch}
-      searchInput={search}
-      allItems={filteredPosts}
-    />
+    <div>
+      <div>
+        <SearchFilter
+          client:load
+          handleSearch={handleSearch}
+          searchInput={search}
+          allItems={filteredPosts}
+        />
+      </div>
+    </div>
   </div>
 </body>
+
+</html>

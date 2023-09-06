@@ -1,0 +1,52 @@
+Date : 2023-09-05 23:53:16
+Directory : /home/r3dux/Repositories/engage-showcase
+Total : 19 files,  982 codes, 0 comments, 144 blanks, all 1126 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Astro    |         14 |        742 |          0 |        114 |        856 |
+| Svelte   |          5 |        240 |          0 |         30 |        270 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                            | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                               |         19 |        982 |          0 |        144 |      1,126 |
+| src                                                                             |         19 |        982 |          0 |        144 |      1,126 |
+| src/components                                                                  |         12 |        444 |          0 |         63 |        507 |
+| src/layouts                                                                     |          1 |         79 |          0 |          8 |         87 |
+| src/pages                                                                       |          6 |        459 |          0 |         73 |        532 |
+| src/pages (Files)                                                               |          2 |        245 |          0 |         29 |        274 |
+| src/pages/feed                                                                  |          1 |         41 |          0 |         10 |         51 |
+| src/pages/project                                                               |          2 |         77 |          0 |         14 |         91 |
+| src/pages/tags                                                                  |          1 |         96 |          0 |         20 |        116 |
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                        | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /home/r3dux/Repositories/engage-showcase/src/components/BaseHead.astro          | Astro    |         54 |          0 |         10 |         64 |
+| /home/r3dux/Repositories/engage-showcase/src/components/Footer.astro            | Astro    |         15 |          0 |          3 |         18 |
+| /home/r3dux/Repositories/engage-showcase/src/components/FormatDate.svelte       | Svelte   |         13 |          0 |          2 |         15 |
+| /home/r3dux/Repositories/engage-showcase/src/components/FormattedDate.astro     | Astro    |         15 |          0 |          3 |         18 |
+| /home/r3dux/Repositories/engage-showcase/src/components/Header.astro            | Astro    |         36 |          0 |          4 |         40 |
+| /home/r3dux/Repositories/engage-showcase/src/components/HeaderBack.astro        | Astro    |         41 |          0 |          4 |         45 |
+| /home/r3dux/Repositories/engage-showcase/src/components/HeaderLink.astro        | Astro    |         20 |          0 |          5 |         25 |
+| /home/r3dux/Repositories/engage-showcase/src/components/SearchCards.svelte      | Svelte   |         74 |          0 |          7 |         81 |
+| /home/r3dux/Repositories/engage-showcase/src/components/SearchFilter.svelte     | Svelte   |         69 |          0 |          9 |         78 |
+| /home/r3dux/Repositories/engage-showcase/src/components/SvelteTypewriter.svelte | Svelte   |         15 |          0 |          2 |         17 |
+| /home/r3dux/Repositories/engage-showcase/src/components/TaggedFilter.svelte     | Svelte   |         69 |          0 |         10 |         79 |
+| /home/r3dux/Repositories/engage-showcase/src/components/TechCard.astro          | Astro    |         23 |          0 |          4 |         27 |
+| /home/r3dux/Repositories/engage-showcase/src/layouts/ProjectPost.astro          | Astro    |         79 |          0 |          8 |         87 |
+| /home/r3dux/Repositories/engage-showcase/src/pages/about.astro                  | Astro    |        187 |          0 |         21 |        208 |
+| /home/r3dux/Repositories/engage-showcase/src/pages/feed/index.astro             | Astro    |         41 |          0 |         10 |         51 |
+| /home/r3dux/Repositories/engage-showcase/src/pages/index.astro                  | Astro    |         58 |          0 |          8 |         66 |
+| /home/r3dux/Repositories/engage-showcase/src/pages/project/[...slug].astro      | Astro    |         17 |          0 |          4 |         21 |
+| /home/r3dux/Repositories/engage-showcase/src/pages/project/index.astro          | Astro    |         60 |          0 |         10 |         70 |
+| /home/r3dux/Repositories/engage-showcase/src/pages/tags/[...tag].astro          | Astro    |         96 |          0 |         20 |        116 |
+| Total                                                                           |          |        982 |          0 |        144 |      1,126 |
++---------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
