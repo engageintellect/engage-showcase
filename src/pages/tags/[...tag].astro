@@ -97,7 +97,7 @@ function handleSearch(event: any) {
 // console.log("my post", pageObjects);
 ---
 
-<html lang="en" transition:name="root" transition:animate="slide">
+<html lang="en" transition:name="root" transition:animate="none">
 <head>
   <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 </head>
@@ -109,7 +109,7 @@ function handleSearch(event: any) {
     <div class="font-bold">#{tagParam}</div>
   </div>
 
-  <div>
+  <div transition:animate="slide">
     <TaggedFilter
       client:load
       handleSearch={handleSearch}
