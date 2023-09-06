@@ -1,6 +1,6 @@
 ---
+// TODO: This whole file could be WAY cleaner. WIP.
 import { type CollectionEntry, getCollection } from "astro:content";
-import ProjectPost from "../../layouts/ProjectPost.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import Header from "../../components/Header.astro";
 import TaggedFilter from "../../components/TaggedFilter.svelte";
@@ -10,8 +10,6 @@ type Props = CollectionEntry<"project">;
 const tagParam = Astro.params.tag;
 const allPosts = await getCollection("project");
 let pageObjects: { title: string; slug: string; tags: string[] }[] = [];
-
-import { type CollectionEntry, getCollection } from "astro:content";
 
 type TagRoute = {
   params: {
@@ -42,8 +40,6 @@ export async function getStaticPaths(): Promise<TagRoute[]> {
 
   return tagRoutes;
 }
-
-console.log("Tagged Pages:");
 
 interface Post {
   title: string;

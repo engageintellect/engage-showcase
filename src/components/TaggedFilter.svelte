@@ -1,4 +1,5 @@
-<!-- SearchFilter.svelte -->
+<!-- TODO: Replace with SearchFilter.svelte. -->
+
 <script lang="ts">
   let searchInput = "";
   let handleSearch: any;
