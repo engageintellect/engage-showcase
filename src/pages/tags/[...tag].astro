@@ -1,7 +1,10 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import ProjectPost from "../../layouts/ProjectPost.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import Header from "../../components/Header.astro";
+import TaggedFilter from "../../components/TaggedFilter.svelte";
+import BaseHead from "../../components/BaseHead.astro";
 
 type Props = CollectionEntry<"project">;
 const tagParam = Astro.params.tag;
@@ -40,13 +43,13 @@ export async function getStaticPaths(): Promise<TagRoute[]> {
   return tagRoutes;
 }
 
-const pageTitle = `Posts with Tag: ${tagParam}`;
-
 console.log("Tagged Pages:");
 
 interface Post {
   title: string;
   slug: string;
+  category: string;
+  pubDate: string;
   tags: string[];
 }
 
@@ -62,12 +65,17 @@ for (let i = 0; i < allPosts.length; i++) {
     // Check if any of the processed tags match tagParam
     if (processedTags.includes(tagParam.toLowerCase().replace(/\s+/g, "-"))) {
       let postTitle = String(allPosts[i].data.title);
-      let postSlug = String(postTitle).toLocaleLowerCase().replace(/\s+/g, "-");
+      let postSlug = postTitle
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/\./g, "");
 
       const newPost: Post = {
         title: postTitle,
         slug: postSlug,
-        tags: processedTags,
+        category: allPosts[i].data.category,
+        pubDate: allPosts[i].data.pubDate,
+        tags: tags,
       };
 
       pageObjects.push(newPost);
@@ -75,11 +83,37 @@ for (let i = 0; i < allPosts.length; i++) {
   }
 }
 
+let search = "";
+let filteredPosts = pageObjects;
+
+function handleSearch(event: any) {
+  search = event.target.value.toLowerCase();
+
+  // Filter posts based on the search term
+  filteredPosts = pageObjects.filter((post) =>
+    post.title.toLowerCase().includes(search)
+  );
+}
 // console.log("my post", pageObjects);
 ---
 
+<head>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
 <div>
   <Header />
-  <h1>{pageTitle}</h1>
-  <div>{JSON.stringify(pageObjects)}</div>
+
+  <div class="flex justify-center text-xl md:text-2xl gap-2 mt-5">
+    <div>Tag:</div>
+    <div class="font-bold">#{tagParam}</div>
+  </div>
+
+  <div>
+    <TaggedFilter
+      client:load
+      handleSearch={handleSearch}
+      searchInput={search}
+      allItems={filteredPosts}
+    />
+  </div>
 </div>

@@ -34,25 +34,25 @@
   </div>
 
   {#each allItems as item}
-    {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
+    {#if item.title.toLowerCase().includes(searchInput.toLowerCase())}
       <div class="">
         <!-- <hr /> -->
         <div class="my-5">
           <a href={`/project/${item.slug}/`} class="">
             <div class="text-xs font-thin mb-2">
-              <span class="border p-1 rounded">{item.data.category}</span>
+              <span class="border p-1 rounded">{item.category}</span>
             </div>
             <div class="flex">
-              <div class="text-xl font-bold">{item.data.title}</div>
+              <div class="text-xl font-bold">{item.title}</div>
             </div>
             <div class="text-gray-500 text-sm">
-              <FormatDate date={item.data.pubDate} />
+              <FormatDate date={item.pubDate} />
             </div>
           </a>
 
-          {#if item.data.tags}
+          {#if item.tags}
             <div class="mt-2 flex flex-wrap gap-1">
-              {#each item.data.tags as tag}
+              {#each item.tags as tag}
                 <a
                   href={`/tags/${tag.toLowerCase().replace(/\s+/g, "-")}/`}
                   class="bg-gray-200 text-xs rounded px-2 py-1 text-gray-700"
