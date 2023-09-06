@@ -40,7 +40,7 @@ function handleSearch(event: any) {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" transition:animate="none">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
@@ -53,7 +53,7 @@ function handleSearch(event: any) {
       allItems={filteredPosts}
     /> -->
 
-    <main class="px-2 max-w-4xl mx-auto py-2">
+    <main class="px-2 max-w-4xl mx-auto py-2" transition:animate="slide">
       <section>
         <SearchCards
           client:load
