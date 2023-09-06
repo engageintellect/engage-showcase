@@ -5,6 +5,7 @@ import TechCard from "../components/TechCard.astro";
 import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
 import { scramble, concurrent } from "svelte-typewriter";
 import HeaderBack from "../components/HeaderBack.astro";
+import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Image } from "astro:assets";
@@ -73,7 +74,6 @@ import { Image } from "astro:assets";
         <div class="lg font-thin">The stuff I use the most.</div>
       </div>
 
-      <!-- <div class="flex gap-2 overflow-scroll"> -->
       <div class="sm:grid flex overflow-auto sm:grid-cols-3 gap-2 my-5">
         <div class="w-full">
           <TechCard
@@ -122,7 +122,7 @@ import { Image } from "astro:assets";
         <div class="w-full">
           <TechCard
             title="Python"
-            description="A versatile and popular high-level programming language that emphasizes readability, simplicity, and productivity, with extensive libraries and frameworks for web development."
+            description="A versatile and popular high-level programming language that emphasizes readability, simplicity, and productivity, with extensive libraries and frameworks for web development and machine learning."
             iconName="vscode-icons:file-type-python"
             cardUrl="https://www.python.org"
           />
@@ -228,4 +228,5 @@ import { Image } from "astro:assets";
       </div>
     </div>
   </div>
+  <Footer />
 </div>

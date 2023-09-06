@@ -34,7 +34,11 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
         >
           <div class="text-3xl font-semibold">@engageintellect</div>
 
-          <SvelteTypewriter client:load inputString="Web Developer" />
+          <SvelteTypewriter
+            client:load
+            typeStyle="scramble"
+            inputString="Web Developer"
+          />
 
           <div class="flex gap-2 my-5">
             <a
