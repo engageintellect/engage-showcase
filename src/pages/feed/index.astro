@@ -33,7 +33,7 @@ function handleSearch(event: any) {
   );
 }
 ---
-<html lang="en" transition:name="root" transition:animate="slide">
+<html lang="en" transition:name="root" transition:animate="none">
 
 <head>
   <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -44,7 +44,7 @@ function handleSearch(event: any) {
 
     <!-- Use the SearchFilter Svelte component and pass searchInput and handleSearch as props -->
     <div>
-      <div>
+      <div transition:animate="slide">
         <SearchFilter
           client:load
           handleSearch={handleSearch}
