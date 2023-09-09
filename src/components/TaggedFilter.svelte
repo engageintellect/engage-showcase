@@ -18,6 +18,13 @@
   onMount(() => {
     inputElement.focus();
   });
+
+  function formatTag(tag: string) {
+    return tag
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]/g, "");
+  }
 </script>
 
 <div class="flex flex-col max-w-4xl mx-auto p-2">
@@ -39,7 +46,7 @@
       <div class="">
         <!-- <hr /> -->
         <div class="my-5">
-          <a href={`/project/${item.slug}/`} class="">
+          <a href={`/project/${formatTag(item.slug)}/`} class="">
             <div class="text-xs font-thin mb-2">
               <span class="border p-1 rounded">{item.category}</span>
             </div>
@@ -55,7 +62,7 @@
             <div class="mt-2 flex flex-wrap gap-1">
               {#each item.tags as tag}
                 <a
-                  href={`/tags/${tag.toLowerCase().replace(/\s+/g, "-")}/`}
+                  href={`/tags/${formatTag(tag)}/`}
                   class="bg-gray-200 text-xs rounded px-2 py-1 text-gray-700"
                 >
                   #{tag}

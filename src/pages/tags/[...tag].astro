@@ -17,6 +17,10 @@ type TagRoute = {
   };
 };
 
+function formatSlug(slug: string) {
+  return slug.replace(/\s+/g, "-").replace(/[^\w-]/g, "");
+}
+
 export async function getStaticPaths(): Promise<TagRoute[]> {
   const posts = await getCollection<CollectionEntry<"project">>("project");
 
@@ -27,7 +31,7 @@ export async function getStaticPaths(): Promise<TagRoute[]> {
     if (Array.isArray(post.data.tags)) {
       post.data.tags.forEach((tag) => {
         const lowercaseTag = tag.toLowerCase();
-        const urlTag = lowercaseTag.replace(/\s+/g, "-");
+        const urlTag = lowercaseTag.replace(/\s+/g, "-").replace(/[^\w-]/g, "");
         tagSet.add(urlTag);
       });
     }
@@ -55,7 +59,7 @@ for (let i = 0; i < allPosts.length; i++) {
   // Check if tags is an array and process each tag
   if (Array.isArray(tags)) {
     const processedTags = tags.map((tag) =>
-      tag.toLowerCase().replace(/\s+/g, "-")
+      tag.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]/g, "")
     );
 
     // Check if any of the processed tags match tagParam
@@ -64,7 +68,7 @@ for (let i = 0; i < allPosts.length; i++) {
       let postSlug = postTitle
         .toLowerCase()
         .replace(/\s+/g, "-")
-        .replace(/\./g, "");
+      .replace(/[^\w-]/g, "");
 
       const newPost: Post = {
         title: postTitle,
@@ -93,18 +97,19 @@ function handleSearch(event: any) {
 // console.log("my post", pageObjects);
 ---
 
+<html lang="en" transition:name="root" transition:animate="none">
 <head>
   <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 </head>
 <div>
   <Header />
 
-  <div class="flex justify-center text-xl md:text-2xl gap-2 mt-5">
+  <div class="flex justify-center text-xl md:text-2xl gap-2 mt-5 max-w-4xl mx-auto">
     <div>Tag:</div>
     <div class="font-bold">#{tagParam}</div>
   </div>
 
-  <div>
+  <div transition:animate="slide">
     <TaggedFilter
       client:load
       handleSearch={handleSearch}
@@ -113,3 +118,5 @@ function handleSearch(event: any) {
     />
   </div>
 </div>
+</html>
+```
