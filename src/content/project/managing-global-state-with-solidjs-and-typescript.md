@@ -1,8 +1,8 @@
 ---
 pubDate: 2023-04-13T00:00:00Z
 title: Managing Global State with Solid.js and TypeScript
-description: Easily determine the best time to buy or sell your crypto.
-excerpt: A simple crypto dashbord built with Sveltekit, CoinGecko API, Blockchain.com API, Fear & Greed index, TailwindCSS, and DaisyUI.
+description: How to implement global state management using Solid.js and TypeScript.
+excerpt: A step-by-step guide to implementing global state management with Solid.js and TypeScript.
 category: Article
 image: /images/solid.png
 tags:

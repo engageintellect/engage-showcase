@@ -42,10 +42,13 @@
             <div class="text-xs font-thin mb-2">
               <span class="border p-1 rounded">{item.data.category}</span>
             </div>
-            <div class="flex">
+            <div class="flex flex-col my-2">
               <div class="text-xl font-bold">{item.data.title}</div>
+              <div class="text-sm font-thin text-neutral-500">
+                {item.data.description}
+              </div>
             </div>
-            <div class="text-gray-500 text-sm">
+            <div class="text-gray-500 text-xs">
               <FormatDate date={item.data.pubDate} />
             </div>
           </a>

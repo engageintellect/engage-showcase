@@ -9,12 +9,11 @@ tags:
   - Sveltekit
   - Crypto
   - Bitcoin
-  - API
   - TailwindCSS
+  - API
   - DaisyUI
+  - Vercel
 ---
-
-# Introduction
 
 Crypto-Dashboard is a simple crypto dashbord built with Sveltekit, CoinGecko API, Blockchain.com API, Fear & Greed index, and TailwindCSS.
 

@@ -10,7 +10,6 @@ tags:
   - tRPC
   - API
   - TypeScript
-# canonical: https://astrowind.vercel.app/how-to-customize-astrowind-to-your-brand
 ---
 
 # Introduction

@@ -11,6 +11,7 @@ tags:
   - ChatGPT
   - API
   - TailwindCSS
+  - Vercel
 ---
 
 # Introduction

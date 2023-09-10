@@ -66,10 +66,18 @@
                   <FormatDate date={item.data.pubDate} />
                 </div>
               </div>
-              <div
-                class="font-semibold overflow-hidden whitespace-nowrap overflow-ellipsis"
-              >
-                {item.data.title}
+              <div class="font-semibold text-ellipsis overflow-hidden">
+                <div class="flex flex-col">
+                  <div>
+                    {item.data.title}
+                  </div>
+
+                  <div
+                    class="text-sm font-thin text-neutral-500 text-ellipsis overflow-hidden"
+                  >
+                    {item.data.description}
+                  </div>
+                </div>
               </div>
             </div>
           </a>

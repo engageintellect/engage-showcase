@@ -10,6 +10,7 @@ interface Post {
   slug: string;
   data: {
     title: string;
+    description: string;
     category: string;
     pubDate: string;
     tags: string[];
@@ -63,6 +64,7 @@ for (const post of allPosts) {
       const postTitle = String(post.data.title);
       const postSlug = formatTag(postTitle);
       const postCategory = String(post.data.category);
+      const postDescription = String(post.data.description);
       const postPubDate = String(post.data.pubDate);
 
       // Create a newPost object conforming to the Post type
@@ -70,6 +72,7 @@ for (const post of allPosts) {
         slug: postSlug,
         data: {
           title: postTitle,
+          description: postDescription,
           category: postCategory,
           pubDate: postPubDate,
           tags: tags,
@@ -120,6 +123,4 @@ function handleSearch(event: Event) {
       />
     </div>
   </div>
-
-   ```
 </html>

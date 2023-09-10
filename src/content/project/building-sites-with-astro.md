@@ -8,6 +8,7 @@ image: "https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/07/social.jpg?f
 tags:
   - Astro
   - SSG
+  - Vercel
 ---
 
 ## Introduction
