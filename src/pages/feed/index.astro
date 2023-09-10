@@ -3,10 +3,7 @@ import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
 import SearchFilter from "../../components/SearchFilter.svelte"; // Import the Svelte component
-
-import { fade } from "astro:transitions";
 
 let search = ""; // Initialize the search input value
 
@@ -33,27 +30,26 @@ function handleSearch(event: any) {
   );
 }
 ---
+
 <html lang="en" transition:name="root" transition:animate="none">
-
-<head>
-  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-</head>
-<body>
-  <div>
-    <Header />
-
-    <!-- Use the SearchFilter Svelte component and pass searchInput and handleSearch as props -->
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
     <div>
-      <div transition:animate="slide">
-        <SearchFilter
-          client:load
-          handleSearch={handleSearch}
-          searchInput={search}
-          allItems={filteredPosts}
-        />
+      <Header />
+
+      <!-- Use the SearchFilter Svelte component and pass searchInput and handleSearch as props -->
+      <div>
+        <div transition:animate="slide">
+          <SearchFilter
+            client:load
+            handleSearch={handleSearch}
+            searchInput={search}
+            allItems={filteredPosts}
+          />
+        </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
