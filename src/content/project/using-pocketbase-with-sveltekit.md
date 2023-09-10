@@ -9,7 +9,7 @@ tags:
   - SvelteKit
   - Pocketbase
   - Database
-# canonical: https://astrowind.vercel.app/get-started-website-with-astro-tailwind-css
+  - Nginx
 ---
 
 # Introduction

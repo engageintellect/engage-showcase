@@ -9,7 +9,7 @@ tags:
   - Medium
   - Product Management
   - Social Engineering
-canonical: https://astrowind.vercel.app/get-started-website-with-astro-tailwind-css
+  - Software Development
 ---
 
 # Introduction.

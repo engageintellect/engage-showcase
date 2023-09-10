@@ -9,6 +9,7 @@ tags:
   - Python
   - AI
   - Machine Learning
+  - PyTorch
   - Hugging Face
 ---
 

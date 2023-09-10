@@ -277,6 +277,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"svelteflix.md": {
+	id: "svelteflix.md";
+  slug: "svelteflix";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "sveltekit-landing-page-with-daisyui.md": {
 	id: "sveltekit-landing-page-with-daisyui.md";
   slug: "sveltekit-landing-page-with-daisyui";

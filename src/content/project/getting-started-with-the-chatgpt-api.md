@@ -10,7 +10,6 @@ tags:
   - AI
   - Python
   - API
-# canonical: https://astrowind.vercel.app/get-started-website-with-astro-tailwind-css
 ---
 
 # Introduction

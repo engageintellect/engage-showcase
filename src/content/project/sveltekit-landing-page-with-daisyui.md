@@ -8,6 +8,8 @@ image: "https://kit.svelte.dev/images/twitter-thumbnail.jpg"
 tags:
   - SvelteKit
   - TailwindCSS
+  - DaisyUI
+  - Vercel
 ---
 
 # Introduction

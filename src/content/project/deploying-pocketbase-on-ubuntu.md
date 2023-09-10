@@ -9,6 +9,8 @@ tags:
   - Pocketbase
   - Ubuntu
   - Server
+  - Linux
+  - Nginx
 ---
 
 # Introduction

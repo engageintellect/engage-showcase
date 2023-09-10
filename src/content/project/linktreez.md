@@ -8,6 +8,7 @@ image: "https://api.blog.production.linktr.ee/wp-content/uploads/2022/06/Avatar-
 tags:
   - Next.js
   - TailwindCSS
+  - Vercel
 ---
 
 # Introduction
