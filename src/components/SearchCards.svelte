@@ -44,16 +44,6 @@
                 alt=""
                 class="md:group-hover:scale-[102%] md:group-hover:saturate-150 transition-all duration-500 h-52 object-cover w-full rounded-t"
               />
-
-              <!-- <div class="flex flex-wrap gap-1 absolute bottom-1 left-1">
-                {#each item.data.tags as tag}
-                  <div
-                    class="text-xs bg-neutral-900 text-white rounded-full py-1 px-2"
-                  >
-                    #{tag}
-                  </div>
-                {/each}
-              </div> -->
             </div>
             <div
               class=" bg-white p-2 rounded-b border-t border-t-neutral-900/20 w-full"
@@ -81,6 +71,16 @@
                   >
                     {item.data.description}
                   </div>
+
+                  <!-- <div class="flex flex-wrap gap-1 py-2">
+                    {#each item.data.tags as tag}
+                      <div
+                        class="text-xs bg-neutral-900 text-white rounded py-1 px-2"
+                      >
+                        #{tag}
+                      </div>
+                    {/each}
+                  </div> -->
                 </div>
               </div>
             </div>

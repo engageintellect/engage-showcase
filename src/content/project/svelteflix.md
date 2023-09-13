@@ -16,7 +16,16 @@ tags:
 
 # Introduction
 
-Svelteflix is a Netflix UI built with Sveltekit, Supabase, TailwindCSS, and Zod.
+Svelteflix is a Netflix UI that allows the user to discover movies, watch trailors, add movies to their playlist, and stream them online.
+
+## Technologies Used
+
+- Sveltekit
+- TailwindCSS
+- API
+- Supabase
+- Zod
+- Vercel
 
 [Try the App](https://engage-svelteflix.vercel.app)
 <br />
