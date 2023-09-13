@@ -58,17 +58,21 @@
             <div
               class=" bg-white p-2 rounded-b border-t border-t-neutral-900/20 w-full"
             >
-              <div class="flex flex-col gap-1">
-                <div
-                  class="text-[.75rem] inline-block rounded"
-                  style="max-width: fit-content;"
-                >
+              <div class="flex gap-2">
+                <div class="text-xs font-thin mb-2">
+                  <span class="border border-neutral-900 p-1 px-2 rounded"
+                    >{item.data.category}</span
+                  >
+                </div>
+
+                <div class="text-gray-500 text-[.75rem]">
                   <FormatDate date={item.data.pubDate} />
                 </div>
               </div>
+
               <div class="font-semibold text-ellipsis overflow-hidden">
                 <div class="flex flex-col">
-                  <div>
+                  <div class="text-xl">
                     {item.data.title}
                   </div>
 
