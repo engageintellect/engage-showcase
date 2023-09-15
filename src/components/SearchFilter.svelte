@@ -42,7 +42,7 @@
             <div class="flex gap-2">
               <div class="text-xs font-thin mb-2">
                 <span
-                  class="border border-neutral-700 text-neutral-700 p-1 px-2 rounded"
+                  class="border border-neutral-700 font-semibold text-neutral-700 p-1 px-2 rounded"
                   >{item.data.category}</span
                 >
               </div>
