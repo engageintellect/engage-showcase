@@ -1,3 +1,13 @@
+ul {
+  display: block !important;
+  list-style-type: disc !important;
+  padding-left: 40px !important;
+}
+ol {
+  display: block !important;
+  list-style-type: decimal !important;
+  padding-left: 40px !important;
+}
 :root {
   --accent: 96, 115, 159;
   --accent-dark: #000d8a;

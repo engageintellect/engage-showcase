@@ -4,7 +4,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import HeaderBack from "../components/HeaderBack.astro";
 import Footer from "../components/Footer.astro";
-import FormattedDate from "../components/FormattedDate.astro";
+import FormatDate from "../components/FormattedDate.astro";
 import { Image } from "astro:assets";
 import { formatTag } from "../utils";
 
@@ -26,9 +26,21 @@ const { title, description, pubDate, updatedDate, image, tags, category } =
       <!-- <a href="/project" class="text-xl font-bold">← Projects</a> -->
       <article transition:animate="fade">
         <div
-          class="flex flex-col justify-start items-start sm:items-center py-2 rounded-t-none border-t sm:border-r sm:border-l border-neutral-900/20 sm:rounded-t px-2"
+          class="flex flex-col justify-start items-start py-2 rounded-t-none border-t sm:border-r sm:border-l border-neutral-900/20 sm:rounded-t px-2"
         >
-          <div class="font-extrathin text-neutral-500">
+          <div class="flex gap-2 text-neutral-500">
+            <div class="text-xs font-thin">
+              <span class="border border-neutral-900/50 p-1 px-2 rounded"
+                >{category}</span
+              >
+            </div>
+
+            <div class="text-gray-500 text-xs">
+              <FormatDate date={pubDate} />
+            </div>
+          </div>
+
+          <!-- <div class="font-extrathin text-neutral-500">
             <FormattedDate date={pubDate} />
             {
               updatedDate && (
@@ -37,15 +49,18 @@ const { title, description, pubDate, updatedDate, image, tags, category } =
                 </div>
               )
             }
-          </div>
-          <div class="text-3xl font-semibold sm:text-center">{title}</div>
-          <div class="text-base font-thin sm:text-center text-neutral-500">
+          </div> -->
+
+          <div class="my-2 flex flex-col items-start">
+            <div class="text-3xl font-semibold sm:text-center">{title}</div>
+            <div class="text-base font-thin sm:text-center text-neutral-500">
+            </div>
             {description}
           </div>
 
           {
             tags && (
-              <div class="flex gap-1 my-2 w-full flex-wrap justify-start sm:justify-center">
+              <div class="flex gap-1 w-full flex-wrap justify-start">
                 {tags.map((tag) => (
                   <a
                     href={`/tags/${formatTag(tag)}/`}
