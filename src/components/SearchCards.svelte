@@ -45,42 +45,25 @@
                 class="md:group-hover:scale-[102%] md:group-hover:saturate-150 transition-all duration-500 h-52 object-cover w-full rounded-t"
               />
             </div>
-            <div
-              class=" bg-white p-2 rounded-b border-t border-t-neutral-900/20 w-full"
-            >
-              <div class="flex gap-2">
-                <div class="text-xs font-thin mb-2">
-                  <span class="border border-neutral-900 p-1 px-2 rounded"
+
+            <div class="p-2">
+              <div class="flex gap-2 items-center">
+                <div class="text-xs font-thin my-2">
+                  <span
+                    class="border border-neutral-500 font-semibold text-neutral-500 p-1 px-2 rounded"
                     >{item.data.category}</span
                   >
                 </div>
 
-                <div class="text-neutral-500 text-[.75rem]">
+                <div class="text-neutral-500 text-xs">
                   <FormatDate date={item.data.pubDate} />
                 </div>
               </div>
 
-              <div class="font-semibold text-ellipsis overflow-hidden">
-                <div class="flex flex-col">
-                  <div class="text-xl">
-                    {item.data.title}
-                  </div>
-
-                  <div
-                    class="text-sm font-thin text-neutral-500 text-ellipsis overflow-hidden"
-                  >
-                    {item.data.description}
-                  </div>
-
-                  <!-- <div class="flex flex-wrap gap-1 py-2">
-                    {#each item.data.tags as tag}
-                      <div
-                        class="text-xs bg-neutral-900 text-white rounded py-1 px-2"
-                      >
-                        #{tag}
-                      </div>
-                    {/each}
-                  </div> -->
+              <div class="flex flex-col">
+                <div class="text-xl font-bold">{item.data.title}</div>
+                <div class="text-sm font-thin text-neutral-500">
+                  {item.data.description}
                 </div>
               </div>
             </div>
