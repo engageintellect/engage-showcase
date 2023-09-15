@@ -55,7 +55,7 @@
                   >
                 </div>
 
-                <div class="text-gray-500 text-[.75rem]">
+                <div class="text-neutral-500 text-[.75rem]">
                   <FormatDate date={item.data.pubDate} />
                 </div>
               </div>

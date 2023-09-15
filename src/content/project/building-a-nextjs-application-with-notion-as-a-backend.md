@@ -26,6 +26,8 @@ In recent years, Notion has become a popular productivity tool for individuals a
 3. Rich text support
    Notion supports rich text, which means you can format your text with headings, lists, tables, images, and more. This makes it easy to create content-rich applications, such as blogs, wikis, or knowledge bases.
 4. API access
+   <br>
+   <br>
 
 Notion provides an API that allows you to access and manipulate your data programmatically. This means you can build custom applications and integrations that leverage your Notion database as a backend.
 Building a Next.js application with Notion as a backend
@@ -33,12 +35,14 @@ Now that we've covered the benefits of using Notion as a backend, let's see how 
 
 # Prerequisites
 
-Before we get started, make sure you have the following:
+Before we get started, make sure you have the following
 
 - A Notion account
 - A Notion API key
 - A Next.js project set up with TypeScript
 - The notion-client package installed
+  <br>
+  <br>
 
 To get your Notion API key, go to your Notion integrations page, create a new integration, and copy the API key.
 To install the notion-client package, run the following command:
@@ -57,6 +61,8 @@ This will create a database with the following properties:
 - Tags
 - Title
 - Content
+  <br>
+  <br>
 
 Feel free to customize the properties to suit your needs.
 

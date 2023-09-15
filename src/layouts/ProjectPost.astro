@@ -26,16 +26,16 @@ const { title, description, pubDate, updatedDate, image, tags, category } =
       <!-- <a href="/project" class="text-xl font-bold">← Projects</a> -->
       <article transition:animate="fade">
         <div
-          class="flex flex-col justify-start items-start py-2 rounded-t-none border-t sm:border-r sm:border-l border-neutral-900/20 sm:rounded-t px-2"
+          class="flex flex-col justify-start items-start pt-3 pb-2 rounded-t-none border-t sm:border-r sm:border-l border-neutral-900/20 sm:rounded-t px-2"
         >
-          <div class="flex gap-2 text-neutral-500">
+          <div class="flex mb-2 gap-2 text-neutral-500">
             <div class="text-xs font-thin">
               <span class="border border-neutral-900/50 p-1 px-2 rounded"
                 >{category}</span
               >
             </div>
 
-            <div class="text-gray-500 text-xs">
+            <div class="text-neutral-500 text-xs">
               <FormatDate date={pubDate} />
             </div>
           </div>
@@ -52,9 +52,8 @@ const { title, description, pubDate, updatedDate, image, tags, category } =
           </div> -->
 
           <div class="my-2 flex flex-col items-start">
-            <div class="text-3xl font-semibold sm:text-center">{title}</div>
-            <div class="text-base font-thin sm:text-center text-neutral-500">
-            </div>
+            <div class="text-3xl font-semibold">{title}</div>
+            <div class="text-base font-thin text-neutral-500"></div>
             {description}
           </div>
 

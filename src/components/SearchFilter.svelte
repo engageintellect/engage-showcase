@@ -47,7 +47,7 @@
                 >
               </div>
 
-              <div class="text-gray-500 text-xs">
+              <div class="text-neutral-500 text-xs">
                 <FormatDate date={item.data.pubDate} />
               </div>
             </div>
@@ -65,7 +65,7 @@
               {#each item.data.tags as tag}
                 <a
                   href={`/tags/${formatTag(tag)}/`}
-                  class="bg-gray-200 md:hover:bg-gray-300 text-xs rounded px-2 py-1 text-gray-700"
+                  class="bg-neutral-200 md:hover:bg-neutral-300 text-xs rounded px-2 py-1 text-neutral-700"
                 >
                   #{tag}
                 </a>

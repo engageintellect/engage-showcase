@@ -26,6 +26,8 @@ Svelteflix is a Netflix UI that allows the user to discover movies, watch trailo
 - Supabase
 - Zod
 - Vercel
+  <br>
+  <br>
 
 [Try the App](https://engage-svelteflix.vercel.app)
 <br />

@@ -23,6 +23,8 @@ Before you begin, you will need the following:
 - A Raspberry Pi with Ubuntu installed (we recommend version 20.04 or higher)
 - A terminal or SSH connection to the Raspberry Pi
 - A basic understanding of the Linux command line
+  <br>
+  <br>
 
 ## Step 1: Install Nginx
 
