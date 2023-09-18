@@ -4,7 +4,7 @@ title: Fullstack Web Store
 description: A fullstack web store using HTMX, Python, Django, Stripe, SQLite, Ubuntu, and Apache.
 excerpt: Create web stores without JS
 category: Project
-image: "https://i.guim.co.uk/img/media/6bc60b720f2288e8b8153dc04e8b079b4a7a9dd6/0_93_4276_2566/master/4276.jpg?width=1200&quality=85&auto=format&fit=max&s=dbf5ae905596b39263143be5a4ec7488"  
+image: "https://static01.nyt.com/images/2021/03/14/business/14stripe1/14stripe1-superJumbo.jpg"  
 tags:
   - HTMX
   - Python
