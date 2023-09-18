@@ -14,9 +14,8 @@ tags:
   - TailwindCSS
 ---
 
-<br>
+# Links
 [Try the App](http://172.233.128.129)
-<br>
 [Go to Repository](https://github.com/engageintellect/greymatter-store)
 
 
