@@ -4,7 +4,7 @@ title: Fullstack Web Store
 description: A fullstack web store using HTMX, Python, Django, Stripe, SQLite, Ubuntu, and Apache.
 excerpt: Create web stores without JS
 category: Project
-image: "https://static01.nyt.com/images/2021/03/14/business/14stripe1/14stripe1-superJumbo.jpg"  
+image: "/images/gme-site.png"  
 tags:
   - HTMX
   - Python
@@ -16,6 +16,7 @@ tags:
 
 # Links
 [Try the App](http://172.233.128.129)
+<br>
 [Go to Repository](https://github.com/engageintellect/greymatter-store)
 
 

@@ -221,6 +221,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"fullstack-web-store.md": {
+	id: "fullstack-web-store.md";
+  slug: "fullstack-web-store";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "getting-started-with-tailwindcss-in-nextjs.md": {
 	id: "getting-started-with-tailwindcss-in-nextjs.md";
   slug: "getting-started-with-tailwindcss-in-nextjs";
