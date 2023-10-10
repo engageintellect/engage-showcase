@@ -214,6 +214,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"engage-glucose.md": {
+	id: "engage-glucose.md";
+  slug: "engage-glucose";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "fastapi-for-python-development.md": {
 	id: "fastapi-for-python-development.md";
   slug: "fastapi-for-python-development";

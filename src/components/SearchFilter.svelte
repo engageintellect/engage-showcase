@@ -24,7 +24,7 @@
     <input
       type="text"
       id="search"
-      class="border border-neutral-900 rounded p-2 flex-grow w-full focus:outline-none ring-none focus:border-neutral-900"
+      class="border border-gray-900 rounded p-2 flex-grow w-full focus:outline-none ring-none focus:border-gray-900"
       placeholder="Search"
       on:input={handleSearch}
       bind:value={searchInput}
@@ -42,19 +42,19 @@
             <div class="flex gap-2">
               <div class="text-xs font-thin mb-2">
                 <span
-                  class="border border-neutral-500 font-semibold text-neutral-500 p-1 px-2 rounded"
+                  class="border border-gray-500 text-gray-500 p-1 px-2 rounded"
                   >{item.data.category}</span
                 >
               </div>
 
-              <div class="text-neutral-500 text-xs">
+              <div class="text-gray-500 text-xs">
                 <FormatDate date={item.data.pubDate} />
               </div>
             </div>
 
             <div class="flex flex-col my-2">
               <div class="text-xl font-bold">{item.data.title}</div>
-              <div class="text-sm font-thin text-neutral-500">
+              <div class="text-sm font-thin text-gray-500">
                 {item.data.description}
               </div>
             </div>
@@ -65,7 +65,7 @@
               {#each item.data.tags as tag}
                 <a
                   href={`/tags/${formatTag(tag)}/`}
-                  class="bg-neutral-200 md:hover:bg-neutral-300 text-xs rounded px-2 py-1 text-neutral-700"
+                  class="bg-gray-200 md:hover:bg-gray-300 text-xs rounded px-2 py-1 text-gray-700"
                 >
                   #{tag}
                 </a>

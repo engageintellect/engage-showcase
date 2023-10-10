@@ -23,7 +23,7 @@
     <input
       type="text"
       id="search"
-      class="border border-neutral-900 rounded p-2 flex-grow w-full focus:outline-none ring-none focus:border-neutral-900"
+      class="border border-gray-900 rounded p-2 flex-grow w-full focus:outline-none ring-none focus:border-gray-900"
       placeholder="Search"
       on:input={handleSearch}
       bind:value={searchInput}
@@ -35,7 +35,7 @@
     {#each allItems as item}
       {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
         <div
-          class="group shadow md:hover:shadow-md transition-shadow duration-300 border rounded border-neutral-900/20"
+          class="group shadow md:hover:shadow-md transition-shadow duration-300 border rounded border-gray-900/20"
         >
           <a href={`/project/${item.slug}/`} class="">
             <div class=" overflow-hidden rounded-t relative">
@@ -50,19 +50,19 @@
               <div class="flex gap-2 items-center">
                 <div class="text-xs font-thin my-2">
                   <span
-                    class="border border-neutral-500 font-semibold text-neutral-500 p-1 px-2 rounded"
+                    class="border border-gray-500 font-semibold text-gray-500 p-1 px-2 rounded"
                     >{item.data.category}</span
                   >
                 </div>
 
-                <div class="text-neutral-500 text-xs">
+                <div class="text-gray-500 text-xs">
                   <FormatDate date={item.data.pubDate} />
                 </div>
               </div>
 
               <div class="flex flex-col">
                 <div class="text-xl font-bold">{item.data.title}</div>
-                <div class="text-sm font-thin text-neutral-500">
+                <div class="text-sm font-thin text-gray-500">
                   {item.data.description}
                 </div>
               </div>
