@@ -39,7 +39,7 @@
         >
           <a href={`/project/${item.slug}/`} class="">
             <div
-              class="overflow-hidden rounded-t border border-b-gray-900/20 relative"
+              class="overflow-hidden rounded-t border-b border-b-gray-900/20 relative"
             >
               <img
                 src={item.data.image}
