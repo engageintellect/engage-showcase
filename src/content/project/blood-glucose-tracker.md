@@ -1,6 +1,6 @@
 ---
 pubDate: 2023-10-09T00:00:00Z
-title: Glucose monitor tracker.
+title: Blood Glucose Tracker.
 description: A glucose monitor tracker built with Sveltekit, TailwindCSS, and DaisyUI.
 excerpt: hello world
 category: Project
@@ -30,6 +30,7 @@ This app is a glucose monitor tracker built with Sveltekit, TailwindCSS, and Dai
       <br/>
       <br/>
 
+![image](/images/engage-glucose.png)
 [Try the App](https://engage-glucose.vercel.app)
 <br/>
 [Go to Repository](https://github.com/engageintellect/engage-glucose)

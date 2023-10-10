@@ -38,7 +38,7 @@
           class="group shadow md:hover:shadow-md transition-shadow duration-300 border rounded border-gray-900/20"
         >
           <a href={`/project/${item.slug}/`} class="">
-            <div class=" overflow-hidden rounded-t relative">
+            <div class="overflow-hidden rounded-t relative">
               <img
                 src={item.data.image}
                 alt=""

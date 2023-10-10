@@ -192,6 +192,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"blood-glucose-tracker.md": {
+	id: "blood-glucose-tracker.md";
+  slug: "blood-glucose-tracker";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "building-a-nextjs-application-with-notion-as-a-backend.md": {
 	id: "building-a-nextjs-application-with-notion-as-a-backend.md";
   slug: "building-a-nextjs-application-with-notion-as-a-backend";
@@ -216,13 +223,6 @@ declare module 'astro:content' {
 "deploying-pocketbase-on-ubuntu.md": {
 	id: "deploying-pocketbase-on-ubuntu.md";
   slug: "deploying-pocketbase-on-ubuntu";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"engage-glucose.md": {
-	id: "engage-glucose.md";
-  slug: "engage-glucose";
   body: string;
   collection: "project";
   data: InferEntrySchema<"project">
