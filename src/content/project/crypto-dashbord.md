@@ -14,14 +14,18 @@ tags:
   - DaisyUI
   - Vercel
 ---
+<div class="flex gap-2 my-5">
+  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
+    <a href="https://crypto-dashboard-engageintellect.vercel.app" target="_blank"> Go to App </a>
+  </button>
+
+  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
+    <a href="https://github.com/engageintellect/crypto-dashboard" target="_blank">Go to Repository</a>
+  </button>
+</div>
+
 
 Crypto-Dashboard is a simple crypto dashbord built with Sveltekit, CoinGecko API, Blockchain.com API, Fear & Greed index, and TailwindCSS.
-
-[Try the App](https://crypto-dashboard-engageintellect.vercel.app)
-<br/>
-[Go to Repository](https://github.com/engageintellect/crypto-dashboard)
-<br/>
-[How it works](https://crypto-dashboard-engageintellect.vercel.app/about)
 
 ## Getting Started
 

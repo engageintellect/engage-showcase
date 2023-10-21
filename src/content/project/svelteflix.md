@@ -13,6 +13,16 @@ tags:
   - Zod
   - Vercel
 ---
+<div class="flex gap-2 my-5">
+  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
+    <a href="https://engage-svelteflix.vercel.app" target="_blank"> Go to App </a>
+  </button>
+
+  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
+    <a href="https://github.com/engageintellect/engage-svelteflix" target="_blank">Go to Repository</a>
+  </button>
+</div>
+
 
 # Introduction
 
@@ -28,10 +38,6 @@ Svelteflix is a Netflix UI that allows the user to discover movies, watch trailo
 - Vercel
   <br>
   <br>
-
-[Try the App](https://engage-svelteflix.vercel.app)
-<br />
-[Go to Repository](https://github.com/engageintellect/engage-svelteflix.git)
 
 # Getting Started
 

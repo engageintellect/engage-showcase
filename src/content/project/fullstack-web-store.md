@@ -13,11 +13,15 @@ tags:
   - Ubuntu
   - TailwindCSS
 ---
+<div class="flex gap-2 my-5">
+  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
+    <a href="https://shopgme.com" target="_blank"> Go to App </a>
+  </button>
 
-# Links
-[Try the App](https://shopgme.com)
-<br>
-[Go to Repository](https://github.com/engageintellect/greymatter-store)
+  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
+    <a href="https://github.com/engageintellect/greymatter-store" target="_blank">Go to Repository</a>
+  </button>
+</div>
 
 
 # Introduction

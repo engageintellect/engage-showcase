@@ -10,8 +10,16 @@ import { formatTag } from "../utils";
 
 type Props = CollectionEntry<"project">["data"];
 
-const { title, description, pubDate, updatedDate, image, tags, category } =
-  Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  projectURL,
+  updatedDate,
+  image,
+  tags,
+  category,
+} = Astro.props;
 ---
 
 <html lang="en" transition:name="root" transition:animate="none">
@@ -88,6 +96,9 @@ const { title, description, pubDate, updatedDate, image, tags, category } =
             )
           }
         </div>
+
+        {projectURL && <div>hello world {projectURL}</div>}
+
         <div class="prose px-2 sm:px-0">
           <slot />
         </div>

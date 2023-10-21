@@ -13,14 +13,21 @@ tags:
   - TailwindCSS
   - Vercel
 ---
+<div class="flex gap-2 my-5">
+  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
+    <a href="https://twitter-bio-tau.vercel.app" target="_blank"> Go to App </a>
+  </button>
+
+  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
+    <a href="https://github.com/engageintellect/twitter-bio" target="_blank">Go to Repository</a>
+  </button>
+</div>
+
 
 # Introduction
 
 Twitter-Bio is a tool to generate great twitter bios using OpenAI's ChatGPT API.
 
-[Try the App](https://twitter-bio-tau.vercel.app)
-<br/>
-[Go to Repository](https://github.com/engageintellect/twitter-bio)
 
 ## Getting Started
 
