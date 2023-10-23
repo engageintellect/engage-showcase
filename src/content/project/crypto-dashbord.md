@@ -16,7 +16,7 @@ tags:
 ---
 <div class="flex gap-2 my-5">
   <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://crypto-dashboard-engageintellect.vercel.app" target="_blank"> Go to App </a>
+    <a href="https://engage-crypto.vercel.app" target="_blank"> Go to App </a>
   </button>
 
   <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
