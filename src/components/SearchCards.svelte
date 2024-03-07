@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { formatTag } from "../utils";
   import FormatDate from "./FormatDate.svelte";
   let searchInput = "";
   let handleSearch: any;
@@ -67,6 +68,21 @@
                 <div class="text-sm font-thin text-gray-500">
                   {item.data.description}
                 </div>
+              </div>
+
+              <div>
+                {#if item.data.tags}
+                  <div class="flex gap-1 mt-2 flex-wrap">
+                    {#each item.data.tags as tag}
+                      <a
+                        href={`/tags/${formatTag(tag)}/`}
+                        class="text-xs bg-gray-200 sm:hover:bg-gray-300 p-1 px-2 rounded"
+                      >
+                        {tag}
+                      </a>
+                    {/each}
+                  </div>
+                {/if}
               </div>
             </div>
           </a>
