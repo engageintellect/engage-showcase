@@ -26,6 +26,12 @@ dependencies:
   astro-icon:
     specifier: ^0.8.1
     version: 0.8.1
+  prettier:
+    specifier: ^3.2.5
+    version: 3.2.5
+  prettier-tailwind:
+    specifier: 0.0.0-development
+    version: 0.0.0-development
   react:
     specifier: ^18.0.0
     version: 18.2.0
@@ -3487,6 +3493,24 @@ packages:
       find-yarn-workspace-root2: 1.2.16
       path-exists: 4.0.0
       which-pm: 2.0.0
+    dev: false
+
+  /prettier-tailwind@0.0.0-development:
+    resolution: {integrity: sha512-GJZc1bhaenVUgaq4IUZ4OaY8HhOiJoHsUBzivjQJcw6g1lNuLzk2adJKlE0JJDOlQ4YBx5nByW5bDF/O5xO5Iw==}
+    dependencies:
+      prettier: 2.8.8
+    dev: false
+
+  /prettier@2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: false
+
+  /prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: false
 
   /prismjs@1.29.0:

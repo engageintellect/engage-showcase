@@ -32,7 +32,7 @@
       autofocus
     />
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-5">
     {#each allItems as item}
       {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
         <div
@@ -63,15 +63,18 @@
                 </div>
               </div>
 
-              <div class="flex flex-col">
+              <div class="flex flex-col py-2">
                 <div class="text-xl font-bold">{item.data.title}</div>
                 <div class="text-sm font-thin text-gray-500">
                   {item.data.description}
                 </div>
               </div>
 
-              <div>
+              <!-- <div>
                 {#if item.data.tags}
+                  <div class="text-xs pt-2 text-gray-500 py-1">
+                    Technologies:
+                  </div>
                   <div class="flex gap-1 mt-2 flex-wrap">
                     {#each item.data.tags as tag}
                       <a
@@ -83,7 +86,7 @@
                     {/each}
                   </div>
                 {/if}
-              </div>
+              </div> -->
             </div>
           </a>
         </div>

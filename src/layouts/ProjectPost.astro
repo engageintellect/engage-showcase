@@ -11,45 +11,45 @@ import { formatTag } from "../utils";
 type Props = CollectionEntry<"project">["data"];
 
 const {
-    title,
-    description,
-    pubDate,
-    projectURL,
-    updatedDate,
-    image,
-    tags,
-    category,
+  title,
+  description,
+  pubDate,
+  projectURL,
+  updatedDate,
+  image,
+  tags,
+  category,
 } = Astro.props;
 ---
 
 <html lang="en" transition:name="root" transition:animate="none">
-    <head>
-        <BaseHead title={title} description={description} />
-    </head>
+  <head>
+    <BaseHead title={title} description={description || ""} />
+  </head>
 
-    <body>
-        <!-- <Header /> -->
-        <HeaderBack />
-        <main class="mx-auto max-w-4xl sm:my-2 sm:px-2">
-            <!-- <a href="/project" class="text-xl font-bold">← Projects</a> -->
-            <article transition:animate="fade">
-                <div
-                    class="flex flex-col items-start justify-start rounded-t-none border-t border-gray-900/20 px-2 pb-2 pt-3 sm:rounded-t sm:border-l sm:border-r"
-                >
-                    <div class="mb-2 flex gap-2">
-                        <div class="text-xs font-thin">
-                            <span
-                                class="rounded border border-gray-500 p-1 px-2 font-semibold text-gray-500"
-                                >{category}</span
-                            >
-                        </div>
+  <body>
+    <!-- <Header /> -->
+    <HeaderBack />
+    <main class="mx-auto max-w-4xl sm:my-2 sm:px-2">
+      <!-- <a href="/project" class="text-xl font-bold">← Projects</a> -->
+      <article transition:animate="fade">
+        <div
+          class="flex flex-col items-start justify-start rounded-t-none border-t border-gray-900/20 px-2 pb-2 pt-3 sm:rounded-t sm:border-l sm:border-r"
+        >
+          <div class="mb-2 flex gap-2">
+            <div class="text-xs font-thin">
+              <span
+                class="rounded border border-gray-500 p-1 px-2 font-semibold text-gray-500"
+                >{category}</span
+              >
+            </div>
 
-                        <div class="text-xs text-gray-500">
-                            <FormatDate date={pubDate} />
-                        </div>
-                    </div>
+            <div class="text-xs text-gray-500">
+              <FormatDate date={pubDate} />
+            </div>
+          </div>
 
-                    <!-- <div class="font-extrathin text-gray-500">
+          <!-- <div class="font-extrathin text-gray-500">
             <FormattedDate date={pubDate} />
             {
               updatedDate && (
@@ -60,50 +60,50 @@ const {
             }
           </div> -->
 
-                    <div class="my-2 flex flex-col items-start">
-                        <div class="text-3xl font-semibold">{title}</div>
-                        <div class="text-base font-thin text-gray-500"></div>
-                        {description}
-                    </div>
+          <div class="py-2 md:py-5 flex flex-col items-start">
+            <div class="text-3xl font-semibold">{title}</div>
+            <div class="text-base font-thin text-gray-500"></div>
+            {description}
+          </div>
 
-                    {
-                        tags && (
-                            <div class="flex w-full flex-wrap justify-start gap-1">
-                                {tags.map((tag) => (
-                                    <a
-                                        href={`/tags/${formatTag(tag)}/`}
-                                        class="rounded-full bg-gray-200 px-2  py-1 text-[0.8rem] text-xs font-semibold md:hover:bg-gray-300"
-                                    >
-                                        #{tag}
-                                    </a>
-                                ))}
-                            </div>
-                        )
-                    }
-                </div>
+          {
+            tags && (
+              <div class="flex w-full flex-wrap justify-start gap-1">
+                {tags.map((tag) => (
+                  <a
+                    href={`/tags/${formatTag(tag)}/`}
+                    class="rounded bg-gray-200 px-2  py-1 text-[0.8rem] text-xs font-semibold md:hover:bg-gray-300"
+                  >
+                    #{tag}
+                  </a>
+                ))}
+              </div>
+            )
+          }
+        </div>
 
-                <div class="">
-                    {
-                        image && (
-                            <Image
-                                loading="eager"
-                                class="h-52 object-cover shadow sm:h-64 sm:rounded-b sm:border sm:border-gray-900/20 sm:shadow-none md:h-80"
-                                width={1020}
-                                height={510}
-                                src={image}
-                                alt=""
-                            />
-                        )
-                    }
-                </div>
+        <div class="">
+          {
+            image && (
+              <Image
+                loading="eager"
+                class="h-52 object-cover shadow sm:h-64 sm:rounded-b sm:border sm:border-gray-900/20 sm:shadow-none md:h-80"
+                width={1020}
+                height={510}
+                src={image}
+                alt=""
+              />
+            )
+          }
+        </div>
 
-                {projectURL && <div>hello world {projectURL}</div>}
+        {projectURL && <div>hello world {projectURL}</div>}
 
-                <div class="prose px-2 sm:px-0">
-                    <slot />
-                </div>
-            </article>
-        </main>
-        <Footer />
-    </body>
+        <div class="prose px-2 sm:px-0">
+          <slot />
+        </div>
+      </article>
+    </main>
+    <Footer />
+  </body>
 </html>

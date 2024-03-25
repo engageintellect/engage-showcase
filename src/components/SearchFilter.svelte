@@ -33,48 +33,53 @@
     />
   </div>
 
-  {#each allItems as item}
-    {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
-      <div class="">
-        <!-- <hr /> -->
-        <div class="my-5">
-          <a href={`/project/${formatTag(item.slug)}/`} class="">
-            <div class="flex gap-2">
-              <div class="text-xs font-thin mb-2">
-                <span
-                  class="border border-gray-500 text-gray-500 p-1 px-2 rounded"
-                  >{item.data.category}</span
-                >
+  <div class="flex flex-col gap-2">
+    {#each allItems as item}
+      {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
+        <div class="p-2 border">
+          <!-- <hr /> -->
+          <div class="">
+            <a href={`/project/${formatTag(item.slug)}/`} class="">
+              <div class="flex gap-2">
+                <div class="text-xs font-thin mb-2 flex items-center gap-2">
+                  <div
+                    class="border border-gray-500 text-gray-500 p-1 px-2 rounded"
+                  >
+                    {item.data.category}
+                  </div>
+
+                  <div class="text-gray-500 text-xs">
+                    <FormatDate date={item.data.pubDate} />
+                  </div>
+                </div>
               </div>
 
-              <div class="text-gray-500 text-xs">
-                <FormatDate date={item.data.pubDate} />
+              <div class="flex flex-col my-2">
+                <div class="text-xl font-bold">{item.data.title}</div>
+                <div class="text-sm font-thin text-gray-500">
+                  {item.data.description}
+                </div>
               </div>
-            </div>
+            </a>
 
-            <div class="flex flex-col my-2">
-              <div class="text-xl font-bold">{item.data.title}</div>
-              <div class="text-sm font-thin text-gray-500">
-                {item.data.description}
+            <div class="text-xs pt-2 text-gray-500 py-1">Technologies:</div>
+
+            {#if item.data.tags}
+              <div class="flex flex-wrap gap-1">
+                {#each item.data.tags as tag}
+                  <a
+                    href={`/tags/${formatTag(tag)}/`}
+                    class="bg-gray-200 md:hover:bg-gray-300 text-xs rounded px-2 py-1 text-gray-700"
+                  >
+                    #{tag}
+                  </a>
+                {/each}
               </div>
-            </div>
-          </a>
-
-          {#if item.data.tags}
-            <div class="mt-2 flex flex-wrap gap-1">
-              {#each item.data.tags as tag}
-                <a
-                  href={`/tags/${formatTag(tag)}/`}
-                  class="bg-gray-200 md:hover:bg-gray-300 text-xs rounded px-2 py-1 text-gray-700"
-                >
-                  #{tag}
-                </a>
-              {/each}
-            </div>
-          {/if}
+            {/if}
+          </div>
+          <!-- <div class="border-t border-[.5px] border-gray-200 w-full"></div> -->
         </div>
-        <hr />
-      </div>
-    {/if}
-  {/each}
+      {/if}
+    {/each}
+  </div>
 </div>

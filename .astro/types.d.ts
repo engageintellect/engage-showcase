@@ -297,6 +297,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"stonk-ai.md": {
+	id: "stonk-ai.md";
+  slug: "stonk-ai";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "svelteflix.md": {
 	id: "svelteflix.md";
   slug: "svelteflix";
