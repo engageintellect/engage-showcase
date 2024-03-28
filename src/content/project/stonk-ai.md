@@ -11,9 +11,9 @@ tags:
   - TailwindCSS
   - Python
   - TensorFlow
+  - OpenAI
   - FastAPI
   - AI
-  - OpenAI
   - Ubuntu
   - Nginx
   - Vercel
@@ -21,7 +21,7 @@ tags:
 
 <div class="flex gap-2 my-5">
   <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://ai-stock-client.vercel.app" target="_blank"> Go to App </a>
+    <a href="https://stonkai.xyz" target="_blank"> Go to App </a>
   </button>
 
   <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 

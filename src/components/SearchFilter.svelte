@@ -33,10 +33,10 @@
     />
   </div>
 
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-col gap-5">
     {#each allItems as item}
       {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
-        <div class="p-2 border">
+        <div class="p-2">
           <!-- <hr /> -->
           <div class="">
             <a href={`/project/${formatTag(item.slug)}/`} class="">
@@ -54,7 +54,7 @@
                 </div>
               </div>
 
-              <div class="flex flex-col my-2">
+              <div class="flex flex-col">
                 <div class="text-xl font-bold">{item.data.title}</div>
                 <div class="text-sm font-thin text-gray-500">
                   {item.data.description}
@@ -62,18 +62,20 @@
               </div>
             </a>
 
-            <div class="text-xs pt-2 text-gray-500 py-1">Technologies:</div>
+            <div class="text-xs pt-2 text-gray-500">Technologies:</div>
 
             {#if item.data.tags}
-              <div class="flex flex-wrap gap-1">
-                {#each item.data.tags as tag}
-                  <a
-                    href={`/tags/${formatTag(tag)}/`}
-                    class="bg-gray-200 md:hover:bg-gray-300 text-xs rounded px-2 py-1 text-gray-700"
-                  >
-                    #{tag}
-                  </a>
-                {/each}
+              <div class="overflow-auto">
+                <div class="flex gap-1 pb-2 pt-1">
+                  {#each item.data.tags as tag}
+                    <a
+                      href={`/tags/${formatTag(tag)}/`}
+                      class="bg-gray-200 whitespace-nowrap md:hover:bg-gray-300 text-xs font-thin lowercase rounded px-2 py-1 text-gray-700"
+                    >
+                      #{tag}
+                    </a>
+                  {/each}
+                </div>
               </div>
             {/if}
           </div>
