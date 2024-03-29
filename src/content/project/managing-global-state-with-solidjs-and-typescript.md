@@ -8,7 +8,6 @@ image: /images/solid.png
 tags:
   - SolidJS
   - TypeSript
-  - Global State
 ---
 
 # Introduction:

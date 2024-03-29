@@ -12,6 +12,7 @@ tags:
   - Python
   - TensorFlow
   - OpenAI
+  - ChatGPT
   - FastAPI
   - AI
   - Ubuntu

@@ -6,14 +6,15 @@ excerpt: Create web stores without JS
 category: Project
 image: "/images/gme-site.png"
 tags:
-  - HTMX
-  - Python
   - Django
+  - Python
   - Stripe
+  - HTMX
   - TailwindCSS
   - Pocketbase
-  - Ubuntu
+  - SQLite
   - Nginx
+  - Ubuntu
 ---
 
 <div class="flex gap-2 my-5">

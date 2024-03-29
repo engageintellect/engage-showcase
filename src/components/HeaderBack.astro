@@ -4,44 +4,44 @@ import { Icon } from "astro-icon";
 ---
 
 <html lang="en" transition:name="root" transition:animate="none">
-
-<div class="pt-2 px-2 max-w-4xl mx-auto">
-  <a href="/" class="text-2xl">
-    {SITE_TITLE}
-  </a>
-</div>
-<header class="sticky top-0 bg-white z-50 shadow-md">
-  <nav class="max-w-4xl px-2 mx-auto flex flex-col items-start justify-start">
-    <div class="flex justify-betwe w-full">
-      <div class="flex items-center gap-5 w-full">
-        <a href="javascript:history.back()">
-          <div class="flex gap-1 items-center pt-1">
-            <div class="">
-              <Icon name="icon-park:left" width="16" />
+  <div class="pt-2 px-2 max-w-3xl mx-auto">
+    <a href="/" class="text-2xl">
+      {SITE_TITLE}
+    </a>
+  </div>
+  <header class="sticky top-0 bg-white z-50 shadow-md">
+    <nav class="max-w-3xl px-2 mx-auto flex flex-col items-start justify-start">
+      <div class="flex justify-betwe w-full">
+        <div class="flex items-center gap-5 w-full">
+          <a href="javascript:history.back()">
+            <div class="flex gap-1 items-center pt-1">
+              <div class="">
+                <Icon name="icon-park:left" width="16" />
+              </div>
+              <div>Back</div>
             </div>
-            <div>Back</div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
-    </div>
-  </nav>
-  <style>
-    /* Set initial styles for nav links */
-    nav a {
-      padding: 0.5rem 0em;
-      border-bottom: 4px solid transparent;
-      text-decoration: none;
-    }
+    </nav>
+    <style>
+      /* Set initial styles for nav links */
+      nav a {
+        padding: 0.5rem 0em;
+        border-bottom: 4px solid transparent;
+        text-decoration: none;
+      }
 
-    /* Define styles for the active state */
-    nav a.active {
-      text-decoration: none;
-      border-bottom-color: var(--accent);
-    }
+      /* Define styles for the active state */
+      nav a.active {
+        text-decoration: none;
+        border-bottom-color: var(--accent);
+      }
 
-    .bottom-shadow {
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); /* Adjust shadow properties as needed */
-    }
-  </style>
-</header>
+      .bottom-shadow {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); /* Adjust shadow properties as needed */
+      }
+    </style>
+  </header>
+
 </html>
