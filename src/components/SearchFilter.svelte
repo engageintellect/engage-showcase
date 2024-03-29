@@ -25,7 +25,7 @@
       type="text"
       id="search"
       class="border border-gray-900 rounded p-2 flex-grow w-full focus:outline-none ring-none focus:border-gray-900"
-      placeholder="Search"
+      placeholder="Filter Feed"
       on:input={handleSearch}
       bind:value={searchInput}
       bind:this={inputElement}

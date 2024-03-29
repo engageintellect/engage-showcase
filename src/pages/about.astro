@@ -1,9 +1,6 @@
 ---
-import Layout from "../layouts/ProjectPost.astro";
 import { Icon } from "astro-icon";
 import TechCard from "../components/TechCard.astro";
-import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
-import { scramble, concurrent } from "svelte-typewriter";
 import HeaderBack from "../components/HeaderBack.astro";
 import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
@@ -18,7 +15,7 @@ import { Image } from "astro:assets";
 <div transition:animate="none">
   <HeaderBack />
   <div class="max-w-3xl mx-auto px-2">
-    <div class="my-2 md:my-20">
+    <div class="my-5 md:my-20">
       <div class="" transition:animate="fade">
         <div
           class="flex flex-col md:flex-row md:justify-center md:items-center gap-5"
@@ -35,8 +32,10 @@ import { Image } from "astro:assets";
 
           <div class="max-w-xs">
             <div class="text-3xl font-bold">I'm Josh.</div>
-            <div>Fullstack Web Developer</div>
-            <div class="text-xs">Orange County, California.🍊🌊</div>
+            <div>Fullstack Software Developer</div>
+            <div class="text-sm text-gray-500">
+              Orange County, California.🍊🌊
+            </div>
 
             <div class="flex gap-2 my-5">
               <a
@@ -76,8 +75,10 @@ import { Image } from "astro:assets";
         </div>
       </div>
 
-      <div class="sm:grid flex overflow-auto sm:grid-cols-3 gap-2 py-5">
-        <div class="w-full">
+      <div
+        class="sm:grid flex overflow-auto sm:grid-cols-3 gap-2 py-5 snap-x snap-mandatory"
+      >
+        <div class="w-full snap-center">
           <TechCard
             title="Next.js"
             description="A versatile React framework for building performant server-side rendered and statically generated web applications with seamless integration with popular web technologies."
@@ -86,7 +87,7 @@ import { Image } from "astro:assets";
             tag="JS Framework"
           />
         </div>
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="Sveltekit"
             description="A lightweight and fast web framework for building server-rendered and static sites with Svelte, offering intuitive development and easy deployment."
@@ -96,7 +97,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="React"
             description="A popular JavaScript library for building user interfaces with reusable components and a virtual DOM, backed by a vast ecosystem of tools and resources."
@@ -106,7 +107,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="Astro"
             description="A modern static site generator that combines performance, flexibility, and simplicity, enabling developers to build dynamic sites with modern web technologies."
@@ -116,7 +117,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="Typescript"
             description="A superset of JavaScript that provides static type checking, enhanced IDE support, and other features for safer and more maintainable code, ideal for large-scale projects."
@@ -126,7 +127,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="Python"
             description="A versatile and popular high-level programming language that emphasizes readability, simplicity, and productivity, with extensive libraries and frameworks for web development and machine learning."
@@ -136,7 +137,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="Tailwind"
             description="A utility-first CSS framework for rapidly building custom user interfaces with a modern design system, offering a wide range of pre-built components and utilities."
@@ -146,7 +147,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="PlanetScale"
             description="A cloud-native database platform that enables developers to build applications with the scalability and reliability of a distributed database, without the operational overhead."
@@ -156,7 +157,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="Supabase"
             description="An open-source alternative to Firebase that provides a suite of tools for building applications with serverless functions, authentication, and a PostgreSQL database."
@@ -166,7 +167,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="GraphQL"
             description="A query language for APIs that provides a flexible and efficient approach to data fetching, enabling clients to specify exactly what data they need and nothing more."
@@ -175,7 +176,7 @@ import { Image } from "astro:assets";
             tag="Web"
           />
         </div>
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="Vercel"
             description="A cloud platform for static sites and serverless functions that provides a global edge network, serverless functions, and other tools for rapid deployment and scaling."
@@ -185,7 +186,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="AWS"
             description="A cloud platform that provides a wide range of services for building and deploying applications, including serverless functions, databases, storage, and more."
@@ -195,7 +196,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="Linux"
             description="An open-source operating system that provides a free and highly customizable alternative to Windows and macOS, with a wide range of distributions and desktop environments."
@@ -205,7 +206,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="OpenAI"
             description="A research laboratory that develops artificial intelligence technology, including the GPT-3 language model, which can generate human-like text in response to prompts."
@@ -215,7 +216,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="Hugging Face"
             description="An open-source natural language processing library that provides a wide range of pretrained models and tools for building conversational AI applications."
@@ -225,7 +226,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="PyTorch"
             description="A popular machine learning library that provides a Python interface for tensor computation and deep neural networks, with extensive support for GPU acceleration."
@@ -235,7 +236,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="FastAPI"
             description="A modern Python framework for building APIs with a focus on developer productivity and code quality, offering automatic documentation and data validation."
@@ -245,7 +246,7 @@ import { Image } from "astro:assets";
           />
         </div>
 
-        <div class="w-full">
+        <div class="w-full snap-center">
           <TechCard
             title="Django"
             description="A modern Python framework for building APIs with a focus on developer productivity and code quality, offering automatic documentation and data validation."
