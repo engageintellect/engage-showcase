@@ -20,7 +20,7 @@
 </script>
 
 <div class="flex flex-col max-w-3xl mx-auto">
-  <div class="mb-2 sticky top-14 -z-[-1]">
+  <div class="pb-2 sticky top-12 -z-[-1]">
     <input
       type="text"
       id="search"
@@ -58,7 +58,7 @@
                 <div>
                   <div class="flex justify-between items-center">
                     <span
-                      class="text-xs font-semibold text-gray-600 bg-gray-100 p-1 px-2 rounded"
+                      class="border border-gray-500 text-xs text-gray-500 p-1 px-2 rounded"
                       >{item.data.category}</span
                     >
                     <div class="text-gray-500 text-xs">
@@ -82,9 +82,9 @@
                         {#each item.data.tags as tag}
                           <a
                             href={`/tags/${formatTag(tag)}/`}
-                            class="text-xs bg-gray-100 hover:bg-gray-200 p-1 px-2 rounded"
+                            class="text-xs lowercase bg-gray-200 hover:bg-gray-300 p-1 px-2 rounded text-gray-700"
                           >
-                            {tag}
+                            #{tag}
                           </a>
                         {/each}
                       </div>

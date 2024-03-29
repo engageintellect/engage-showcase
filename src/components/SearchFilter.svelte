@@ -20,7 +20,7 @@
 </script>
 
 <div class="flex flex-col max-w-3xl mx-auto p-2">
-  <div class="mb-2 sticky top-14 -z-[-1]">
+  <div class="pb-2 sticky top-12 -z-[-1]">
     <input
       type="text"
       id="search"

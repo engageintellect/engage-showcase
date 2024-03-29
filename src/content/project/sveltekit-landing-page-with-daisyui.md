@@ -11,12 +11,12 @@ tags:
   - DaisyUI
   - Vercel
 ---
-<div class="flex gap-2 my-5">
+
+<div class="flex gap-2">
   <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
     <a href="https://github.com/engageintellect/sveltekit-landing-daisy" target="_blank">Go to Repository</a>
   </button>
 </div>
-
 
 # Introduction
 
