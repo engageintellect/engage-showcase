@@ -68,7 +68,7 @@
 
                   <div class="py-2">
                     <div class="text-lg font-bold">{item.data.title}</div>
-                    <div class="text-sm text-gray-600 line-clamp-3">
+                    <div class="text-sm font-thin text-gray-500">
                       {item.data.description}
                     </div>
                   </div>
@@ -76,13 +76,13 @@
 
                 {#if item.data.tags}
                   <div class="">
-                    <div class="text-xs text-gray-500 pb-1">Technologies:</div>
+                    <div class="text-sm text-gray-500 pb-1">Technologies:</div>
                     <div class="overflow-auto">
                       <div class="flex gap-1">
                         {#each item.data.tags as tag}
                           <a
                             href={`/tags/${formatTag(tag)}/`}
-                            class="text-xs lowercase bg-gray-200 hover:bg-gray-300 p-1 px-2 rounded text-gray-700"
+                            class="text-sm lowercase bg-gray-200 hover:bg-gray-300 p-1 px-2 rounded text-gray-700"
                           >
                             #{tag}
                           </a>

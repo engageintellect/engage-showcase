@@ -62,7 +62,7 @@
               </div>
             </a>
 
-            <div class="text-xs pt-2 text-gray-500">Technologies:</div>
+            <div class="text-sm pt-2 text-gray-500">Technologies:</div>
 
             {#if item.data.tags}
               <div class="overflow-auto">
@@ -70,7 +70,7 @@
                   {#each item.data.tags as tag}
                     <a
                       href={`/tags/${formatTag(tag)}/`}
-                      class="bg-gray-200 whitespace-nowrap md:hover:bg-gray-300 text-xs font-thin lowercase rounded px-2 py-1 text-gray-700"
+                      class="bg-gray-200 whitespace-nowrap md:hover:bg-gray-300 text-sm font-thin lowercase rounded px-2 py-1 text-gray-700"
                     >
                       #{tag}
                     </a>
