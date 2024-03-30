@@ -1,9 +1,0 @@
-"filename", "language", "Astro", "Svelte", "comment", "blank", "total"
-"/home/r3dux/Repositories/engage-showcase/src/components/SearchFilter.svelte", "Svelte", 0, 7, 0, 1, 8
-"/home/r3dux/Repositories/engage-showcase/src/components/TaggedFilter.svelte", "Svelte", 0, 69, 0, 10, 79
-"/home/r3dux/Repositories/engage-showcase/src/layouts/ProjectPost.astro", "Astro", 3, 0, 0, 0, 3
-"/home/r3dux/Repositories/engage-showcase/src/pages/feed/index.astro", "Astro", 1, 0, 0, 1, 2
-"/home/r3dux/Repositories/engage-showcase/src/pages/index.astro", "Astro", -2, 0, 0, 0, -2
-"/home/r3dux/Repositories/engage-showcase/src/pages/project/index.astro", "Astro", -2, 0, 0, 0, -2
-"/home/r3dux/Repositories/engage-showcase/src/pages/tags/[...tag].astro", "Astro", 96, 0, 0, 20, 116
-"Total", "-", 96, 76, 0, 32, 204
