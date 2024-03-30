@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon";
 import TechCard from "../components/TechCard.astro";
 import HeaderBack from "../components/HeaderBack.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
@@ -13,24 +14,24 @@ import { Image } from "astro:assets";
 </head>
 
 <div transition:animate="none">
-  <HeaderBack />
+  <Header />
   <div class="max-w-3xl mx-auto px-2">
     <div class="my-5 md:my-20">
-      <div class="" transition:animate="fade">
+      <div class="" transition:persist>
         <div
           class="flex flex-col md:flex-row md:justify-center md:items-center gap-5"
         >
-          <div transition:animate="fade">
-            <Image
-              src="https://github.com/engageintellect.png"
-              alt="Josh"
-              class="rounded-full w-32 md:w-48 shadow"
-              width="400"
-              height="400"
-            />
-          </div>
+          <div class="max-w-xs mx-auto flex flex-col items-center">
+            <div class="py-5">
+              <Image
+                src="https://github.com/engageintellect.png"
+                alt="Josh"
+                class="rounded-full w-32 md:w-48 shadow"
+                width="400"
+                height="400"
+              />
+            </div>
 
-          <div class="max-w-xs">
             <div class="text-3xl font-bold">I'm Josh.</div>
             <div>Fullstack Software Developer</div>
             <div class="text-sm text-gray-500">
@@ -67,7 +68,7 @@ import { Image } from "astro:assets";
       </div>
     </div>
 
-    <div class="my-10" transition:animate="fade">
+    <div class="my-10 text-center" transition:animate="fade">
       <div class="md:text-center">
         <div class="text-3xl font-bold">Technologies</div>
         <div class="lg font-thin">
