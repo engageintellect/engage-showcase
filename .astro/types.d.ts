@@ -255,6 +255,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"gsa-rag.md": {
+	id: "gsa-rag.md";
+  slug: "gsa-rag";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "how-to-use-react-tailwind-and-svelte-inside-astro.md": {
 	id: "how-to-use-react-tailwind-and-svelte-inside-astro.md";
   slug: "how-to-use-react-tailwind-and-svelte-inside-astro";
@@ -286,6 +293,13 @@ declare module 'astro:content' {
 "project-nexum-wiki.md": {
 	id: "project-nexum-wiki.md";
   slug: "project-nexum-wiki";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"rugged-development.md": {
+	id: "rugged-development.md";
+  slug: "rugged-development";
   body: string;
   collection: "project";
   data: InferEntrySchema<"project">
