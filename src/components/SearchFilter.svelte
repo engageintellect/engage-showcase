@@ -4,6 +4,7 @@
   let handleSearch: any;
   let allItems: any = [];
   let inputElement: HTMLInputElement;
+
   import FormatDate from "./FormatDate.svelte";
   import { formatTag } from "../utils";
   export { searchInput, handleSearch, allItems };
@@ -25,7 +26,7 @@
       type="text"
       id="search"
       class="border border-gray-900 rounded p-2 flex-grow w-full focus:outline-none ring-none focus:border-gray-900"
-      placeholder="Filter Feed"
+      placeholder="Filter Articles"
       on:input={handleSearch}
       bind:value={searchInput}
       bind:this={inputElement}
