@@ -6,60 +6,31 @@ excerpt: hello world
 category: Project
 image: /images/wally3.png
 tags:
-  - Sveltekit
+  - Next.js
   - TypeScript
   - TailwindCSS
   - Python
-  - TensorFlow
-  - OpenAI
-  - ChatGPT
   - FastAPI
-  - AI
-  - Ubuntu
+  - API
+  - Uvicorn
   - Nginx
+  - Ubuntu
   - Vercel
 ---
 
 <div class="flex gap-2">
   <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://stonkai.xyz" target="_blank"> Go to App </a>
+    <a href="https://wally-btc.vercel.app" target="_blank"> Go to App </a>
   </button>
 
   <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://github.com/engageintellect/ai-stock-client.git" target="_blank">Go to Repository</a>
+    <a href="https://github.com/engageintellect/wally" target="_blank">Go to Repository</a>
   </button>
 </div>
 
 # Introduction
 
-This app is an AI stock market prediction app built with Sveltekit, Python, TensorFlow, FastAPI, TailwindCSS, and DaisyUI. It uses a machine learning model to predict stock prices and display them on the frontend. This app is a work in progress and is not yet ready for production use.
-
-## Features
-
-- [x] Detailed price dynamic price charts and performance metrics.
-- [x] Company data, news, videos, and more.
-- [x] Context-aware AI insights and sentiment analysis.
-- [x] Options chain
-      <br/>
-
-# Predict Stock Prices based on past data
-
-# A simple and easy to use stock market prediction app
-
-![image](/images/stonkAi5.png)
-<br/>
-
-# Detailed views of stock prices, company data, news, videos, and more.
-
-![image](/images/stonkAi6.png)
-<br/>
-
-# Context-aware AI insights and sentiment analysis
-
-![image](/images/stonkAi7.png)
-<br/>
-
-<br/>
+Wally is a simple, easy-to-use bitcoin wallet generator. It is built with Next.js, TypeScript, and TailwindCSS on the frontend, and Python, FastAPI, and Uvicorn on the backend. The app is hosted on Vercel and the API is hosted on an Ubuntu server with Nginx.
 
 ## Getting Started
 
@@ -67,7 +38,7 @@ This app is an AI stock market prediction app built with Sveltekit, Python, Tens
 
 ```bash
 # Clone the repository
-git clone https://github.com/engageintellect/ai-stock-client.git
+git clone https://github.com/engageintellect/wally.git
 ```
 
 ```bash
@@ -79,7 +50,7 @@ cd ai-stock-client && pnpm i && pnpm run dev
 
 ```bash
 # Clone the repository
-git clone https://github.com/engageintellect/ai-stock-server.git
+git clone https://github.com/engageintellect/btc-walley-generator.git
 ```
 
 ```bash
