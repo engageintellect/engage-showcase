@@ -39,7 +39,7 @@
         <div class="p-2">
           <!-- <hr /> -->
           <div class="">
-            <a href={`/project/${formatTag(item.slug)}/`} class="">
+            <a href={`/article/${formatTag(item.slug)}/`} class="">
               <div class="flex gap-2">
                 <div class="text-xs font-thin mb-2 flex items-center gap-2">
                   <div
