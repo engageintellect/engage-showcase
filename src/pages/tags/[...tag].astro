@@ -25,6 +25,7 @@ type TagRoute = {
 
 export async function getStaticPaths(): Promise<TagRoute[]> {
   const posts = await getCollection("project");
+  console.log(posts);
 
   const tagSet = new Set<string>();
 
@@ -120,6 +121,7 @@ function handleSearch(event: Event) {
         handleSearch={handleSearch}
         searchInput={search}
         allItems={filteredPosts}
+        filterCategory=""
       />
     </div>
   </div>

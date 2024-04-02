@@ -5,6 +5,8 @@
   let allItems: any = [];
   let inputElement: HTMLInputElement;
 
+  export let filterCategory: string = "";
+
   import FormatDate from "./FormatDate.svelte";
   import { formatTag } from "../utils";
   export { searchInput, handleSearch, allItems };
@@ -37,7 +39,7 @@
   <div class="flex flex-col gap-5">
     {#each allItems as item}
       {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
-        {#if item.data.category != "Project"}
+        {#if item.data.category == filterCategory || filterCategory == ""}
           <div class="p-2">
             <!-- <hr /> -->
             <div class="">
