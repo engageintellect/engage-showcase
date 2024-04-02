@@ -42,7 +42,7 @@ This app is a glucose monitor tracker built with Sveltekit, TailwindCSS, and Dai
       <br/>
       <br/>
 
-![image](/images/engage-glucose.png)
+<img class="rounded" src="/images/engage-glucose.png"/>
 <br/>
 
 ## Getting Started

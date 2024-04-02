@@ -35,12 +35,12 @@ Sveltekit chatGPT integration with dynamic 3rd party API-fed context injection. 
 
 # Detailed views of stock prices, company data, news, videos, and more.
 
-![image](/images/svelte-ai-injection-chart1.png)
+<img class="rounded" src="/images/svelte-ai-injection-chart1.png"/>
 <br/>
 
 # Context-aware AI insights and sentiment analysis
 
-![image](/images/svelte-ai-injection-chart2.png)
+<img class="rounded" src="/images/svelte-ai-injection-chart2.png"/>
 <br/>
 
 <br/>

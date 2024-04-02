@@ -4,6 +4,7 @@
   let handleSearch: any;
   let allItems: any = [];
   let inputElement: HTMLInputElement;
+  let tag = "";
 
   export let filterCategory: string = "";
 
@@ -20,6 +21,10 @@
   onMount(() => {
     inputElement.focus();
   });
+
+  const lowercase = (str: string) => {
+    return str.toLowerCase();
+  };
 </script>
 
 <div class="flex flex-col max-w-3xl mx-auto p-2">
@@ -43,7 +48,10 @@
           <div class="p-2">
             <!-- <hr /> -->
             <div class="">
-              <a href={`/article/${formatTag(item.slug)}/`} class="">
+              <a
+                href={`/${lowercase(item.data.category)}/${formatTag(item.slug)}/`}
+                class=""
+              >
                 <div class="flex gap-2">
                   <div class="text-xs font-thin mb-2 flex items-center gap-2">
                     <div

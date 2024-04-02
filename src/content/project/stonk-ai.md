@@ -44,12 +44,12 @@ This app is an AI stock market prediction app built with Sveltekit, Python, Tens
 
 # Detailed views of stock prices, company data, news, videos, and more.
 
-![image](/images/stonkAi6.png)
+<img class="rounded" src="/images/stonkAi6.png"/>
 <br/>
 
 # Context-aware AI insights and sentiment analysis
 
-![image](/images/stonkAi7.png)
+<img class="rounded" src="/images/stonkAi7.png"/>
 <br/>
 
 <br/>

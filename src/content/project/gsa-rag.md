@@ -1,6 +1,6 @@
 ---
 pubDate: 2024-2-10T00:00:00Z
-title: GSA Elibrary2.0 RAG
+title: GSA RAG
 description: Am AI-powered context-aware recommendation system for the GSA Elibrary2.0.
 excerpt: hello world
 category: Project
