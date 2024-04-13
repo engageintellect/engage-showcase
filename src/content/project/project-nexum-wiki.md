@@ -14,17 +14,9 @@ tags:
   - DaisyUI
   - TinyMCE
   - Zod
+projectURL: "https://project-nexum.vercel.app"
+projectRepository: "https://github.com/engageintellect/project-nexum"
 ---
-
-<div class="flex gap-2">
-  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://project-nexum.vercel.app" target="_blank"> Go to App </a>
-  </button>
-
-  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://github.com/engageintellect/project-nexum" target="_blank">Go to Repository</a>
-  </button>
-</div>
 
 # Introduction
 

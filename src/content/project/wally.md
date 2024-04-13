@@ -16,17 +16,9 @@ tags:
   - Nginx
   - Ubuntu
   - Vercel
+projectURL: "https://wally-btc.vercel.app"
+projectRepository: "https://github.com/engageintellect/wally.git"
 ---
-
-<div class="flex gap-2">
-  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://wally-btc.vercel.app" target="_blank"> Go to App </a>
-  </button>
-
-  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://github.com/engageintellect/wally" target="_blank">Go to Repository</a>
-  </button>
-</div>
 
 # Introduction
 

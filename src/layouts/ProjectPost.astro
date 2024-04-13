@@ -7,6 +7,7 @@ import Footer from "../components/Footer.astro";
 import FormatDate from "../components/FormattedDate.astro";
 import { Image } from "astro:assets";
 import { formatTag } from "../utils";
+import { Icon } from "astro-icon";
 
 type Props = CollectionEntry<"project">["data"];
 
@@ -15,6 +16,7 @@ const {
   description,
   pubDate,
   projectURL,
+  projectRepository,
   updatedDate,
   image,
   tags,
@@ -82,21 +84,44 @@ const {
               )
             }
           </div>
-          {
-            projectURL && (
-              <div class="p-2">
+        </div>
+
+        {
+          projectURL && (
+            <div class="flex gap-2 my-2 mx-2 sm:mx-0">
+              <button class="group p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200">
                 <a
                   href={projectURL}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-blue-600 hover:underline"
+                  class="flex items-center gap-2"
                 >
-                  Visit project
+                  <div>Go to App</div>
+                  <Icon
+                    name="fe:app-menu"
+                    class="sm:group-hover:scale-110 transition-all duration-200"
+                    width="20"
+                  />
                 </a>
-              </div>
-            )
-          }
-        </div>
+              </button>
+
+              <button class="group p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200">
+                <a
+                  href={projectRepository}
+                  target="_blank"
+                  class="flex gap-2 items-center"
+                >
+                  <div>Go to Repository</div>
+                  <Icon
+                    name="simple-icons:github"
+                    class="sm:group-hover:scale-110 transition-all duration-200"
+                    width="20"
+                  />
+                </a>
+              </button>
+            </div>
+          )
+        }
+
         <div class="prose py-2 px-2 sm:px-0">
           <slot />
         </div>

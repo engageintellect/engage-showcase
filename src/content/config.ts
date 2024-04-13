@@ -19,6 +19,7 @@ const project = defineCollection({
     category: z.string().optional(),
     excerpt: z.string().optional(),
     projectURL: z.string().optional(),
+    projectRepository: z.string().optional(),
   }),
 });
 

@@ -15,27 +15,9 @@ tags:
   - Ubuntu
   - Nginx
   - Vercel
+projectURL: "https://engage-server-dashboard.vercel.app"
+projectRepository: "https://github.com/engageintellect/server-dashboard"
 ---
-
-<div class="flex gap-2">
-  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://engage-server-dashboard.vercel.app" target="_blank"> Go to App </a>
-  </button>
-
-  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://github.com/engageintellect/server-dashboard.git" target="_blank">Go to Repository</a>
-  </button>
-</div>
-
-# Introduction
-
-Sveltekit chatGPT integration with dynamic 3rd party API-fed context injection. Made using Vercel's AI SDK, OpenAI, TailwindCSS, and DaisyUI.
-
-# create-svelte
-
-## Description
-
-A simple server dashboard that displays the CPU and memory usage of the server it is running on. The server is written in Python and the client is written in Svelte.
 
 ## Getting Started
 

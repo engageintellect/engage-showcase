@@ -17,17 +17,9 @@ tags:
   - Ubuntu
   - Nginx
   - Vercel
+projectURL: "https://stonkai-chat.vercel.app"
+projectRepository: "https://github.com/engageintellect/svelte-ai-injection.git"
 ---
-
-<div class="flex gap-2">
-  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://stonkai-chat.vercel.app" target="_blank"> Go to App </a>
-  </button>
-
-  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://github.com/engageintellect/svelte-ai-injection.git" target="_blank">Go to Repository</a>
-  </button>
-</div>
 
 # Introduction
 

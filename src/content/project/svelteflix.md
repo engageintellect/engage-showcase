@@ -13,17 +13,9 @@ tags:
   - Postgres
   - Zod
   - Vercel
+projectURL: "https://engage-svelteflix.vercel.app"
+projectRepository: "https://github.com/engageintellect/engage-sveltekit.git"
 ---
-
-<div class="flex gap-2">
-  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://engage-svelteflix.vercel.app" target="_blank"> Go to App </a>
-  </button>
-
-  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://github.com/engageintellect/engage-svelteflix" target="_blank">Go to Repository</a>
-  </button>
-</div>
 
 # Introduction
 
