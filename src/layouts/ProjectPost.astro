@@ -73,14 +73,16 @@ const {
           <div class="">
             {
               image && (
-                <Image
-                  loading="eager"
-                  class="h-full min-h-64 w-full object-cover shadow border-t border-gray-900/20 sm:rounded-b sm:border sm:border-gray-900/20 sm:shadow-none"
-                  width={1020}
-                  height={510}
-                  src={image}
-                  alt=""
-                />
+                <a href={projectURL || ""}>
+                  <Image
+                    loading="eager"
+                    class="h-full min-h-64 w-full object-cover shadow border-t border-gray-900/20 sm:rounded-b sm:border sm:border-gray-900/20 sm:shadow-none"
+                    width={1020}
+                    height={510}
+                    src={image}
+                    alt=""
+                  />
+                </a>
               )
             }
           </div>
