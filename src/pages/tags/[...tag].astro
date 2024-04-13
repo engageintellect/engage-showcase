@@ -85,14 +85,23 @@ for (const post of allPosts) {
   }
 }
 
+// After populating the pageObjects array, sort it in reverse chronological order
+pageObjects.sort((a, b) => {
+  // Assuming pubDate is in a format that can be directly compared, e.g., 'YYYY-MM-DD'
+  // For other formats, you might need to parse them into Date objects first
+  return (
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+  );
+});
+
 let search: string = "";
-let filteredPosts: Post[] = pageObjects;
+let filteredPosts: Post[] = pageObjects; // This now starts off in reverse chronological order
 
 function handleSearch(event: Event) {
   const inputElement = event.target as HTMLInputElement;
   search = inputElement.value.toLowerCase();
 
-  // Filter posts based on the search term
+  // Filter posts based on the search term, already in reverse chronological order
   filteredPosts = pageObjects.filter((post) =>
     post.data.title.toLowerCase().includes(search)
   );
