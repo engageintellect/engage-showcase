@@ -4,7 +4,7 @@ title: Server Dashboard.
 description: A simple server dashboard that displays the CPU and memory usage of the server it is running on. The server is written in Python and the client is written in Svelte.
 excerpt: hello world
 category: Project
-image: /images/server-dashboard1.png
+image: /images/server-dashboard3.png
 tags:
   - Sveltekit
   - TypeScript

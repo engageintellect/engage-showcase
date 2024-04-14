@@ -25,7 +25,7 @@
       type="text"
       id="search"
       class="border border-gray-900 rounded p-2 flex-grow w-full focus:outline-none focus:ring-0 focus:border-gray-900"
-      placeholder="Filter Projects"
+      placeholder="type to filter..."
       on:input={handleSearch}
       bind:value={searchInput}
       bind:this={inputElement}
@@ -34,19 +34,17 @@
   </div>
 
   <div class="overflow-auto snap-mandatory snap-x">
-    <div class="flex sm:grid sm:grid-cols-2 gap-2">
+    <div class="flex sm:grid sm:grid-cols-2 gap-2 my-2">
       {#each allItems as item}
         {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
           <div
-            class="group shadow-md hover:shadow-lg w-80 sm:w-full snap-center transition-shadow duration-300 border rounded border-gray-200 flex flex-col"
+            class="group shadow-md md:hover:-translate-y-[2px] w-80 sm:w-full snap-center transition-all duration-300 rounded flex flex-col"
           >
             <a
               href={`/project/${item.slug}/`}
               class="flex flex-col h-full w-80 sm:w-full"
             >
-              <div
-                class="overflow-hidden rounded-t border border-gray-200 relative"
-              >
+              <div class="overflow-hidden rounded-t relative shadow">
                 <img
                   src={item.data.image}
                   alt={item.data.title}
@@ -54,7 +52,9 @@
                 />
               </div>
 
-              <div class="flex-1 p-4 flex flex-col justify-between">
+              <div
+                class="flex-1 p-4 flex flex-col justify-between border border-gray-200 rounded-b"
+              >
                 <div>
                   <div class="flex justify-between items-center">
                     <span
