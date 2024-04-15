@@ -1,7 +1,7 @@
 ---
 pubDate: 2024-4-14T12:00:00Z
 title: Ollama.
-description: Run Llama 2, Code Llama, and other models. Customize and create your own.
+description: Run Llama 2, Code Llama, and other models locally. Customize and create your own models.
 excerpt: hello world
 category: Article
 image: /images/ollama2.png
