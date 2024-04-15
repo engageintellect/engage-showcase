@@ -25,23 +25,21 @@ projectRepository: "https://github.com/engageintellect/svelte-ai-injection.git"
 
 Sveltekit chatGPT integration with dynamic 3rd party API-fed context injection. Made using Vercel's AI SDK, OpenAI, TailwindCSS, and DaisyUI.
 
-# Detailed views of stock prices, company data, news, videos, and more.
+## Detailed views of stock prices, company data, news, videos, and more.
 
 <img class="rounded" src="/images/svelte-ai-injection-chart1.png"/>
 <br/>
 
-# Context-aware AI insights and sentiment analysis
+## Context-aware AI insights and sentiment analysis
 
 <img class="rounded" src="/images/svelte-ai-injection-chart2.png"/>
-<br/>
-
 <br/>
 
 ## Getting Started (for developers)
 
 Everything you need to build a Svelte project with Vercel's AI SDK, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-## Creating a project
+### Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
 
@@ -51,7 +49,7 @@ git clone https://github.com/engageintellect/svelte-ai-injection.git
 
 ```
 
-## OpenAI API Key
+### OpenAI API Key
 
 ```bash
 /.env.local
@@ -63,7 +61,7 @@ OPENAI_API_KEY=sk-<your-api-key>
 YFINANCE_ENDPIONT=https://apidojo-yahoo-finance-v1.p.rapidapi.com
 ```
 
-## Developing
+### Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
@@ -74,7 +72,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+### Building
 
 To create a production version of your app:
 
