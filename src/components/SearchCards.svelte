@@ -34,7 +34,7 @@
   </div>
 
   <div class="overflow-auto snap-mandatory snap-x">
-    <div class="flex sm:grid sm:grid-cols-2 gap-2 m-2">
+    <div class="flex sm:grid sm:grid-cols-2 gap-2 sm:mx-2 my-2">
       {#each allItems as item}
         {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
           <div
@@ -68,7 +68,7 @@
 
                   <div class="py-2">
                     <div class="text-lg font-bold">{item.data.title}</div>
-                    <div class="text-sm font-thin text-base/50">
+                    <div class="text-sm font-thin text-base-content/70">
                       {item.data.description}
                     </div>
                   </div>

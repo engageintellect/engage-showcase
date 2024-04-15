@@ -68,7 +68,7 @@
 
                 <div class="flex flex-col">
                   <div class="text-xl font-bold">{item.data.title}</div>
-                  <div class="text-sm font-thin text-base/50">
+                  <div class="text-sm font-thin text-base-content/70">
                     {item.data.description}
                   </div>
                 </div>
