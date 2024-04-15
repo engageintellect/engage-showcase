@@ -41,6 +41,26 @@ As AI technologies proliferate, the computational power of individual devices co
 
 ## Tutorial: Running Ollama Locally
 
+### Requirements:
+
+To run these models locally, and maintain performance and usability, you will will want to use as high-powered of a machine as possible. I have personally tested Ollama across the following devices, with the following results:
+
+<div class="table table-sm border">
+
+| Machine                 | RAM   | Results |
+| ----------------------- | ----- | ------- |
+| M3 Pro MacBook Pro      | 18 GB | A+      |
+| SurfaceBook 2           | 16 GB | B+      |
+| Raspberry Pi 4B         | 8 GB  | C-      |
+| ThinkPad X220           | 8 GB  | C+      |
+| Linode Ubuntu 22.04 VPS | 2 GB  | F       |
+
+</div>
+
+<br/>
+
+<strong>Note:</strong> As you can see by the above results, performance is correlated to RAM. For best results, use on the most powerful machine that you have access to.
+
 ### Step 1: Install Ollama
 
 Ensure your system meets the hardware requirements (primarily modern CPU with optional GPU support for enhanced performance). Install Ollama by running the following command in your terminal:
@@ -65,6 +85,30 @@ You can start by running a simple model to see Ollama in action:
 ollama run your-model-name
 ```
 
+### Available Models:
+
+<a class="btn btn-primary" href="https://ollama.com/library" target="_blank">View Available Models</a>
+
+### Example Usage:
+
+Run Llama2
+
+```bash
+ollama run llama2
+```
+
+Run Phi-2
+
+```bash
+ollama run phi
+```
+
+List models
+
+```bash
+ollama list
+```
+
 Replace your-model-name with the model you wish to run. Make sure the model is compatible with your Ollama installation.
 
 ### Step 4: Monitoring and Managing Models
@@ -73,4 +117,6 @@ Use Ollama's dashboard or command-line tools to monitor and manage the models. Y
 
 ## Conclusion
 
-As AI continues to integrate into every aspect of modern life, platforms like Ollama and the concept of leveraging personal compute as a currency illustrate a future where technology is more personalized, secure, and accessible. This paradigm not only empowers individuals by valuing and utilizing their resources but also fosters a more distributed and democratic digital ecosystem. By embracing locally-run models, we step into a future where technology serves humanity more discreetly and powerfully, all from the comfort of our local devices.
+As AI continues to integrate into every aspect of modern life, platforms like Ollama and the concept of leveraging personal compute as a currency illustrate a future where technology is more personalized, secure, and accessible.
+
+This paradigm not only empowers individuals by valuing and utilizing their resources but also fosters a more distributed and democratic digital ecosystem. By embracing locally-run models, we step into a future where technology serves humanity more discreetly and powerfully, all from the comfort of our local devices.
