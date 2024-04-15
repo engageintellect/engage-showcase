@@ -15,47 +15,45 @@ import { fade, slide } from "astro:transitions";
   <body>
     <Header title={SITE_TITLE} />
 
-    <div
-      class="md:h-screen flex justify-center py-10 md:items-center md:-mt-52 max-w-3xl mx-auto"
-    >
-      <div class="flex flex-col md:flex-row items-center gap-5">
-        <a href="/about" class="hover:animate-pulse">
-          <Image
-            client:load
-            transition:animate={fade({ duration: ".5s" })}
-            transition:persist
-            loading="eager"
-            class="object-cover h-52 w-52 lg:h-72 lg:w-72 rounded-full"
-            src="https://github.com/engageintellect.png"
-            alt=""
-            width="1440"
-            height="720"
-          />
-        </a>
+    <div class="flex justify-center sm:py-2 sm:p-2 max-w-3xl mx-auto">
+      <div class="flex flex-col items-center gap-5 w-full">
+        <div class="card sm:card-side bg-base-100 w-full">
+          <div class="w-full">
+            <img
+              src="https://github.com/engageintellect.png"
+              alt="Album"
+              class="sm:rounded w-full max-h-80 object-cover"
+            />
+          </div>
+          <div
+            class="card-body flex flex-col w-full items-center justify-center"
+          >
+            <div class="card-title text-3xl">@engageintellect</div>
+            <SvelteTypewriter
+              client:load
+              typeStyle="scramble"
+              inputString="Software Engineer"
+            />
+            <div class="card-actions justify-end max-w-md w-full">
+              <div class="flex gap-2 py-2 max-w-md w-full">
+                <a href="/project" class="btn btn-primary uppercase flex-1">
+                  <div class="flex items-center gap-2">
+                    <Icon name="ph:code-fill" width="20" />
+                    <div>Projects</div>
+                  </div>
+                </a>
 
-        <div class="flex flex-col justify-center items-center gap-2">
-          <div class="text-3xl font-semibold">@engageintellect</div>
-
-          <SvelteTypewriter
-            client:load
-            typeStyle="scramble"
-            inputString="Web Developer"
-          />
-
-          <div class="flex gap-2 py-2">
-            <a href="/project" class="btn btn-primary">
-              <div class="flex items-center gap-2">
-                <Icon name="ph:code-fill" width="20" />
-                <div>Projects</div>
+                <a
+                  href="mailto:jc9361@gmail.com"
+                  class="btn btn-outline uppercase flex-1"
+                >
+                  <div class="flex items-center gap-2">
+                    <Icon name="ion:mail" width="20" />
+                    <div>Contact</div>
+                  </div>
+                </a>
               </div>
-            </a>
-
-            <a href="mailto:jc9361@gmail.com" class="btn btn-outline">
-              <div class="flex items-center gap-2">
-                <Icon name="ion:mail" width="20" />
-                <div>Contact</div>
-              </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>

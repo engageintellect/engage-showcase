@@ -9,9 +9,9 @@
     class="text-2xl text-base-content/50 font-thin"
     use:scramble={{
       typeDuration: 1000,
-      scrambleDuration: 1500,
+      scrambleDuration: 1000,
       scrambleSlowdown: true,
-      delay: 5000,
+      delay: 3000,
     }}
   >
     {inputString}
