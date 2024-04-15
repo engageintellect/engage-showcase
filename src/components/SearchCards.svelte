@@ -48,12 +48,12 @@
                 <img
                   src={item.data.image}
                   alt={item.data.title}
-                  class="group-hover:scale-[102%] group-hover:saturate-150 transition-transform duration-500 h-52 object-cover w-full rounded-t"
+                  class=" transition-transform duration-500 h-52 object-cover w-full rounded-t"
                 />
               </div>
 
               <div
-                class="flex-1 p-4 flex flex-col justify-between border border-primary/20 rounded-b"
+                class="flex-1 p-4 flex flex-col justify-between border border-base-300 rounded-b"
               >
                 <div>
                   <div class="flex justify-between items-center">
@@ -82,7 +82,7 @@
                         {#each item.data.tags as tag}
                           <a
                             href={`/tags/${formatTag(tag)}/`}
-                            class="text-sm lowercase bg-primary text-primary-content p-1 px-2 rounded"
+                            class="text-sm lowercase bg-base-300 hover:bg-base-200 transition-all duration-200 text-base-content p-1 px-2 rounded"
                           >
                             #{tag}
                           </a>

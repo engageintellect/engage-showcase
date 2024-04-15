@@ -38,7 +38,7 @@ const {
     >
       <!-- <a href="/project" class="text-xl font-bold">← Projects</a> -->
       <article>
-        <div class="flex flex-col rounded sm:border border-primary/20">
+        <div class="flex flex-col rounded sm:border border-base-300">
           <div class="p-2 sm:p-4">
             <div class="flex items-center gap-2">
               <div class="text-xs font-thin">
@@ -65,7 +65,7 @@ const {
                   tags?.map((tag, index) => (
                     <a
                       href={`/tags/${formatTag(tag)}/`}
-                      class="bg-primary text-primary-content whitespace-nowrap text-sm font-thin lowercase rounded px-2 py-1"
+                      class="bg-base-300 hover:bg-base-200 transition-all duration-200 text-base-content whitespace-nowrap text-sm font-thin lowercase rounded px-2 py-1"
                     >
                       #{tag}
                     </a>
@@ -80,7 +80,7 @@ const {
                 <a href={projectURL || ""}>
                   <Image
                     loading="eager"
-                    class="h-full min-h-64 w-full object-cover shadow border-t border-primary/20 sm:rounded-b sm:shadow-none"
+                    class="h-full min-h-64 w-full object-cover shadow border-t border-base-300 sm:rounded-b sm:shadow-none"
                     width={1020}
                     height={510}
                     src={image}
@@ -95,13 +95,13 @@ const {
         <div class="flex gap-2 my-2 mx-2 sm:mx-0">
           {
             projectURL && (
-              <button class="group p-2 rounded border border-primary/20 md:hover:shadow transition-shadow duration-200">
+              <button class="group btn btn-primary">
                 <a
                   href={projectURL}
                   target="_blank"
                   class="flex items-center gap-2"
                 >
-                  <div>Go to App</div>
+                  <div>Try App</div>
                   <Icon
                     name="fe:app-menu"
                     class="sm:group-hover:scale-110 transition-all duration-200"
@@ -114,13 +114,13 @@ const {
 
           {
             projectRepository && (
-              <button class="group p-2 rounded border border-primary/20 md:hover:shadow transition-shadow duration-200">
+              <button class="group btn btn-primary">
                 <a
                   href={projectRepository}
                   target="_blank"
                   class="flex gap-2 items-center"
                 >
-                  <div>Go to Repository</div>
+                  <div>Repository</div>
                   <Icon
                     name="simple-icons:github"
                     class="sm:group-hover:scale-110 transition-all duration-200"

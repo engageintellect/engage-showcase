@@ -82,7 +82,7 @@
                     {#each item.data.tags as tag}
                       <a
                         href={`/tags/${formatTag(tag)}/`}
-                        class="bg-primary text-primary-content whitespace-nowrap text-sm font-thin lowercase rounded px-2 py-1"
+                        class="bg-base-300 hover:bg-base-200 transition-all duration-200 text-base-content whitespace-nowrap text-sm font-thin lowercase rounded px-2 py-1"
                       >
                         #{tag}
                       </a>
