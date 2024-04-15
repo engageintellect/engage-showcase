@@ -290,6 +290,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"ollama.md": {
+	id: "ollama.md";
+  slug: "ollama";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "project-nexum-wiki.md": {
 	id: "project-nexum-wiki.md";
   slug: "project-nexum-wiki";

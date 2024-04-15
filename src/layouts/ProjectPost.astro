@@ -8,6 +8,7 @@ import FormatDate from "../components/FormattedDate.astro";
 import { Image } from "astro:assets";
 import { formatTag } from "../utils";
 import { Icon } from "astro-icon";
+import { fade, slide } from "astro:transitions";
 
 type Props = CollectionEntry<"project">["data"];
 
@@ -31,37 +32,40 @@ const {
   </head>
   <body>
     <HeaderBack />
-    <main transition:animate="fade" class="mx-auto max-w-3xl sm:p-2">
+    <main
+      transition:animate={fade({ duration: ".25s" })}
+      class="mx-auto max-w-3xl sm:p-2"
+    >
       <!-- <a href="/project" class="text-xl font-bold">← Projects</a> -->
       <article>
-        <div class="flex flex-col rounded sm:border border-gray-900/20">
+        <div class="flex flex-col rounded sm:border border-primary/20">
           <div class="p-2 sm:p-4">
             <div class="flex items-center gap-2">
               <div class="text-xs font-thin">
                 <div
-                  class="border border-gray-500 font-semibold text-gray-500 p-2 rounded"
+                  class="border border-primary text-primary font-semibold text-base/50 p-2 rounded"
                 >
                   {category}
                 </div>
               </div>
-              <div class="text-gray-500 text-xs">
+              <div class="text-base/50 text-xs">
                 <FormatDate date={pubDate} />
               </div>
             </div>
 
             <div class="py-2">
               <div class="text-3xl font-semibold">{title}</div>
-              <div class="text-base font-thin text-gray-500">{description}</div>
+              <div class="text-base font-thin text-base/50">{description}</div>
             </div>
 
             <div class="">
-              <div class="text-sm text-gray-500 pb-1">Technologies:</div>
+              <div class="text-sm text-base/50 pb-1">Technologies:</div>
               <div class="flex overflow-x-auto gap-1">
                 {
                   tags?.map((tag, index) => (
                     <a
                       href={`/tags/${formatTag(tag)}/`}
-                      class="bg-gray-200 whitespace-nowrap md:hover:bg-gray-300 text-sm font-thin lowercase rounded px-2 py-1 text-gray-700"
+                      class="bg-primary text-primary-content whitespace-nowrap text-sm font-thin lowercase rounded px-2 py-1"
                     >
                       #{tag}
                     </a>
@@ -76,7 +80,7 @@ const {
                 <a href={projectURL || ""}>
                   <Image
                     loading="eager"
-                    class="h-full min-h-64 w-full object-cover shadow border-t border-gray-900/20 sm:rounded-b sm:border sm:border-gray-900/20 sm:shadow-none"
+                    class="h-full min-h-64 w-full object-cover shadow border-t border-primary/20 sm:rounded-b sm:shadow-none"
                     width={1020}
                     height={510}
                     src={image}
@@ -88,10 +92,10 @@ const {
           </div>
         </div>
 
-        {
-          projectURL && (
-            <div class="flex gap-2 my-2 mx-2 sm:mx-0">
-              <button class="group p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200">
+        <div class="flex gap-2 my-2 mx-2 sm:mx-0">
+          {
+            projectURL && (
+              <button class="group p-2 rounded border border-primary/20 md:hover:shadow transition-shadow duration-200">
                 <a
                   href={projectURL}
                   target="_blank"
@@ -105,8 +109,12 @@ const {
                   />
                 </a>
               </button>
+            )
+          }
 
-              <button class="group p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200">
+          {
+            projectRepository && (
+              <button class="group p-2 rounded border border-primary/20 md:hover:shadow transition-shadow duration-200">
                 <a
                   href={projectRepository}
                   target="_blank"
@@ -120,9 +128,9 @@ const {
                   />
                 </a>
               </button>
-            </div>
-          )
-        }
+            )
+          }
+        </div>
 
         <div class="prose py-2 px-2 sm:px-0">
           <slot />

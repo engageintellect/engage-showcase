@@ -25,7 +25,7 @@ The Server Dashboard is a comprehensive tool designed to monitor and display rea
 
 Built using Python for the server-side logic and Svelte for the client interface, this project leverages the best of both worlds - the robustness of Python for backend operations and the reactivity of Svelte for a seamless frontend experience. The dashboard updates in real-time using WebSockets, providing immediate feedback on the server's current state.
 
-Key Features:
+### Key Features
 
 - Real-time CPU and memory usage graphs.
 - Easy setup and deployment on any server running Ubuntu and Nginx.

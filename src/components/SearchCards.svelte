@@ -24,7 +24,7 @@
     <input
       type="text"
       id="search"
-      class="border border-gray-900 rounded p-2 flex-grow w-full focus:outline-none focus:ring-0 focus:border-gray-900"
+      class="input border border-primary rounded p-2 flex-grow w-full focus:outline-none focus:ring-0 focus:border-primary"
       placeholder="type to filter..."
       on:input={handleSearch}
       bind:value={searchInput}
@@ -34,7 +34,7 @@
   </div>
 
   <div class="overflow-auto snap-mandatory snap-x">
-    <div class="flex sm:grid sm:grid-cols-2 gap-2 my-2">
+    <div class="flex sm:grid sm:grid-cols-2 gap-2 m-2">
       {#each allItems as item}
         {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
           <div
@@ -48,27 +48,27 @@
                 <img
                   src={item.data.image}
                   alt={item.data.title}
-                  class="group-hover:scale-105 group-hover:saturate-150 transition-transform duration-500 h-52 object-cover w-full rounded-t"
+                  class="group-hover:scale-[102%] group-hover:saturate-150 transition-transform duration-500 h-52 object-cover w-full rounded-t"
                 />
               </div>
 
               <div
-                class="flex-1 p-4 flex flex-col justify-between border border-gray-200 rounded-b"
+                class="flex-1 p-4 flex flex-col justify-between border border-primary/20 rounded-b"
               >
                 <div>
                   <div class="flex justify-between items-center">
                     <span
-                      class="border border-gray-500 text-xs text-gray-500 p-1 px-2 rounded"
+                      class="border border-primary text-xs text-primary p-1 px-2 rounded"
                       >{item.data.category}</span
                     >
-                    <div class="text-gray-500 text-xs">
+                    <div class="text-base/50 text-xs">
                       <FormatDate date={item.data.pubDate} />
                     </div>
                   </div>
 
                   <div class="py-2">
                     <div class="text-lg font-bold">{item.data.title}</div>
-                    <div class="text-sm font-thin text-gray-500">
+                    <div class="text-sm font-thin text-base/50">
                       {item.data.description}
                     </div>
                   </div>
@@ -76,13 +76,13 @@
 
                 {#if item.data.tags}
                   <div class="">
-                    <div class="text-sm text-gray-500 pb-1">Technologies:</div>
+                    <div class="text-sm text-base/50 pb-1">Technologies:</div>
                     <div class="overflow-auto">
                       <div class="flex gap-1">
                         {#each item.data.tags as tag}
                           <a
                             href={`/tags/${formatTag(tag)}/`}
-                            class="text-sm lowercase bg-gray-200 hover:bg-gray-300 p-1 px-2 rounded text-gray-700"
+                            class="text-sm lowercase bg-primary text-primary-content p-1 px-2 rounded"
                           >
                             #{tag}
                           </a>

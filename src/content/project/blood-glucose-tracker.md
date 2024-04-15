@@ -15,11 +15,11 @@ tags:
 ---
 
 <div class="flex gap-2">
-  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
+  <button class="p-2 rounded border border-primary/20 md:hover:shadow transition-shadow duration-200"> 
     <a href="https://engage-glucose.vercel.app" target="_blank"> Go to App </a>
   </button>
 
-  <button class="p-2 rounded border border-gray-900/20 md:hover:shadow transition-shadow duration-200"> 
+  <button class="p-2 rounded border border-primary/20 md:hover:shadow transition-shadow duration-200"> 
     <a href="https://github.com/engageintellect/engage-glucose" target="_blank">Go to Repository</a>
   </button>
 </div>

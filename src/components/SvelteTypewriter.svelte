@@ -6,7 +6,7 @@
 
 {#if typeStyle === "scramble"}
   <div
-    class="text-2xl text-gray-500 font-thin"
+    class="text-2xl text-base-content/50 font-thin"
     use:scramble={{
       typeDuration: 1000,
       scrambleDuration: 1500,
@@ -18,7 +18,7 @@
   </div>
 {:else if typeStyle === "concurrent"}
   <div
-    class="text-2xl text-gray-900/50"
+    class="text-2xl text-base-content/50 font-thin"
     use:concurrent={{
       typeDuration: 100,
       interval: 50,

@@ -9,14 +9,21 @@ import { Icon } from "astro-icon";
       {SITE_TITLE}
     </a>
   </div>
-  <header class="sticky top-0 bg-white z-50 shadow-md">
+  <header
+    transition:animate="none"
+    class="sticky top-0 z-50 bg-base-100 shadow-sm"
+  >
     <nav class="max-w-3xl px-2 mx-auto flex flex-col items-start justify-start">
       <div class="flex justify-betwe w-full">
         <div class="flex items-center gap-5 w-full">
           <a href="javascript:history.back()">
-            <div class="flex items-center pt-1">
+            <div class="flex items-center gap-1 pt-1">
               <div class="">
-                <Icon name="icon-park:left" width="16" />
+                <Icon
+                  name="ep:back"
+                  width="16"
+                  currentColor="fill-red-500 bg-red-500"
+                />
               </div>
               <div>Back</div>
             </div>

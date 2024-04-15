@@ -17,6 +17,7 @@
     "@astrojs/tailwind": "^5.0.0",
     "astro": "^3.0.7",
     "astro-icon": "^0.8.1",
+    "daisyui": "^4.10.1",
     "prettier": "^3.2.5",
     "prettier-tailwind": "0.0.0-development",
     "react": "^18.0.0",

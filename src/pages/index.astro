@@ -5,9 +5,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
 import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
+import { fade, slide } from "astro:transitions";
 ---
 
-<html lang="en" class="">
+<html lang="en" class="" data-theme="lofi">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
@@ -15,11 +16,14 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
     <Header title={SITE_TITLE} />
 
     <div
-      class="h-screen flex justify-center py-10 sm:items-center sm:-mt-52 max-w-3xl mx-auto"
+      class="md:h-screen flex justify-center py-10 md:items-center md:-mt-52 max-w-3xl mx-auto"
     >
       <div class="flex flex-col md:flex-row items-center gap-5">
         <a href="/about" class="hover:animate-pulse">
           <Image
+            client:load
+            transition:animate={fade({ duration: ".5s" })}
+            transition:persist
             loading="eager"
             class="object-cover h-52 w-52 lg:h-72 lg:w-72 rounded-full"
             src="https://github.com/engageintellect.png"
@@ -39,21 +43,15 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
           />
 
           <div class="flex gap-2 py-2">
-            <a
-              href="/project"
-              class="bg-gray-900 md:hover:bg-gray-800 py-2 px-4 text-white rounded"
-            >
-              <div class="flex items-center gap-2 uppercase">
+            <a href="/project" class="btn btn-primary">
+              <div class="flex items-center gap-2">
                 <Icon name="ph:code-fill" width="20" />
                 <div>Projects</div>
               </div>
             </a>
 
-            <a
-              href="mailto:jc9361@gmail.com"
-              class="bg-teal-500 md:hover:bg-teal-400 py-2 px-4 text-white rounded"
-            >
-              <div class="flex items-center gap-2 uppercase">
+            <a href="mailto:jc9361@gmail.com" class="btn btn-outline">
+              <div class="flex items-center gap-2">
                 <Icon name="ion:mail" width="20" />
                 <div>Contact</div>
               </div>
