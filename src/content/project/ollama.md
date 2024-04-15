@@ -51,8 +51,8 @@ To run these models locally, and maintain performance and usability, you will wi
 | ----------------------- | ----- | ------- |
 | M3 Pro MacBook Pro      | 18 GB | A+      |
 | SurfaceBook 2           | 16 GB | B+      |
-| Raspberry Pi 4B         | 8 GB  | C-      |
 | ThinkPad X220           | 8 GB  | C+      |
+| Raspberry Pi 4B         | 8 GB  | C-      |
 | Linode Ubuntu 22.04 VPS | 2 GB  | F       |
 
 </div>
