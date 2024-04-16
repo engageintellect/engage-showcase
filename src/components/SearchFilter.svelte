@@ -50,17 +50,19 @@
             <div class="">
               <a
                 href={`/${lowercase(item.data.category)}/${formatTag(item.slug)}/`}
-                class=""
+                class="flex flex-col gap-5"
               >
                 <div class="flex gap-2">
-                  <div class="text-xs font-thin mb-2 flex items-center gap-2">
+                  <div
+                    class="text-xs font-thin flex justify-between w-full items-center gap-2"
+                  >
                     <div
                       class="border border-primary text-primary p-1 px-2 rounded"
                     >
                       {item.data.category}
                     </div>
 
-                    <div class="text-base/50 text-xs">
+                    <div class="text-base-content/50 text-xs">
                       <FormatDate date={item.data.pubDate} />
                     </div>
                   </div>
@@ -72,24 +74,26 @@
                     {item.data.description}
                   </div>
                 </div>
-              </a>
 
-              <div class="text-sm pt-2 text-base/50">Technologies:</div>
+                <div>
+                  <div class="text-sm text-base/50">Technologies:</div>
 
-              {#if item.data.tags}
-                <div class="overflow-auto">
-                  <div class="flex gap-1 pb-2 pt-1">
-                    {#each item.data.tags as tag}
-                      <a
-                        href={`/tags/${formatTag(tag)}/`}
-                        class="bg-base-300 hover:bg-base-200 transition-all duration-200 text-base-content whitespace-nowrap text-sm font-thin lowercase rounded px-2 py-1"
-                      >
-                        #{tag}
-                      </a>
-                    {/each}
-                  </div>
+                  {#if item.data.tags}
+                    <div class="overflow-auto">
+                      <div class="flex gap-1 pb-2 pt-1">
+                        {#each item.data.tags as tag}
+                          <a
+                            href={`/tags/${formatTag(tag)}/`}
+                            class="bg-base-300 hover:bg-base-200 transition-all duration-200 text-base-content whitespace-nowrap text-sm font-thin lowercase rounded px-2 py-1"
+                          >
+                            #{tag}
+                          </a>
+                        {/each}
+                      </div>
+                    </div>
+                  {/if}
                 </div>
-              {/if}
+              </a>
             </div>
             <!-- <div class="border-t border-[.5px] border-primary/20 w-full"></div> -->
           </div>

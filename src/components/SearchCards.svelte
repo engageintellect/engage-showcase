@@ -48,12 +48,12 @@
                 <img
                   src={item.data.image}
                   alt={item.data.title}
-                  class=" transition-transform duration-500 h-52 object-cover w-full rounded-t"
+                  class=" transition-transform duration-500 h-56 object-cover w-full rounded-t"
                 />
               </div>
 
               <div
-                class="flex-1 p-4 flex flex-col justify-between border border-base-300 rounded-b"
+                class="flex-1 p-4 flex flex-col justify-between border-base-300 rounded-b"
               >
                 <div>
                   <div class="flex justify-between items-center">
@@ -61,13 +61,13 @@
                       class="border border-primary text-xs text-primary p-1 px-2 rounded"
                       >{item.data.category}</span
                     >
-                    <div class="text-base/50 text-xs">
+                    <div class="text-base-content/50 text-xs">
                       <FormatDate date={item.data.pubDate} />
                     </div>
                   </div>
 
-                  <div class="py-2">
-                    <div class="text-lg font-bold">{item.data.title}</div>
+                  <div class="py-5">
+                    <div class="text-xl font-bold">{item.data.title}</div>
                     <div class="text-sm font-thin text-base-content/70">
                       {item.data.description}
                     </div>
