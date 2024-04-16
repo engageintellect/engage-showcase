@@ -1,0 +1,247 @@
+---
+import Header from "../components/Header.astro";
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<html lang="en" class="" data-theme="lofi">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+
+  <div transition:animate="fade">
+    <Header />
+    <div class="max-w-3xl mx-auto px-2">
+      <body
+        ><article class="page sans">
+          <header>
+            <h1 class="page-title">Josh Chadwick</h1>
+
+            <div>
+              <div class="page-body">
+                Email: <a href="mailto:josh.chadwick@protonmail.com"
+                  >josh.chadwick@protonmail.com</a
+                > | Phone: 949.750.6530 | GitHub: <a
+                  href="https://github.com/engageintellect"
+                  class="underline text-info-content">engageintellect</a
+                >
+              </div>
+              <p>
+                Projects: <a
+                  href="https://engage-showcase.vercel.app/"
+                  class="underline text-info-content"
+                  >https://engage-showcase.vercel.app</a
+                >
+              </p>
+              <p>Location: Orange County, CA</p>
+            </div>
+          </header>
+
+          <div>
+            <h2>
+              <strong>About Me</strong>
+            </h2>
+            <hr />
+            <p>
+              Full Stack Developer with over a decade of experience across
+              various sectors including startup, tech, luxury automotive,
+              consulting, and prop tech. Expert in developing scalable
+              applications, integrating AI/ML technologies, and leading
+              technological transformations.
+            </p>
+          </div>
+
+          <div>
+            <h2>
+              <strong>Technical Skills</strong>
+            </h2>
+            <hr />
+            <ul>
+              <li style="list-style-type:disc">
+                <strong>Languages</strong>: TypeScript, JavaScript, Python,
+                Bash, GO, C, C++, C#
+              </li>
+              <li style="list-style-type:disc">
+                <strong>Frameworks</strong>: Next.js, Sveltekit, React, Astro,
+                Node.js, Solid, Flask
+              </li>
+              <li style="list-style-type:disc">
+                <strong>Technologies</strong>: AI/ML, Web Development, Agile
+                Methodologies, DevOps, Cloud Services, Data Science
+              </li>
+              <li style="list-style-type:disc">
+                <strong>Tools</strong>: Git, Cloud Platforms (Vercel, AWS,
+                Azure, GCP, Linode), CI/CD, Terraform, Docker
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>
+              <strong>Professional Experience</strong>
+            </h2>
+            <hr />
+            <div class="flex flex-col gap-5">
+              <div>
+                <p>
+                  <strong>Principal AI Engineer</strong>, Resonant Logic, Los
+                  Angeles, CA
+                </p>
+                <p>
+                  <em>Jan 2024 - Present</em>
+                </p>
+                <ul class="bulleted-list">
+                  <li style="list-style-type:disc">
+                    Engineered a regulatory advisory generator utilizing
+                    Claude2, HuggingFace, PyTorch, enhancing search, tagging,
+                    and analysis across government intranet.
+                  </li>
+                  <li>
+                    Deployed applications on AWS using Next.js and TailwindCSS
+                    for front-end and backend solutions, significantly improving
+                    data accessibility and analysis.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p>
+                  <strong>Software Engineer II - Emerging Technologies</strong>,
+                  First American Title, Santa Ana, CA
+                </p>
+                <p>
+                  <em>2022 - Present</em>
+                </p>
+                <ul>
+                  <li style="list-style-type:disc">
+                    Developed AI/ML proofs of concept to enhance internal search
+                    and data classification systems using OpenAI and HuggingFace
+                    libraries.
+                  </li>
+                  <li style="list-style-type:disc">
+                    Recognized with the “Innovation Challenge” award for
+                    integrating APIs across platforms to enhance operational
+                    connectivity.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p>
+                  <strong>Software Engineer</strong>, Rugged Development,
+                  Newport Beach, CA
+                </p>
+                <p>
+                  <em>Feb 2022 - Present</em>
+                </p>
+                <ul class="bulleted-list">
+                  <li style="list-style-type:disc">
+                    Led the migration from WordPress/PHP to a React-based stack,
+                    increasing client acquisition by 220% through enhanced web
+                    functionalities.
+                  </li>
+                  <li style="list-style-type:disc">
+                    Implemented analytics tools to refine customer engagement
+                    strategies and platform optimization.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p>
+                  <strong
+                    >Business Systems Analyst - Emerging Technologies</strong
+                  >, First American Title, Santa Ana, CA
+                </p>
+                <p>
+                  <em>Oct 2021 - 2022</em>
+                </p>
+                <ul class="bulleted-list">
+                  <li style="list-style-type:disc">
+                    Spearheaded the development and deployment of an Enterprise
+                    Wiki, facilitating a seamless scale to over 430 active
+                    users.
+                  </li>
+                  <li style="list-style-type:disc">
+                    Designed and implemented AWS infrastructure using Terraform,
+                    enhancing enterprise-wide collaboration and document
+                    management.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p>
+                  <strong
+                    >Product Management Coordinator - Enterprise Architecture
+                    &amp; Emerging Technologies</strong
+                  >, First American Title, Santa Ana, CA
+                </p>
+                <p>
+                  <em>Jun 2021 - Aug 2021</em>
+                </p>
+                <ul>
+                  <li style="list-style-type:disc">
+                    Managed critical application reviews and documentation
+                    across multiple teams, improving system resiliency and
+                    project efficiency.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p>
+                  <strong>Founder</strong>, Grey Matter Extracts, Laguna Hills,
+                  CA
+                </p>
+                <p id="02a888b6-619a-4835-9759-0f1be883ad5c" class="">
+                  <em>Aug 2017 - Present</em>
+                </p>
+                <ul class="bulleted-list">
+                  <li style="list-style-type:disc">
+                    Established an online marketplace platform using Django,
+                    Stripe, and modern web technologies, managing end-to-end
+                    ecommerce operations.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="">
+              <strong>Education and Certifications</strong>
+            </h2>
+            <hr id="fa192bbc-b593-4667-b362-ef4844349dd1" />
+            <ul class="bulleted-list">
+              <li style="list-style-type:disc">Python for Everybody</li>
+              <li style="list-style-type:disc">JavaScript Language Course</li>
+              <li style="list-style-type:disc">Data Science with Python</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="">
+              <strong>Awards</strong>
+            </h2>
+            <hr id="8fdf8a86-cd60-4dcd-be2c-e0aa17e56840" />
+            <ul class="bulleted-list">
+              <li style="list-style-type:disc">
+                First American BTS Innovation Challenge Winner
+              </li>
+              <li style="list-style-type:disc">Apple RedZone Award</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="">
+              <strong>Professional Affiliation</strong>
+            </h2>
+            <hr id="05e26a6d-a480-4c56-8484-76bf161699e6" />
+            <ul class="bulleted-list">
+              <li style="list-style-type:disc">Agile Professional Network</li>
+              <li style="list-style-type:disc">
+                AI and Machine Learning Enthusiasts Group
+              </li>
+            </ul>
+          </div>
+        </article>
+      </body><span class="sans" style="font-size:14px;padding-top:2em"></span>
+    </div>
+  </div>
+</html>

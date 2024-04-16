@@ -141,16 +141,6 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
 
           <div class="w-full snap-center">
             <TechCard
-              title="Tailwind"
-              description="A utility-first CSS framework for rapidly building custom user interfaces with a modern design system, offering a wide range of pre-built components and utilities."
-              iconName="vscode-icons:file-type-tailwind"
-              cardUrl="https://tailwindcss.com"
-              tag="Web"
-            />
-          </div>
-
-          <div class="w-full snap-center">
-            <TechCard
               title="OpenAI"
               description="A research laboratory that develops artificial intelligence technology, including the GPT-3 language model, which can generate human-like text in response to prompts."
               iconName="simple-icons:openai"
@@ -181,6 +171,27 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
 
           <div class="w-full snap-center">
             <TechCard
+              title="Tensorflow"
+              description=""
+              description="An open-source machine learning framework that enables developers to easily build and deploy ML models, offering comprehensive libraries and tools for research and production."
+              iconName="cib:tensorflow"
+              cardUrl="https://tensorflow.org"
+              tag="AI/ML"
+            />
+          </div>
+
+          <div class="w-full snap-center">
+            <TechCard
+              title="Tailwind"
+              description="A utility-first CSS framework for rapidly building custom user interfaces with a modern design system, offering a wide range of pre-built components and utilities."
+              iconName="vscode-icons:file-type-tailwind"
+              cardUrl="https://tailwindcss.com"
+              tag="Web"
+            />
+          </div>
+
+          <div class="w-full snap-center">
+            <TechCard
               title="Django"
               description="A modern Python framework for building APIs with a focus on developer productivity and code quality, offering automatic documentation and data validation."
               iconName="simple-icons:django"
@@ -191,10 +202,10 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
 
           <div class="w-full snap-center">
             <TechCard
-              title="PlanetScale"
-              description="A cloud-native database platform that enables developers to build applications with the scalability and reliability of a distributed database, without the operational overhead."
+              title="MySQL"
+              description="A popular relational database management system that is widely used for storing and managing structured data in various applications.."
               iconName="vscode-icons:file-type-mysql"
-              cardUrl="https://planetscale.com"
+              cardUrl="https://mysql.com"
               tag="Web"
             />
           </div>
@@ -231,10 +242,40 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
 
           <div class="w-full snap-center">
             <TechCard
+              title="Node.js"
+              description="An open-source, cross-platform runtime environment that enables developers to build server-side applications in JavaScript. It features an event-driven, non-blocking I/O model, making it ideal for scalable network applications."
+              iconName="logos:nodejs-icon"
+              cardUrl="https://nodejs.org"
+              tag="Web"
+            />
+          </div>
+
+          <div class="w-full snap-center">
+            <TechCard
               title="Linux"
               description="An open-source operating system that provides a free and highly customizable alternative to Windows and macOS, with a wide range of distributions and desktop environments."
               iconName="logos:linux-tux"
               cardUrl="https://www.linux.org"
+              tag="Web"
+            />
+          </div>
+
+          <div class="w-full snap-center">
+            <TechCard
+              title="Ubuntu"
+              description="An open-source operating system based on Debian Linux. Used for desktops, servers, and clouds. Ubuntu is known for its security, regular updates, and strong community support."
+              iconName="logos:ubuntu"
+              cardUrl="https://www.ubuntu.com"
+              tag="Web"
+            />
+          </div>
+
+          <div class="w-full snap-center">
+            <TechCard
+              title="Nginx"
+              description="A web server software known for its high performance, scalability, and reverse proxy capabilities. It is commonly used to serve web content, handle load balancing, and act as a reverse proxy."
+              iconName="logos:nginx"
+              cardUrl="https://www.nginx.com"
               tag="Web"
             />
           </div>
@@ -264,23 +305,40 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
       <div class="hero bg-base-100 mb-20">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <div class="text-center max-w-md">
-            <h1 class="text-3xl font-bold">Let's Chat.</h1>
-            <p class="py-2 text-base-content/70">
-              Get in contact with me to talk about your next project. Let's find
-              out how I can help.
-            </p>
             <div class="card shrink-0 w-full max-w-md shadow-2xl bg-base-100">
-              <a
-                href="mailto:jc9361@gmail.com"
-                class="btn btn-primary uppercase flex-1"
-              >
-                <div class="flex gap-2 items-center">
-                  <div>
-                    <Icon name="ion:mail" width="20" />
-                  </div>
-                  <div>Contact</div>
+              <div class="flex gap-2 card-body">
+                <h1 class="text-3xl font-bold">Let's Chat.</h1>
+                <p class="py-2 text-base-content/70">
+                  Get in contact with me to talk about your next project. Let's
+                  find out how I can help.
+                </p>
+
+                <div class="flex items-center gap-2">
+                  <a
+                    href="mailto:jc9361@gmail.com"
+                    class="btn btn-primary uppercase flex-1"
+                  >
+                    <div class="flex gap-2 items-center">
+                      <div>
+                        <Icon name="ion:mail" width="20" />
+                      </div>
+                      <div>Contact</div>
+                    </div>
+                  </a>
+
+                  <a href="/resume" class="btn btn-outline uppercase flex-1">
+                    <div class="flex gap-2 items-center">
+                      <div>
+                        <Icon
+                          name="fluent:contact-card-28-regular"
+                          width="20"
+                        />
+                      </div>
+                      <div>Resume</div>
+                    </div>
+                  </a>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>

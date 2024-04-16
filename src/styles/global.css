@@ -17,13 +17,13 @@ ul {
   display: block !important;
   list-style-type: disc !important;
   padding-left: 40px !important;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
 }
 ol {
   display: block !important;
   list-style-type: decimal !important;
   padding-left: 40px !important;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
 }
 :root {
   /* --accent: 96, 115, 159; */
@@ -64,12 +64,6 @@ body {
   font-size: 16px;
   line-height: 1.7;
 }
-/* main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
-} */
 h1,
 h2,
 h3,
