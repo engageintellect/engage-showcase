@@ -13,17 +13,10 @@ tags:
   - TailwindCSS
   - API
   - Vercel
+
+projectURL: "https://twitter-bio-tau.vercel.app"
+projectRepository: "https://github.com/engageintellect/twitter-bio"
 ---
-
-<div class="flex gap-2">
-  <button class="p-2 rounded border border-primary/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://twitter-bio-tau.vercel.app" target="_blank"> Go to App </a>
-  </button>
-
-  <button class="p-2 rounded border border-primary/20 md:hover:shadow transition-shadow duration-200"> 
-    <a href="https://github.com/engageintellect/twitter-bio" target="_blank">Go to Repository</a>
-  </button>
-</div>
 
 # Introduction
 
