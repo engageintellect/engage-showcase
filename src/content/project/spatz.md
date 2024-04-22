@@ -27,7 +27,6 @@ A complete, fullstack template for Svelte.
 
 ![Image Description](/images/spatz2.png)
 
-[Demo App](https://spatz.engage-dev.com)
 
 ## Features
 
