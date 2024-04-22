@@ -325,6 +325,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"spatz.md": {
+	id: "spatz.md";
+  slug: "spatz";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "stonk-ai.md": {
 	id: "stonk-ai.md";
   slug: "stonk-ai";
