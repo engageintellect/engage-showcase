@@ -1,5 +1,5 @@
 ---
-pubDate: 2024-4-14T12:00:00Z
+pubDate: 2024-4-21T12:00:00Z
 title: Spatz.
 description: A fullstack Sveltekit template for building FAST.
 excerpt: hello world
