@@ -25,7 +25,7 @@ projectRepository: "https://github.com/engageintellect/spatz"
 
 A complete, fullstack template for Svelte.
 
-![Image Description](/images/spatz.png)
+![Image Description](/images/spatz2.png)
 
 [Demo App](https://spatz.engage-dev.com)
 
@@ -38,7 +38,6 @@ A complete, fullstack template for Svelte.
 - [TailwindCSS](https://tailwindcss.com): A utility-first CSS framework for rapid UI development.
 - [Zod](https://zod.dev): TypeScript-first schema declaration and validation.
 
-![Image Description](/images/spatz2.png)
 ## Getting Started
 
 ### Pocketbase Setup
