@@ -14,7 +14,7 @@ tags:
   - OpenAI
   - Vercel AI SDK
   - Ubuntu
-projectURL: "spatz.engage-dev.com"
+projectURL: "https://spatz.engage-dev.com"
 projectRepository: "https://github.com/engageintellect/spatz"
 ---
 
