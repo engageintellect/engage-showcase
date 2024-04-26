@@ -276,6 +276,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"litterbot.md": {
+	id: "litterbot.md";
+  slug: "litterbot";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "managing-global-state-with-solidjs-and-typescript.md": {
 	id: "managing-global-state-with-solidjs-and-typescript.md";
   slug: "managing-global-state-with-solidjs-and-typescript";
