@@ -35,23 +35,47 @@ import { fade, slide } from "astro:transitions";
               inputString="Software Engineer"
             />
             <div class="card-actions justify-end max-w-md w-full">
-              <div class="flex gap-2 py-2 max-w-md w-full">
-                <a href="/project" class="btn btn-primary uppercase flex-1">
-                  <div class="flex items-center gap-2">
-                    <Icon name="ph:code-fill" width="20" />
-                    <div>Projects</div>
-                  </div>
-                </a>
+              <div class="py-5 w-full flex flex-col gap-2">
+                <div class="flex gap-2 max-w-md w-full">
+                  <a
+                    href="/project"
+                    class="btn btn-primary btn-outline uppercase flex-1"
+                  >
+                    <div class="flex items-center justify-between gap-2 w-full">
+                      <div>Projects</div>
+                      <Icon name="ph:code-fill" width="20" />
+                    </div>
+                  </a>
 
-                <a
-                  href="mailto:jc9361@gmail.com"
-                  class="btn btn-outline uppercase flex-1"
-                >
-                  <div class="flex items-center gap-2">
-                    <Icon name="ion:mail" width="20" />
-                    <div>Contact</div>
-                  </div>
-                </a>
+                  <a href="/articles" class="btn btn-outline uppercase flex-1">
+                    <div class="flex items-center justify-between gap-2 w-full">
+                      <div>Articles</div>
+                      <Icon name="ri:article-fill" width="20" />
+                    </div>
+                  </a>
+                </div>
+
+                <div class="flex gap-2 max-w-md w-full">
+                  <a
+                    href="/about"
+                    class="btn btn-primary btn-outline uppercase flex-1"
+                  >
+                    <div class="flex items-center justify-between gap-2 w-full">
+                      <div>About</div>
+                      <Icon name="ic:baseline-account-circle" width="20" />
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:engage_intellect@protonmail.com"
+                    class="btn btn-outline uppercase flex-1"
+                  >
+                    <div class="flex items-center justify-between gap-2 w-full">
+                      <div>Contact</div>
+                      <Icon name="ion:mail" width="20" />
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -34,21 +34,21 @@
   </div>
 
   <div class="overflow-auto snap-mandatory snap-x">
-    <div class="flex sm:grid sm:grid-cols-2 gap-2 sm:mx-2 my-2">
+    <div class="flex sm:grid sm:grid-cols-2 gap-2 my-2">
       {#each allItems as item}
         {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
           <div
-            class="group shadow-md md:hover:-translate-y-[2px] w-80 sm:w-full snap-center transition-all duration-300 rounded flex flex-col"
+            class="group hover:shadow md:hover:-translate-y-[2px] w-80 sm:w-full snap-center transition-all duration-300 rounded flex flex-col"
           >
             <a
               href={`/project/${item.slug}/`}
-              class="flex flex-col h-full w-80 sm:w-full"
+              class="flex flex-col h-full w-80 sm:w-full border rounded"
             >
-              <div class="overflow-hidden rounded-t relative shadow">
+              <div class="overflow-hidden rounded-t relative border-b">
                 <img
                   src={item.data.image}
                   alt={item.data.title}
-                  class=" transition-transform duration-500 h-56 object-cover w-full rounded-t"
+                  class="transition-transform duration-500 h-56 object-cover w-full rounded-t sm:group-hover:scale-[102%]"
                 />
               </div>
 
@@ -68,7 +68,9 @@
 
                   <div class="py-5">
                     <div class="text-xl font-bold">{item.data.title}</div>
-                    <div class="text-sm font-thin text-base-content/70">
+                    <div
+                      class="text-sm font-thin text-base-content/70 line-clamp-3"
+                    >
                       {item.data.description}
                     </div>
                   </div>
