@@ -34,7 +34,7 @@
   </div>
 
   <div class="overflow-auto snap-mandatory snap-x">
-    <div class="flex sm:grid sm:grid-cols-2 gap-2 sm:mx-2 my-2">
+    <div class="flex sm:grid sm:grid-cols-2 gap-2 my-2">
       {#each allItems as item}
         {#if item.data.title.toLowerCase().includes(searchInput.toLowerCase())}
           <div
@@ -42,9 +42,9 @@
           >
             <a
               href={`/project/${item.slug}/`}
-              class="flex flex-col h-full w-80 sm:w-full"
+              class="flex flex-col h-full w-80 sm:w-full border rounded"
             >
-              <div class="overflow-hidden rounded-t relative shadow">
+              <div class="overflow-hidden rounded-t relative border-b">
                 <img
                   src={item.data.image}
                   alt={item.data.title}
@@ -68,7 +68,9 @@
 
                   <div class="py-5">
                     <div class="text-xl font-bold">{item.data.title}</div>
-                    <div class="text-sm font-thin text-base-content/70">
+                    <div
+                      class="text-sm font-thin text-base-content/70 line-clamp-3"
+                    >
                       {item.data.description}
                     </div>
                   </div>

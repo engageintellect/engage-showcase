@@ -304,6 +304,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"pi-dashboard.md": {
+	id: "pi-dashboard.md";
+  slug: "pi-dashboard";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "project-nexum-wiki.md": {
 	id: "project-nexum-wiki.md";
   slug: "project-nexum-wiki";
