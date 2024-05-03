@@ -1,6 +1,6 @@
 ---
 pubDate: 2024-5-2T12:00:00Z
-title: hckrnws - A Hacker News clone written in Sveltekeit.
+title: hckrnws
 description: A Hacker News clone written in Sveltekit, TailwindCSS, and DaisyUI.
 excerpt: hello world
 category: Project
