@@ -262,6 +262,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"hckrnws.md": {
+	id: "hckrnws.md";
+  slug: "hckrnws";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "how-to-use-react-tailwind-and-svelte-inside-astro.md": {
 	id: "how-to-use-react-tailwind-and-svelte-inside-astro.md";
   slug: "how-to-use-react-tailwind-and-svelte-inside-astro";
