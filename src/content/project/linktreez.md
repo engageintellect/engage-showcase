@@ -4,7 +4,7 @@ title: Linktreez
 description: A linktree clone built with Next.js 13 and TailwindCSS.
 excerpt: A minimal linktree clone built with Next.js 13 and TailwindCSS.
 category: Project
-image: "https://api.blog.production.linktr.ee/wp-content/uploads/2022/06/Avatar-Symbol-Canopy.png"
+image: "/images/linktreez.png"
 tags:
   - Next.js
   - TailwindCSS
