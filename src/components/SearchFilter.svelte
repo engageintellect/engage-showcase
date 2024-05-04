@@ -62,7 +62,7 @@
                       {item.data.category}
                     </div>
 
-                    <div class="text-base-content/50 text-xs">
+                    <div class="text-base-content/70 text-xs">
                       <FormatDate date={item.data.pubDate} />
                     </div>
                   </div>
@@ -76,7 +76,7 @@
                 </div>
 
                 <div>
-                  <div class="text-sm text-base/50">Technologies:</div>
+                  <div class="text-sm text-base-content/50">Technologies:</div>
 
                   {#if item.data.tags}
                     <div class="overflow-auto">
