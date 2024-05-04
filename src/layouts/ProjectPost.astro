@@ -58,18 +58,20 @@ const {
                   {category}
                 </a>
               </div>
-              <div class="text-base-content/50 text-xs">
+              <div class="text-base-content/70 text-xs">
                 <FormatDate date={pubDate} />
               </div>
             </div>
 
             <div class="py-5">
-              <div class="text-5xl font-semibold">{title}</div>
-              <div class="text-base-content/70 font-thin">{description}</div>
+              <div class="text-5xl tracking-tighter font-semibold">{title}</div>
+              <div class="text-base-content/70 font-thin mt-2">
+                {description}
+              </div>
             </div>
 
             <div class="">
-              <div class="text-sm text-base/50 pb-1">Technologies:</div>
+              <div class="text-sm text-base-content/50 pb-1">Technologies:</div>
               <div class="flex overflow-x-auto gap-1">
                 {
                   tags?.map((tag, index) => (
