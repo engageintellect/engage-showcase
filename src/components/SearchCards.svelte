@@ -58,7 +58,7 @@
                 <div>
                   <div class="flex justify-between items-center">
                     <span
-                      class="border border-primary text-xs text-primary p-1 px-2 rounded"
+                      class="btn btn-outline btn-xs font-thin whitespace-nowrap"
                       >{item.data.category}</span
                     >
                     <div class="text-base-content/50 text-xs">
@@ -84,7 +84,7 @@
                         {#each item.data.tags as tag}
                           <a
                             href={`/tags/${formatTag(tag)}/`}
-                            class="text-sm lowercase bg-base-300 hover:bg-base-200 transition-all duration-200 text-base-content p-1 px-2 rounded whitespace-nowrap"
+                            class="btn btn-sm font-thin lowercase whitespace-nowrap"
                           >
                             #{tag}
                           </a>
