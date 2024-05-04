@@ -17,8 +17,6 @@ projectURL: "https://hckrnws.vercel.app"
 projectRepository: "https://github.com/engageintellect/hckrnws"
 ---
 
-# hckrnws
-
 ## Description
 
 A Hacker News clone built with [Sveltekit](https://kit.svelte.dev), [Tailwind](https://tailwindcss.com), and [DaisyUI](https://daisyui.com).
