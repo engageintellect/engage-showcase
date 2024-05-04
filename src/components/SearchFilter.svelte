@@ -57,7 +57,7 @@
                     class="text-xs font-thin flex justify-between w-full items-center gap-2"
                   >
                     <div
-                      class="border border-primary text-primary p-1 px-2 rounded"
+                      class="btn btn-outline btn-xs font-thin whitespace-nowrap"
                     >
                       {item.data.category}
                     </div>
@@ -84,7 +84,7 @@
                         {#each item.data.tags as tag}
                           <a
                             href={`/tags/${formatTag(tag)}/`}
-                            class="bg-base-300 hover:bg-base-200 transition-all duration-200 text-base-content whitespace-nowrap text-sm font-thin lowercase rounded px-2 py-1"
+                            class="btn btn-sm lowercase whitespace-nowrap font-thin"
                           >
                             #{tag}
                           </a>

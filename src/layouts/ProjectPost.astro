@@ -51,11 +51,12 @@ const {
           <div class="p-2 sm:p-4">
             <div class="flex items-center w-full justify-between gap-2">
               <div class="text-xs font-thin">
-                <div
-                  class="border border-primary text-primary font-semibold text-base/50 p-2 rounded"
+                <a
+                  href={category === "Article" ? "/articles" : "/projects"}
+                  class="btn btn-outline btn-xs font-thin whitespace-nowrap"
                 >
                   {category}
-                </div>
+                </a>
               </div>
               <div class="text-base-content/50 text-xs">
                 <FormatDate date={pubDate} />
@@ -74,7 +75,7 @@ const {
                   tags?.map((tag, index) => (
                     <a
                       href={`/tags/${formatTag(tag)}/`}
-                      class="bg-base-300 hover:bg-base-200 transition-all duration-200 text-base-content whitespace-nowrap text-sm font-thin lowercase rounded px-2 py-1"
+                      class="btn btn-sm lowercase whitespace-nowrap font-thin"
                     >
                       #{tag}
                     </a>
@@ -104,18 +105,14 @@ const {
         <div class="flex gap-2 my-2 mx-2 sm:mx-0">
           {
             projectURL && (
-              <button class="group btn btn-primary">
+              <button class="group btn flex-1">
                 <a
                   href={projectURL}
                   target="_blank"
                   class="flex items-center gap-2"
                 >
                   <div>Try App</div>
-                  <Icon
-                    name="fe:app-menu"
-                    class="sm:group-hover:scale-110 transition-all duration-200"
-                    width="20"
-                  />
+                  <Icon name="fe:app-menu" class="" width="20" />
                 </a>
               </button>
             )
@@ -123,18 +120,14 @@ const {
 
           {
             projectRepository && (
-              <button class="group btn btn-primary">
+              <button class="group btn flex-1">
                 <a
                   href={projectRepository}
                   target="_blank"
                   class="flex gap-2 items-center"
                 >
                   <div>Repository</div>
-                  <Icon
-                    name="simple-icons:github"
-                    class="sm:group-hover:scale-110 transition-all duration-200"
-                    width="20"
-                  />
+                  <Icon name="simple-icons:github" class="" width="20" />
                 </a>
               </button>
             )

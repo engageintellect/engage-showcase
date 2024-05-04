@@ -15,7 +15,7 @@ tags:
   - Ubuntu
   - Nginx
   - Vercel
-projectURL: "https://engage-server-dashboard.vercel.app"
+projectURL: "https://jarvis-dashboard.vercel.app"
 projectRepository: "https://github.com/engageintellect/server-dashboard"
 ---
 
