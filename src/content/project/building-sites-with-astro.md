@@ -11,7 +11,7 @@ tags:
   - Vercel
 ---
 
-## Introduction
+# Introduction
 
 Astro is a static site generator that aims to simplify the process of building modern websites. It is built with a focus on developer experience, performance, and flexibility. One of the core features of Astro is its component-based architecture that allows developers to build reusable UI components that can be easily shared across pages and Project.
 

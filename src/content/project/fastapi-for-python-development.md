@@ -11,7 +11,7 @@ tags:
   - API
 ---
 
-## Introduction
+# Introduction
 
 Python is a popular programming language used for a wide range of applications, including web development. If you're a Python developer, you might be familiar with popular web frameworks like Django or Flask. However, there's a new kid on the block that's quickly gaining popularity among developers - FastAPI.
 
