@@ -16,7 +16,7 @@ import { fade, slide } from "astro:transitions";
     <Header title={SITE_TITLE} />
 
     <div class="flex justify-center sm:py-2 sm:p-2 max-w-3xl mx-auto">
-      <div class="flex flex-col items-center gap-5 w-full">
+      <div class="flex flex-col items-center gap-2 w-full">
         <div class="card sm:card-side bg-base-100 w-full md:shadow-lg">
           <div transition:animate="fade" class="w-full">
             <img
@@ -75,6 +75,104 @@ import { fade, slide } from "astro:transitions";
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div
+          transition:animate="fade"
+          class="hidden sm:flex flex-col w-full gap-2"
+        >
+          <div class="flex gap-2 w-full">
+            <a
+              href="/tags/ai"
+              class="w-full h-40 card shadow border relative bg-primary group group-hover:shadow-lg transition-all duration-200"
+            >
+              <img
+                src="https://builtin.com/sites/www.builtin.com/files/styles/og/public/2024-04/what-is-artificial-intelligence-ai.jpg"
+                alt="Shoes"
+                class="object-cover h-40 rounded opacity-100 group-hover:opacity-30 transition-opacity duration-500 ease-in-out"
+              />
+
+              <div
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-3xl text-white font-extrabold absolute w-full left-0 top-0 drop-shadow-lg h-full flex"
+              >
+                <div
+                  class="flex flex-col justify-center items-center h-full w-full"
+                >
+                  AI
+                </div>
+              </div>
+            </a>
+            <a
+              href="/tags/sveltekit"
+              class="w-full h-40 card shadow border relative bg-primary group group-hover:shadow-lg transition-all duration-200"
+            >
+              <img
+                src="https://miro.medium.com/v2/resize:fit:1400/1*G9fzmaoymDGy7scbkgpC7A.png"
+                alt="Shoes"
+                class="object-cover h-40 rounded opacity-100 group-hover:opacity-30 transition-opacity duration-500 ease-in-out"
+              />
+
+              <div
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-3xl text-white font-extrabold absolute w-full left-0 top-0 drop-shadow-lg h-full flex"
+              >
+                <div
+                  class="flex flex-col justify-center items-center h-full w-full"
+                >
+                  SvelteKit
+                </div>
+              </div>
+            </a>
+            <a
+              href="/tags/finance"
+              class="w-full h-40 card shadow border relative bg-primary group group-hover:shadow-lg transition-all duration-200"
+            >
+              <img
+                src="https://cdn.discordapp.com/attachments/1094505565931176006/1236928258549878804/engage_intellect_create_a_modern_logo_of_a_stock_chart_with_tec_d86e6817-ff53-4693-94bf-9993baa5d53c.png?ex=6639cab5&is=66387935&hm=5c33478477b0f5ccbe650a2e1f83ce4fd9e2777bcfb3e8dd54192cdf3e2669f3&"
+                alt="Shoes"
+                class="object-cover h-40 rounded opacity-100 group-hover:opacity-30 transition-opacity duration-500 ease-in-out"
+              />
+
+              <div
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-3xl text-white font-extrabold absolute w-full left-0 top-0 drop-shadow-lg h-full flex"
+              >
+                <div
+                  class="flex flex-col justify-center items-center h-full w-full"
+                >
+                  Finance
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="flex gap-2 w-full">
+            <div class="w-full card shadow bg-primary relative">
+              <img
+                src="https://i0.wp.com/www.thatocgirl.com/wp-content/uploads/2018/12/Treasure-Island-Laguna-Beach-California.jpg?fit=1200%2C800&ssl=1"
+                alt="Shoes"
+                class="object-cover h-40 rounded opacity-100"
+              />
+
+              <div
+                class="text-5xl text-white font-extrabold absolute w-full left-0 top-0 drop-shadow-lg h-full flex"
+              >
+                <div
+                  class="flex flex-col justify-center items-center h-full w-full"
+                >
+                  Orange County, CA.
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://instagram.com/engage_intellect"
+              class="w-1/2 h-40 card shadow border relative bg-primary group group-hover:shadow-lg transition-all duration-200"
+            >
+              <img
+                src="https://about.fb.com/wp-content/uploads/2019/10/IG-Glyph-Icon-hero.png"
+                alt="Shoes"
+                class="object-cover h-40 rounded opacity-100"
+              />
+            </a>
           </div>
         </div>
       </div>

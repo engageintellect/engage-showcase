@@ -15,6 +15,7 @@ tags:
   - ChatGPT
   - FastAPI
   - AI
+  - Finance
   - Ubuntu
   - Nginx
   - Vercel
