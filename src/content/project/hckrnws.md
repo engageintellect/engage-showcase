@@ -1,7 +1,7 @@
 ---
 pubDate: 2024-5-2T12:00:00Z
 title: hckrnws
-description: A Hacker News clone written in Sveltekit, TailwindCSS, and DaisyUI.
+description: A Hacker News UI written in Sveltekit, TailwindCSS, and DaisyUI.
 excerpt: hello world
 category: Project
 image: /images/hckrnws2.png
@@ -19,7 +19,7 @@ projectRepository: "https://github.com/engageintellect/hckrnws"
 
 ## Description
 
-A Hacker News clone built with [Sveltekit](https://kit.svelte.dev), [Tailwind](https://tailwindcss.com), and [DaisyUI](https://daisyui.com).
+A Hacker News UI built with [Sveltekit](https://kit.svelte.dev), [Tailwind](https://tailwindcss.com), and [DaisyUI](https://daisyui.com).
 
 ## Features
 

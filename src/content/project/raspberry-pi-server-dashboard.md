@@ -15,6 +15,6 @@ tags:
   - Pocketbase
   - Ubuntu
 
-projectURL: "https://pi.engage-dev.com:8443/docker/"
+projectURL: "https://pi.engage-dev.com"
 projectRepository: "https://github.com/engageintellect/pi-dashboard-docker"
 ---

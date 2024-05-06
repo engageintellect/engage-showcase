@@ -56,11 +56,12 @@
                   <div
                     class="text-xs font-thin flex justify-between w-full items-center gap-2"
                   >
-                    <div
+                    <a
+                      href="/articles/"
                       class="btn btn-outline btn-xs font-thin whitespace-nowrap"
                     >
                       {item.data.category}
-                    </div>
+                    </a>
 
                     <div class="text-base-content/70 text-xs">
                       <FormatDate date={item.data.pubDate} />
