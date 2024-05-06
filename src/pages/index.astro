@@ -34,7 +34,10 @@ import { fade, slide } from "astro:transitions";
               typeStyle="scramble"
               inputString="Software Engineer"
             />
-            <div class="card-actions justify-end max-w-md w-full">
+            <div
+              transition:animate="fade"
+              class="card-actions justify-end max-w-md w-full"
+            >
               <div class="py-5 w-full flex flex-col gap-2">
                 <div class="flex gap-2 max-w-md w-full">
                   <a href="/project" class="btn uppercase flex-1">
