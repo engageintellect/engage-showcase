@@ -12,6 +12,7 @@ tags:
   - Python
   - FastAPI
   - API
+  - Finance
   - Uvicorn
   - Nginx
   - Ubuntu
