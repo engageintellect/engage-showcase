@@ -12,171 +12,43 @@ import { fade, slide } from "astro:transitions";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body class="min-h-screen flex flex-col">
     <Header title={SITE_TITLE} />
 
-    <div class="flex justify-center sm:py-2 sm:p-2 max-w-3xl mx-auto">
-      <div class="flex flex-col items-center gap-2 w-full">
-        <div class="card sm:card-side bg-base-100 w-full md:shadow-lg">
-          <div transition:animate="fade" class="w-full">
-            <img
-              src="https://github.com/engageintellect.png"
-              alt="Album"
-              class="sm:rounded md:rounded-r-none w-full max-h-80 object-cover"
-            />
-          </div>
-          <div
-            class="card-body flex flex-col w-full items-center justify-center"
-          >
-            <div class="font-bold text-4xl">@engageintellect</div>
-            <SvelteTypewriter
-              client:load
-              typeStyle="scramble"
-              inputString="Software Engineer"
-            />
-            <div
-              transition:animate="fade"
-              class="card-actions justify-end max-w-md w-full"
-            >
-              <div class="py-5 w-full flex flex-col gap-2">
-                <div class="flex gap-2 max-w-md w-full">
-                  <a href="/project" class="btn uppercase flex-1">
-                    <div class="flex items-center justify-between gap-2 w-full">
-                      <div>Projects</div>
-                      <Icon name="ph:code-fill" width="20" />
-                    </div>
-                  </a>
-
-                  <a href="/articles" class="btn uppercase flex-1">
-                    <div class="flex items-center justify-between gap-2 w-full">
-                      <div>Articles</div>
-                      <Icon name="ri:article-fill" width="20" />
-                    </div>
-                  </a>
-                </div>
-
-                <div class="flex gap-2 max-w-md w-full">
-                  <a href="/about" class="btn uppercase flex-1">
-                    <div class="flex items-center justify-between gap-2 w-full">
-                      <div>About</div>
-                      <Icon name="ic:baseline-account-circle" width="20" />
-                    </div>
-                  </a>
-
-                  <a
-                    href="mailto:engage_intellect@protonmail.com"
-                    class="btn uppercase flex-1"
-                  >
-                    <div class="flex items-center justify-between gap-2 w-full">
-                      <div>Contact</div>
-                      <Icon name="ion:mail" width="20" />
-                    </div>
-                  </a>
+    <div class="h-full flex flex-grow">
+      <div
+        class="hero"
+        style="background-image: url(https://images.pexels.com/photos/385784/pexels-photo-385784.jpeg);"
+      >
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content -mt-64 text-center text-neutral-content">
+          <div class="max-w-md">
+            <div class="">
+              <div class="avatar">
+                <div class="w-64 mask mask-squircle">
+                  <img src="https://github.com/engageintellect.png" />
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div
-          transition:animate="fade"
-          class="hidden sm:flex flex-col w-full gap-2"
-        >
-          <div class="flex gap-2 w-full">
-            <a
-              href="/tags/ai"
-              class="w-full h-40 card shadow border relative bg-primary group group-hover:shadow-lg transition-all duration-200"
-            >
-              <img
-                src="/images/ai.png"
-                alt="Shoes"
-                class="object-cover h-40 rounded opacity-100 group-hover:opacity-30 transition-opacity duration-500 ease-in-out"
-              />
+            <div class="flex flex-col items-center justify-center">
+              <h1 class="mb-5 text-3xl sm:text-5xl font-bold drop-shadow-lg">
+                @engageintellect
+              </h1>
+              <p class="mb-5">
+                Software Engineer, Open Source Contributor, Technologist.
+              </p>
 
-              <div
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-3xl text-white font-extrabold absolute w-full left-0 top-0 drop-shadow-lg h-full flex"
-              >
-                <div
-                  class="flex flex-col justify-center items-center h-full w-full"
+              <div class="flex items-center gap-2 w-full">
+                <a href="/projects" class="btn btn-primary flex-1 w-full"
+                  >Projects</a
                 >
-                  AI
-                </div>
-              </div>
-            </a>
-            <a
-              href="/tags/sveltekit"
-              class="w-full h-40 card shadow border relative bg-primary group group-hover:shadow-lg transition-all duration-200"
-            >
-              <img
-                src="/images/sveltekit.png"
-                alt="Shoes"
-                class="object-cover h-40 rounded opacity-100 group-hover:opacity-30 transition-opacity duration-500 ease-in-out"
-              />
-
-              <div
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-3xl text-white font-extrabold absolute w-full left-0 top-0 drop-shadow-lg h-full flex"
-              >
-                <div
-                  class="flex flex-col justify-center items-center h-full w-full"
-                >
-                  SvelteKit
-                </div>
-              </div>
-            </a>
-            <a
-              href="/tags/finance"
-              class="w-full h-40 card shadow border relative bg-primary group group-hover:shadow-lg transition-all duration-200"
-            >
-              <img
-                src="/images/finance.png"
-                alt="Shoes"
-                class="object-cover h-40 rounded opacity-100 group-hover:opacity-30 transition-opacity duration-500 ease-in-out"
-              />
-
-              <div
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-3xl text-white font-extrabold absolute w-full left-0 top-0 drop-shadow-lg h-full flex"
-              >
-                <div
-                  class="flex flex-col justify-center items-center h-full w-full"
-                >
-                  Finance
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="flex gap-2 w-full">
-            <div class="w-full card shadow bg-primary relative">
-              <img
-                src="/images/oc.webp"
-                alt="Shoes"
-                class="object-cover h-40 rounded opacity-100 saturate-150"
-              />
-
-              <div
-                class="text-5xl text-white font-extrabold absolute w-full left-0 top-0 drop-shadow-lg h-full flex"
-              >
-                <div
-                  class="flex flex-col justify-center items-center h-full w-full"
-                >
-                  orange county, ca.
-                </div>
+                <a href="/about" class="btn btn-primary flex-1 w-full">About</a>
               </div>
             </div>
-            <a
-              href="https://instagram.com/engage_intellect"
-              class="w-1/2 h-40 card shadow border relative bg-primary group group-hover:shadow-lg transition-all duration-200"
-            >
-              <img
-                src="/images/instagram.webp"
-                alt="Shoes"
-                class="object-cover h-40 rounded opacity-100"
-              />
-            </a>
           </div>
         </div>
       </div>
-      <!-- <Footer /> -->
     </div>
   </body>
 </html>
