@@ -5,6 +5,7 @@ import Header from "../../components/Header.astro";
 import BaseHead from "../../components/BaseHead.astro";
 import { formatTag } from "../../utils";
 import SearchFilter from "../../components/SearchFilter.svelte";
+import { fade } from "astro:transitions";
 
 interface Post {
   slug: string;
@@ -127,7 +128,7 @@ function handleSearch(event: Event) {
       <div class="font-bold">#{tagParam}</div>
     </div>
 
-    <div transition:animate="fade">
+    <div transition:animate={fade({ duration: ".25s" })}>
       <SearchFilter
         client:load
         handleSearch={handleSearch}

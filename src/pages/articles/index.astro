@@ -4,6 +4,7 @@ import Header from "../../components/Header.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import SearchFilter from "../../components/SearchFilter.svelte"; // Import the Svelte component
+import { fade } from "astro:transitions";
 
 let search = ""; // Initialize the search input value
 
@@ -31,12 +32,7 @@ function handleSearch(event: any) {
 }
 ---
 
-<html
-  lang="en"
-  transition:name="root"
-  transition:animate="none"
-  data-theme="lofi"
->
+<html lang="en" data-theme="lofi">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
@@ -46,7 +42,7 @@ function handleSearch(event: any) {
 
       <!-- Use the SearchFilter Svelte component and pass searchInput and handleSearch as props -->
       <div>
-        <div transition:animate="fade">
+        <div transition:animate={fade({ duration: ".5s" })}>
           <SearchFilter
             client:load
             handleSearch={handleSearch}

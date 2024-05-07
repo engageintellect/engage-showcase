@@ -16,7 +16,7 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
 
-  <div transition:animate="none">
+  <div>
     <Header />
     <div class="max-w-3xl mx-auto px-2">
       <div class="my-2">
@@ -26,7 +26,10 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
           >
             <div class="hero bg-base-100">
               <div class="hero-content py-10 text-center">
-                <div class="max-w-md">
+                <div
+                  transition:animate={fade({ duration: ".5s" })}
+                  class="max-w-md"
+                >
                   <div class="text-5xl font-bold">I'm Josh.</div>
                   <div class="py-2 text-base-content/70">
                     Fullstack software developer, focused on automation, gen-ai,
@@ -68,7 +71,10 @@ import SvelteTypewriter from "../components/SvelteTypewriter.svelte";
         </div>
       </div>
 
-      <div class="my-10 text-center" transition:animate="none">
+      <div
+        class="my-10 text-center"
+        transition:animate={fade({ duration: "1s" })}
+      >
         <div class="md:text-center">
           <!-- <div class="text-3xl font-bold">Technologies</div> -->
           <h1 class="text-3xl font-bold">Technologies.</h1>

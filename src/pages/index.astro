@@ -18,7 +18,7 @@ import { fade, slide } from "astro:transitions";
     <div class="flex justify-center sm:py-2 sm:p-2 max-w-3xl mx-auto">
       <div class="flex flex-col items-center gap-2 w-full">
         <div class="card sm:card-side sm:mt-10 bg-base-100 w-full sm:shadow">
-          <div transition:animate="fade" class="w-full">
+          <div transition:animate={fade({ duration: ".5s" })} class="w-full">
             <img
               src="https://github.com/engageintellect.png"
               alt="Album"
@@ -35,7 +35,7 @@ import { fade, slide } from "astro:transitions";
               inputString="Software Engineer"
             />
             <div
-              transition:animate="fade"
+              transition:animate={fade({ duration: "1s" })}
               class="card-actions justify-end max-w-md w-full"
             >
               <div class="py-5 w-full flex flex-col gap-2">

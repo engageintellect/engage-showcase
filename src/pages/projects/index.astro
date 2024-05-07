@@ -6,6 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import SearchCards from "../../components/SearchCards.svelte"; // Import the Svelte component
 import SearchFilter from "../../components/SearchFilter.svelte"; // Import the Svelte component
+import { fade } from "astro:transitions";
 
 // Initialize the search term
 let search = "";
@@ -55,14 +56,14 @@ function handleSearch(event: any) {
     /> -->
 
     <main class="px-2 max-w-3xl mx-auto py-2">
-      <section>
+      <div transition:animate={fade({ duration: ".5s" })}>
         <SearchCards
           client:load
           handleSearch={handleSearch}
           searchInput={search}
           allItems={filteredPosts}
         />
-      </section>
+      </div>
     </main>
 
     <Footer />
