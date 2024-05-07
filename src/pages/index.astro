@@ -18,9 +18,9 @@ import { fade, slide } from "astro:transitions";
     <div class="h-full flex flex-grow">
       <div
         class="hero"
-        style="background-image: url(https://images.pexels.com/photos/385784/pexels-photo-385784.jpeg);"
+        style="background-image: url(https://images.unsplash.com/photo-1619252584172-a83a949b6efd?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);"
       >
-        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-overlay bg-opacity-10"></div>
         <div class="hero-content -mt-64 text-center text-neutral-content">
           <div class="max-w-md">
             <div class="">
@@ -35,14 +35,18 @@ import { fade, slide } from "astro:transitions";
               <h1 class="mb-5 text-3xl sm:text-5xl font-bold drop-shadow-lg">
                 @engageintellect
               </h1>
-              <p class="mb-5">
+              <p class="mb-5 drop-shadow">
                 Software Engineer, Open Source Contributor, Technologist.
               </p>
 
               <div class="flex items-center gap-2 w-full">
-                <a href="/projects" class="btn btn-primary flex-1 w-full"
-                  >Projects</a
+                <a
+                  href="/projects"
+                  class="btn btn-primary flex gap-2 items-center flex-1 w-full"
                 >
+                  <Icon name="ph:code-fill" width="20" />
+                  <div>Projects</div>
+                </a>
                 <a href="/about" class="btn btn-primary flex-1 w-full">About</a>
               </div>
             </div>
