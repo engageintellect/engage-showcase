@@ -62,13 +62,13 @@ const {
 
             <div class="py-5">
               <div
-                transition:animate={slide({ duration: ".25s" })}
+                transition:animate={fade({ duration: ".25s" })}
                 class="text-5xl tracking-tighter font-semibold"
               >
                 {title}
               </div>
               <div
-                transition:animate={fade({ duration: ".75s" })}
+                transition:animate={fade({ duration: ".5s" })}
                 class="text-base-content/70 font-thin mt-2"
               >
                 {description}
@@ -78,7 +78,7 @@ const {
             <div class="">
               <div class="text-sm text-base-content/50 pb-1">Technologies:</div>
               <div
-                transition:animate={fade({ duration: "1.25s" })}
+                transition:animate={fade({ duration: ".75s" })}
                 class="flex overflow-x-auto gap-1"
               >
                 {
@@ -94,7 +94,7 @@ const {
               </div>
             </div>
           </div>
-          <div transition:animate={fade({ duration: "1s" })} class="">
+          <div transition:animate={fade({ duration: ".5s" })} class="">
             {
               image && (
                 <a href={projectURL || ""}>
@@ -148,7 +148,10 @@ const {
           {fetchReadme(projectRepository)}
         </div> -->
 
-        <div class="prose py-2 px-2 sm:px-0">
+        <div
+          transition:animate={fade({ duration: "1.5s" })}
+          class="prose py-2 px-2 sm:px-0"
+        >
           <slot />
         </div>
       </article>

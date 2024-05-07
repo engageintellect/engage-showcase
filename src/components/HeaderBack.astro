@@ -1,4 +1,5 @@
 ---
+import { fade, slide } from "astro:transitions";
 import { SITE_TITLE } from "../consts";
 import { Icon } from "astro-icon";
 ---
@@ -17,7 +18,10 @@ import { Icon } from "astro-icon";
       <div class="flex justify-betwe w-full">
         <div class="flex items-center gap-5 w-full">
           <a href="javascript:history.back()">
-            <div class="flex items-center gap-1 pt-1">
+            <div
+              transition:animate={slide({ duration: ".5s" })}
+              class="flex items-center gap-1 pt-1"
+            >
               <div class="">
                 <Icon
                   name="ep:back"

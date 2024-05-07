@@ -6,12 +6,12 @@
 
 {#if typeStyle === "scramble"}
   <div
-    class="text-2xl text-base-content/50 font-thin"
+    class="text-3xl text-base-content/50 font-thin"
     use:scramble={{
-      typeDuration: 1000,
-      scrambleDuration: 1000,
+      typeDuration: 500,
+      scrambleDuration: 500,
       scrambleSlowdown: true,
-      delay: 3000,
+      delay: 5000,
     }}
   >
     {inputString}
