@@ -64,13 +64,13 @@ body {
 .prose strong, .prose b {
   font-weight: bold;
 }
-/* .prose a {
+.prose a {
   color: #0652DD;
   text-decoration: none;
 }
 .prose a:hover {
   text-decoration: underline;
-} */
+}
 
 /* Lists within .prose */
 .prose ul, .prose ol {
